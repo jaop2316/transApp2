@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html ng-app="myapp">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     </head>
+            <body>
+                <script type="text/javascript" src="lib/angular.min.js"></script>
+                <script type="text/javascript" src="js/app.js"></script>
+                <script type="text/javascript" src="js/rutasCtrl.js"></script>
+                
+                
+             
+                 
+                <div ng-controller="rutasController as rutasCtrl">
+                 <ul class="list-group">
+                    <div ng-repeat= "item in rutasCtrl.productos">
+                    <center><li ng-show=""> <div class="list-group.item">
+                        <h1> <p>{{item.nombre}}</p> </h1>
+                        <h2>$ {{item.horarioLV}}</h2>
+                        <p> {{item.flotaLV}}</p>
+                        <p> {{item.horaLV}}</p>
+                        <p> {{item.interLVP}}</p>
+                        <p> {{item.interLVN}}</p>
+                        <h2>$ {{item.horarioS}}</h2>
+                        <p> {{item.flotaS}}</p>
+                        <p> {{item.horaS}}</p>
+                        <p> {{item.interSP}}</p>
+                        <p> {{item.interSN}}</p>
+                        <h2>$ {{item.horarioDF}}</h2>
+                        <p> {{item.flotaDF}}</p>
+                        <p> {{item.horaDF}}</p>
+                        <p> {{item.interDFP}}</p>
+                        <p> {{item.interDFN}}</p>
+                        </div></li> </center>
+                   
+                        </div> 
+                         </ul>
+                        
+                      
+                
+                </div>
+        
+        </body>
+   
+</html>
