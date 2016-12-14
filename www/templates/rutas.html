@@ -1,5 +1,23 @@
 <ion-view view-title="Rutas">
 	<ion-content class="padding">
-		
+		<div class="col">
+			<div class="list list-inset">
+		  		<label class="item item-input">
+		    	<i class="icon ion-search placeholder-icon"></i>
+		    	<input type="text" placeholder="Buscar">
+		  		</label>
+			</div>
+		</div>
+		<div class="col">
+			<div class="list" ng-repeat="ruta in rutas">
+
+			    <a class="item item-thumbnail-left" href="#">
+			      <img ng-src="{{ruta.url}}">
+			      <h2>Ruta {{ruta.id}}</h2>
+			      <p>{{ruta.nombre}}</p>
+			    </a>
+
+			</div>
+		</div>
 	<ion-content>
 </ion-view> 
