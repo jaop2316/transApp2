@@ -56,6 +56,8 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       views: {
         'tab-rutas': {
           templateUrl: 'templates/rutas.html',
+          controller:'rutasCtrl',
+
           
         }
       }
