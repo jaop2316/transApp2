@@ -9,15 +9,23 @@
 			</div>
 		</div>
 		<div class="col">
-			<div class="list" ng-repeat="ruta in rutas">
+			<ion-list>
+			<div ng-repeat="ruta in rutas">
 
-			    <a class="item item-thumbnail-left" href="#">
-			      <img ng-src="{{ruta.url}}">
-			      <h2>Ruta {{ruta.id}}</h2>
-			      <p>{{ruta.nombre}}</p>
-			    </a>
+			    <ion-item class="item-stable" ng-click="toggleGroup(ruta)">
+			     <i class="icon" ng-class="isGroupShown(ruta) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;Ruta{{ruta.id}} 
+			    </ion-item>
+			    <ion-item class="item-accordion" ng-repeat="item in ruta.items"ng-show="isGroupShown(ruta)">
+			                {{item.sentido1}}
+			    </ion-item>
+			    <ion-item class="item-accordion" ng-repeat="item in ruta.items"ng-show="isGroupShown(ruta)">
+			                {{item.sentido2}}
+			    </ion-item>
+
+
 
 			</div>
+			</ion-list>
 		</div>
 	<ion-content>
 </ion-view> 
