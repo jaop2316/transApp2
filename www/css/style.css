@@ -22,3 +22,7 @@ h1 {
 .list .item.item-accordion.ng-hide-remove {
   display: block !important;
 }
+
+.overflow-scroll{
+	overflow-y:auto;
+}
