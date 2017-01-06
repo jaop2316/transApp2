@@ -1,0 +1,31 @@
+<ion-view view-title="Rutas">
+	<ion-content class="padding">
+		<div class="col">
+			<div class="list list-inset">
+		  		<label class="item item-input">
+		    	<i class="icon ion-search placeholder-icon"></i>
+		    	<input type="text" placeholder="Buscar">
+		  		</label>
+			</div>
+		</div>
+		<div class="col">
+			<ion-list>
+			<div ng-repeat="ruta in rutas">
+
+			    <ion-item class="item-stable" ng-click="toggleGroup(ruta)">
+			     <i class="icon" ng-class="isGroupShown(ruta) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;Ruta{{ruta.id}} 
+			    </ion-item>
+			    <ion-item class="item-accordion" ng-repeat="item in ruta.items"ng-show="isGroupShown(ruta)">
+			                {{item.sentido1}}
+			    </ion-item>
+			    <ion-item class="item-accordion" ng-repeat="item in ruta.items"ng-show="isGroupShown(ruta)">
+			                {{item.sentido2}}
+			    </ion-item>
+
+
+
+			</div>
+			</ion-list>
+		</div>
+	<ion-content>
+</ion-view> 
