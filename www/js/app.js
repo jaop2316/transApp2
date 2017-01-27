@@ -46,6 +46,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
     views: {
       'tab-paradas': {
         templateUrl: 'templates/paradas.html',
+        controller:'paradasController'
         
       }
     }

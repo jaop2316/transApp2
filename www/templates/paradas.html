@@ -1,5 +1,39 @@
 <ion-view view-title="Paradas">
 	<ion-content class="padding">
+
+		<div class="row">
+			<div class="col"> <h1>Mi ubicacion <i class="ion-location"></i></h1></div>
+			
+		</div>
+
+		<div class="row">
+			<div class="card">
+		  		<div class="item item-text-wrap">
+		    	This is a basic Card which contains an item that has wrapping text.
+		  		</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<h1> Paradas Cercanas</h1>
+			</div>
+
+		</div>
+
+		<div class="row">
+		    <div class="col">
+				<div class="list" ng-repeat="parada in paradas">
+
+		    		<a class="item item-thumbnail-left">
+		      			<img ng-src="{{parada.url}}">
+		      			<h2>{{parada.nomParada}}</h2>
+		      			<p>Nine Inch Nails</p>
+		    		</a>
+
+				</div>
+			</div>
+		</div>
 		
 	<ion-content>
 </ion-view> 
