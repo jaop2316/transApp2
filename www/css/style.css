@@ -9,6 +9,14 @@ h1 {
 	color:#ffbb33;
 }
 
+h2{
+	color:#ffbb33;
+}
+
+h3{
+	color:#ffbb33;
+}
+
 .list .item.item-accordion {
   line-height: 38px;
   padding-top: 0;
@@ -31,3 +39,8 @@ h1 {
 color:white;
 
 	}*/
+
+.button.button-energized{
+	background-color: #ffbb33;
+	color:#334455;
+	}

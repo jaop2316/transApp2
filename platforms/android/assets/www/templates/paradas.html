@@ -1,5 +1,67 @@
 <ion-view view-title="Paradas">
 	<ion-content class="padding">
+
+		<div class="row">
+			<div class="col col-75"> 
+				<h2>Mi ubicación</h2>	
+			</div>
+			<div class="col"> 
+				<button class="button button-energized icon ion-location" ng-click="getAddress()"></button>
+			</div>
+		</div>
+
+
+		<div class="row" ng-show="location">
+			<div class="col">
+				<div class="card">
+		  			<div class="item item-text-wrap">
+		    			{{address}}
+		  			</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<h3> Paradas Cercanas</h3>
+			</div>
+
+		</div>
+
+		<ion-slides  options="options" slider="data.slider">
+			<ion-slide-page>
+				<div class="row">
+		   			 <div class="col">
+						<div class="list" ng-repeat="parada in paradas">
+
+		    			<a class="item item-avatar">
+		      			<img ng-src="{{parada.url}}">
+		      			<h2>{{parada.nomParada}}</h2>
+		      			<p>Nine Inch Nails</p>
+		    			</a>
+
+						</div>
+					</div>
+				</div>
+			</ion-slide-page>
+				<ion-slide-page>
+					<div class="row">
+			   			 <div class="col">
+							<div class="list" ng-repeat="parada in paradas">
+
+			    			<a class="item item-avatar">
+			      			<img ng-src="{{parada.url}}">
+			      			<h2>{{parada.nomParada}}</h2>
+			      			<p>Nine Inch Nails</p>
+			    			</a>
+
+							</div>
+						</div>
+					</div>
+				</ion-slide-page>
+
+     </ion-slides>
 		
-	<ion-content>
+		
+	</ion-content>
 </ion-view> 

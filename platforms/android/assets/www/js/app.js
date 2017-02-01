@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-var app=angular.module('myApp', ['ionic'])
+var app=angular.module('myApp', ['ionic','ngCordova'])
 
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -46,6 +46,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
     views: {
       'tab-paradas': {
         templateUrl: 'templates/paradas.html',
+        controller:'paradasController'
         
       }
     }
