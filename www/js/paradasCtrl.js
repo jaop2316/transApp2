@@ -139,21 +139,21 @@ $scope.paradas=[
 },
 {
 	cod:'19',
-	nomParada:'Cutuglahua 1',
+	nomParada:'San José 1',
 	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
 	latitud:'-0.362392',
 	longitud:'-78.5552237'
 },
 {
 	cod:'20',
-	nomParada:'Cutuglahua 2',
+	nomParada:'San José 2',
 	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
 	latitud:'-0.3606163',
 	longitud:'-78.5612386'
 },
 {
 	cod:'21',
-	nomParada:'Cutuglahua 3',
+	nomParada:'San José 3',
 	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
 	latitud:'-0.3604947',
 	longitud:'-78.5617802'
@@ -161,18 +161,751 @@ $scope.paradas=[
 
 {
 	cod:'22',
-	nomParada:'Cutuglahua 4',
+	nomParada:' San José 4',
 	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
 	latitud:'-0.3604947',
 	longitud:'-78.5617802'
 },
 //Paradas de regreso.
 
+{
+	cod:'23',
+	nomParada:' Parada 1 San José',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.360556',
+	longitud:'-78.562222'
+},
 
+{
+	cod:'23',
+	nomParada:' Parada 1 San José',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.360556',
+	longitud:'-78.562222'
+},
 
+{
+	cod:'24',
+	nomParada:' Parada 2 San José',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3625',
+	longitud:'-78.555278'
+},
+    
+{
+	cod:'25',
+	nomParada:' Parada 3 San José',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.358611',
+	longitud:'-78.568333'
+},
+    
+{
+	cod:'26',
+	nomParada:' Av. Maldonado',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.358889',
+	longitud:'-78.567222'
+},
+    
+{
+	cod:'27',
+	nomParada:' Av. Maldonado 2',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.365833',
+	longitud:'-78.550833'
+},
 
+{
+	cod:'28',
+	nomParada:'Ecovía',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.340278',
+	longitud:'-78.549167'
+},
+    
+{
+	cod:'29',
+	nomParada:'La Barba',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.328056',
+	longitud:'-78.550278'
+},
+    
+{
+	cod:'30',
+	nomParada:'Camino al Conde',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.307778',
+	longitud:'-78.544167'
+},
+    
+{
+	cod:'31',
+	nomParada:'Puente Guajalo',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.284444',
+	longitud:'-78.536389'
+},
+  
+{
+	cod:'32',
+	nomParada:'Guajalo 2',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.280556',
+	longitud:'78.533333'
+},
 
+{
+	cod:'33',
+	nomParada:'San Bartolo',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.275',
+	longitud:'-78.53'
+},
+    
+{
+	cod:'34',
+	nomParada:'C.C El Recreo',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.252222',
+	longitud:'-78.521389'
+},
+    
+{
+	cod:'35',
+	nomParada:'Restaurante Forastero',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.245278',
+	longitud:'-78.519167'
+},
+    
+{
+	cod:'36',
+	nomParada:'Parada Rodrigo de Chavez',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'0.2437754',
+	longitud:'-78,5194404'
+},
+    
+{
+	cod:'37',
+	nomParada:'Cinco de Junio 1',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.239722',
+	longitud:'	-78.522778'
+},
+    
+{
+	cod:'38',
+	nomParada:'Cinco de Junio 2',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2371061',
+	longitud:'-785.221314'
+},    
+    
+{
+	cod:'39',
+	nomParada:'Cinco de Junio 2',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2367251',
+	longitud:'-785.217.565'
+},    
 
+{
+	cod:'40',
+	nomParada:'Cinco de Junio Antonio Tejada',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2314546	',
+	longitud:'-785.158.829'
+},    
+
+{
+	cod:'41',
+	nomParada:'Cinco de Junio Antonio Tejada',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2282791',
+	longitud:'-785.144.374'
+}, 
+    
+{
+	cod:'42',
+	nomParada:'Heroes del Cenepa',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2271362',
+	longitud:'-785.149672'
+}, 
+    
+{
+	cod:'43',
+	nomParada:'Escuela Alejandro Cardenas',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2256224',
+	longitud:'-785.157738'
+},     
+    
+{
+	cod:'44',
+	nomParada:'Rocafuerte',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.221944',
+	longitud:'-78.515833'
+}, 
+
+{
+	cod:'45',
+	nomParada:'Rocafuerte e Imbabura',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2207301',
+	longitud:'-785.172973'
+}, 
+    
+{
+	cod:'46',
+	nomParada:'Rocafuerte y Chimborazo',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.219961',
+	longitud:'-785.183356'
+}, 
+
+{
+	cod:'47',
+	nomParada:'Liga Barrial San Roque',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2180695',
+	longitud:'-78,521121'
+}, 
+        
+//SANTO DOMINGO- SAN ROQUE
+    
+{
+	cod:'48',
+	nomParada:'Santo Domingo',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.372778',
+	longitud:'78.564167'
+},
+    
+{
+	cod:'49',
+	nomParada:'Calle 16',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.373333',
+	longitud:'-78.563056'
+},
+
+{
+	cod:'50',
+	nomParada:'Calle A',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.370278',
+	longitud:'-78.561389'
+},
+    
+{
+	cod:'51',
+	nomParada:'Calle A',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.370278',
+	longitud:'-78.561389'
+},
+    
+    
+// U.Central- Monjas
+  
+{
+	cod:'52',
+	nomParada:'Seminario Mayor',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.197559',
+	longitud:'-785.006206'
+},
+        
+{
+	cod:'53',
+	nomParada:'Universidad Central',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.199858',
+	longitud:'-785.008683'
+},
+    
+{
+	cod:'54',
+	nomParada:'Universidad Central 2',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.200833',
+	longitud:'-78.501388'
+},
+  
+{
+	cod:'55',
+	nomParada:'Bolivia',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2052778',
+	longitud:'-78.500277'
+}, 
+
+{
+	cod:'56',
+	nomParada:'Ejido 1',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2080556',
+	longitud:'-784.975'
+}, 
+    
+{
+	cod:'57',
+	nomParada:'Ejido 2',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2077778',
+	longitud:'-78.497222'
+}, 
+    
+{
+	cod:'58',
+	nomParada:'Ejido 3',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2085633',
+	longitud:'-784.95900'
+}, 
+    
+{
+	cod:'59',
+	nomParada:'Casa de la Cultura',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2091667',
+	longitud:'-78.495277'
+}, 
+    
+{
+	cod:'60',
+	nomParada:'Parque "El Arblito"',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2118059',
+	longitud:'-784.961918'
+},
+    
+{
+	cod:'61',
+	nomParada:'Alameda',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2163889',
+	longitud:'-78.503888'
+},
+
+{
+	cod:'62',
+	nomParada:'Marin 1',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2286111',
+	longitud:'-78.507222'
+},
+    
+{
+	cod:'63',
+	nomParada:'Marin 2',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2183333',
+	longitud:'-78.505833'
+},
+    
+{
+	cod:'64',
+	nomParada:'Marin 3',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2246290',
+	longitud:'-78.507131'
+},
+    
+{
+	cod:'65',
+	nomParada:'Marin 4',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.228611',
+	longitud:'-7.850722'
+},
+
+{
+	cod:'66',
+	nomParada:'Trébol,
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2325',
+	longitud:'-78.504444'
+},   
+
+{
+	cod:'67',
+	nomParada:'General Rumiñahui,
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.227222',
+	longitud:'-78.490278'
+},  
+
+{
+	cod:'68',
+	nomParada:'General Rumiñahui 2,
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:' -0.2275',
+	longitud:'-78.487222'
+},    
+
+{
+	cod:'69',
+	nomParada:'Alfonso Mora Bowen',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:' -0.232222',
+	longitud:'-78.483056'
+},
+
+{
+	cod:'70',
+	nomParada:'E21B',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:' -0.2322222',
+	longitud:'-78.483055'
+},
+    
+//Marin- San Juan de Turubamba
+{
+	cod:'71',
+	nomParada:'Pichincha y Calixto',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:' -0.2245639',
+	longitud:'-785.070384'
+},
+
+{
+	cod:'72',
+	nomParada:'Marín Sur 2',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2183333',
+	longitud:'-78.505833'
+},
+    
+{
+	cod:'73',
+	nomParada:'Marín Sur 3',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2246290',
+	longitud:'-78.507131'
+},    
+   
+{
+	cod:'73',
+	nomParada:'Marín Sur 4',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.228611',
+	longitud:'-7.850722'
+}, 
+
+{
+	cod:'74',
+	nomParada:'Trébol Sur',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2325',
+	longitud:'-78.504444'
+}, 
+
+{
+	cod:'75',
+	nomParada:'Velasco Ibarra',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2359098',
+	longitud:'-785.093443'
+}, 
+
+{
+	cod:'76',
+	nomParada:'Napo y Guayllabamba',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2393001',
+	longitud:'-785.106639'
+}, 
+    
+{
+	cod:'77',
+	nomParada:'Napo S7J Sangay',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2404803',
+	longitud:'-785.119943'
+}, 
+    
+{
+	cod:'78',
+	nomParada:'Napo y Alpahuasi',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2432268',
+	longitud:'-785.140.328'
+},
+    
+{
+	cod:'79',
+	nomParada:'Calle Corazón',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.244722',
+	longitud:'-78.517.778'
+}, 
+    
+{
+	cod:'80',
+	nomParada:'San Juan de T. Entrada',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3449751',
+	longitud:'-785.484887'
+}, 
+    
+{
+	cod:'81',
+	nomParada:'S60 y E2',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3455263',
+	longitud:'-785.477827'
+},  
+    
+{
+	cod:'82',
+	nomParada:'S60 y E3',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3475516',
+	longitud:'-785.453091'
+},
+    
+{
+	cod:'83',
+	nomParada:'E6 y S60',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3492994',
+	longitud:'-785.404751'
+},  
+
+{
+	cod:'84',
+	nomParada:'E6 y S61',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3520259',
+	longitud:'-785.395563'
+}, 
+
+{
+	cod:'85',
+	nomParada:'E7A y S62',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.354493',
+	longitud:'-785.383539'
+},     
+  
+{
+	cod:'86',
+	nomParada:'S62E',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3548167',
+	longitud:'-785.292347'
+},
+    
+{
+	cod:'87',
+	nomParada:'E10',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3548167',
+	longitud:'-78.529234'
+}, 
+    
+//Marín - Garrochal
+    
+{
+	cod:'88',
+	nomParada:'S58',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3419681',
+	longitud:'-785.486964'
+},
+  
+{
+	cod:'89',
+	nomParada:'S58D',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.339444',
+	longitud:'-78.545556'
+},   
+
+{
+	cod:'90',
+	nomParada:'S58 Y EBA',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3380527',
+	longitud:'-785.324461'
+}, 
+
+{
+	cod:'91',
+	nomParada:'S57C y S57',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3345446',
+	longitud:'-785.353.803'
+}, 
+    
+//Adicional  
+    
+{
+	cod:'92',
+	nomParada:'Espe- Heroes del Cenepa',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2275',
+	longitud:'-78,514722'
+},     
+    
+{
+	cod:'93',
+	nomParada:'U.E Fernandez Salvador 1',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2438889',
+	longitud:'-78,519444'
+},    
+
+{
+	cod:'94',
+	nomParada:'Gasolineria 5 de Junio',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2369444',
+	longitud:'-78,521944'
+},        
+     
+{
+	cod:'95',
+	nomParada:'Iglesia Santa Clara',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2219444	',
+	longitud:'-78,515833'
+}, 
+
+{
+	cod:'96',
+	nomParada:'Parada Rocafuerte y Quiroga',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2191667',
+	longitud:'-78,519444'
+},
+ 
+//Universidad Central Guajaló
+{
+	cod:'97',
+	nomParada:'Carlos Andrade Marin',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2039455',
+	longitud:'-785.055113'
+},    
+
+{
+	cod:'98',
+	nomParada:'Parque Matovelle',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.212778',
+	longitud:'-785.075'
+},       
+  
+{
+	cod:'99',
+	nomParada:'Venezuela',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2161111',
+	longitud:'-78.509166'
+}, 
+    
+{
+	cod:'100',
+	nomParada:'Benalcazar',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2175248',
+	longitud:'-785.115919'
+}, 
+
+{
+	cod:'101',
+	nomParada:'Benalcazar Y Rocafuerte',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.2222225',
+	longitud:'-78.515757'
+},
+
+{
+	cod:'102',
+	nomParada:'Bahía',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.225278',
+	longitud:'-78.516111'
+}, 
+
+{
+	cod:'103',
+	nomParada:'Ambato',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.227778',
+	longitud:'-78.514722'
+},
+    
+{
+	cod:'104',
+	nomParada:'Letort',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3041667',
+	longitud:'-78.540833'
+},
+
+{
+	cod:'105',
+	nomParada:'Letort 2',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3047222',
+	longitud:'-78.538055'
+},
+    
+{
+	cod:'106',
+	nomParada:'S4DB',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3055556',
+	longitud:'-78.536388'
+},    
+    
+{
+	cod:'107',
+	nomParada:'E58',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3072222',
+	longitud:'-78.534444'
+},
+    
+{
+	cod:'108',
+	nomParada:'S42',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3080556',
+	longitud:'-78.534.444'
+},
+    
+{
+	cod:'109',
+	nomParada:'S4DB',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3055556',
+	longitud:'-78.536388'
+},
+    
+{
+	cod:'110',
+	nomParada:'ESG',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.31',
+	longitud:'-785.338888'
+},
+    
+{
+	cod:'111',
+	nomParada:'S418',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3088889',
+	longitud:'-78.532777'
+},    
 ];
 
 console.log($scope.paradas);
