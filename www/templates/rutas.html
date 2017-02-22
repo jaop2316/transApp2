@@ -10,7 +10,7 @@
 		</div>
 		<div class="col">
 			<ion-list>
-			<div ng-repeat="ruta in rutas |filter:busqueda">
+			<div ng-repeat="ruta in filteredRutas = (rutas |filter:busqueda)">
 
 			    <ion-item class="item-stable" ng-click="toggleGroup(ruta)">
 			     <i class="icon" ng-class="isGroupShown(ruta) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;{{ruta.nombreRuta}} 
@@ -27,5 +27,10 @@
 			</div>
 			</ion-list>
 		</div>
+		<div ng-show="!filteredRutas.length" class="col">
+		<h1 class="notFound">No existe una ruta disponible</h1>
+		</div>
+
+
 	<ion-content>
 </ion-view> 

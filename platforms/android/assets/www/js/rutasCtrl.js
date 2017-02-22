@@ -4,7 +4,8 @@ app.controller('rutasController',['$scope',function($scope){
    var ruta= [
        
        {
-        id:1,
+        id:"1",
+        nombreRuta:"Quitus Colonial - Universidad Central",   
         horarioLV: "Lunes-Viernes",
         flotaLV: 20,
         horaLV: "05:26-19:00",
@@ -22,15 +23,14 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:14",
         Observaciones: "Desde Quitus- colonial se despacha intercaladamente: 2 Unidades por el Capulí",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Quitus Colonial- Universidad Central",
-        sentido2:"Universidad Central-Quitus Colonial"}]    
+        items: [{sentido1:" Hacia Quitus Colonial",
+        sentido2:" Hacia Universidad Central"}]    
         
         },
             
          {
         id:2,
-        sentido1:"Jardín del Valle- Las Casas",
-        sentido2:"Las Casas- Jardín del Valle",
+        nombreRuta:"Jardín del Valle - Las Casas",     
         horarioLV: "Lunes-Viernes",
         flotaLV: 16,
         horaLV: "06:00-19:00",
@@ -48,15 +48,14 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:14",
         Observaciones: "Salen de Buenos Aires los suigientes turnos: 05:38,06:01 y 06:29. Los turnos despachados desde Alma Lojana a Las 11:00, 11:30, 12:00, 16:00, 16:30, 17:00, 17:30 retornan a Buenos Aires.",    
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Jardín del Valle- Las Casas",
-        sentido2:"Las Casas- Jardín del Valle"}]
+        items: [{sentido1:"Hacia Jardín del Valle",
+        sentido2:"Hacia Las Casas"}]
         },
         
         
         {
         id:3,
-        sentido1:"Ciudad Serrana-San José de Cutuglahua-San Roque",
-        sentido2:"San Roque-San José de Cutuglahua-Ciudad Serrana",
+        nombreRuta:"Ciudad Serrana-San José de Cutuglahua-San Roque",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:24-19:00",
@@ -74,14 +73,13 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:20",
         Observaciones: "Ruta que se alterna con la de Santo Domingo (Las unidades que venga de San José regresan a Santo Domingo).",    
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Ciudad Serrana-San José de Cutuglahua-San Roque",
-        sentido2:"San Roque-San José de Cutuglahua-Ciudad Serrana"}]
+        items: [{sentido1:"Hacia San José de Cutuglahua",
+        sentido2:"Hacia San Roque"}]
         },
         
         {
         id:4,
-        sentido1:"Santo Domingo de Cutuglahua-San Roque",
-        sentido2:"San Roque-Santo Domingo de Cutuglahua",
+        nombreRuta:"Santo Domingo de Cutuglahua-San Roque",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:30-19:07",
@@ -99,14 +97,13 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:20",
         Observaciones: "Ruta que se alterna con la de San José (Las unidades que venga de Santo Domingo regresan a San José ).",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Santo Domingo de Cutuglahua-San Roque",
-        sentido2:"San Roque-Santo Domingo de Cutuglahua"}] 
+        items: [{sentido1:" Hacia Santo Domingo de Cutuglahua",
+        sentido2:"Hacia San Roque"}] 
         },
         
         {
         id:5,
-        sentido1:"Parque MetroSur-San Juan de Turubamba-Marín",
-        sentido2:"Marín-San Juan de Turubamba-Parque MetroSur",
+        nombreRuta:"Parque MetroSur-San Juan de Turubamba-Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:44-19:00",
@@ -124,14 +121,13 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:20",
         Observaciones: " ",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Parque MetroSur-San Juan de Turubamba-Marín",
-        sentido2:"Marín-San Juan de Turubamba-Parque MetroSur"}] 
+        items: [{sentido1:"Hacia San Juan de Turubamba",
+        sentido2:"Hacia Marín desde San Juan de Turubamba"}] 
         },
        
        {
         id:6,
-        sentido1:"Ciudad Jardín-Caupicho-Marín",
-        sentido2:"Marín-Caupicho-Ciudad Jardín",
+        nombreRuta: "Caupicho-Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 10,
         horaLV: "04:44-19:00",
@@ -149,14 +145,13 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:18",
         Observaciones: " ",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Ciudad Jardín-Caupicho-Marín",
-        sentido2:"Marín-Caupicho-Ciudad Jardín"}] 
+        items: [{sentido1:"Hacia-Caupicho",
+        sentido2:"Hacia Marín desde Ciudad Jardín"}] 
         },
        
        {
         id:7,
-        sentido1:"Ciudad Jardín-Garrochal-Santo Tomás 1-Santo Tomás 2-Marín",
-        sentido2:"Marín-Santo Tomás 2 -Santo Tomás 1-Garrochal-Ciudad Jardín",
+        nombreRuta:"Ciudad Jardín-Garrochal-Santo Tomás 1-Santo Tomás 2-Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:29-19:06",
@@ -174,14 +169,13 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:18",
         Observaciones: "Ruta Que se alterna con la Terranova (Las unidades que vengan por el Garrochal regresa a Terranova).",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Ciudad Jardín-Garrochal-Santo Tomás 1-Santo Tomás 2-Marín",
-        sentido2:"Marín-Santo Tomás 2 -Santo Tomás 1-Garrochal-Ciudad Jardín"}] 
+        items: [{sentido1:" Hacia El Garrochal",
+        sentido2:" Hacia Marín desde El Garrochal"}] 
         },
        
        {
         id:8,
-        sentido1:"Ciudad Jardín-Terranova-Venecia-Marín",
-        sentido2:"Marín-Venecia-Terranova-Ciudad Jardín",
+        nombreRuta:"Ciudad Jardín-Terranova-Venecia-Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:24-19:00",
@@ -199,8 +193,8 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:18",
         Observaciones: "Ruta Que se alterna con la del Garrochal(Unidad que venga por Terranova regresa al Garrochal).",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Ciudad Jardín-Terranova-Venecia-Marín",
-        sentido2:"Marín-Venecia-Terranova-Ciudad Jardín"}] 
+        items: [{sentido1:"Hacia Terranova-Venecia",
+        sentido2:" Hacia Marín desde Venecia-Terranova"}] 
        }
        
        ];

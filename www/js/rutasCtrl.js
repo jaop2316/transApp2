@@ -98,7 +98,7 @@ app.controller('rutasController',['$scope',function($scope){
         Observaciones: "Ruta que se alterna con la de San José (Las unidades que venga de Santo Domingo regresan a San José ).",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
         items: [{sentido1:" Hacia Santo Domingo de Cutuglahua",
-        sentido2:"Hacia Santo Domingo de Cutuglahua"}] 
+        sentido2:"Hacia San Roque"}] 
         },
         
         {
