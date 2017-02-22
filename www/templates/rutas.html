@@ -13,7 +13,7 @@
 			<div ng-repeat="ruta in rutas">
 
 			    <ion-item class="item-stable" ng-click="toggleGroup(ruta)">
-			     <i class="icon" ng-class="isGroupShown(ruta) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;Ruta{{ruta.id}} 
+			     <i class="icon" ng-class="isGroupShown(ruta) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;{{ruta.nombreRuta}} 
 			    </ion-item>
 			    <ion-item class="item-accordion" ng-repeat="item in ruta.items"ng-show="isGroupShown(ruta)">
 			                {{item.sentido1}}
