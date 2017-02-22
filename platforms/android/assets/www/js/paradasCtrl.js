@@ -159,6 +159,16 @@ $scope.paradas=[
 	longitud:'-78.5617802'
 },
 
+{
+	cod:'22',
+	nomParada:'Cutuglahua 4',
+	url:'https://photos-1.dropbox.com/t/2/AAAxuWyk9HZYlF8Zsb13dQC_-Vi6e428eYWGyorydV0JTg/12/200894603/jpeg/32x32/1/_/1/2/2017-01-03-10-43-47-7389.jpg/EIzPh4gFGFAgBygH/fDy2C5ZLY-V8t9oeZrraYIyxdHqWUOpB4zp51ymUTdw?size=1280x960&size_mode=3',
+	latitud:'-0.3604947',
+	longitud:'-78.5617802'
+},
+//Paradas de regreso.
+
+
 
 
 

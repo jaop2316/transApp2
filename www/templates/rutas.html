@@ -4,13 +4,13 @@
 			<div class="list list-inset">
 		  		<label class="item item-input">
 		    	<i class="icon ion-search placeholder-icon"></i>
-		    	<input type="text" placeholder="Buscar">
+		    	<input type="text" placeholder="Buscar" ng-model="busqueda">
 		  		</label>
 			</div>
 		</div>
 		<div class="col">
 			<ion-list>
-			<div ng-repeat="ruta in rutas">
+			<div ng-repeat="ruta in rutas |filter:busqueda">
 
 			    <ion-item class="item-stable" ng-click="toggleGroup(ruta)">
 			     <i class="icon" ng-class="isGroupShown(ruta) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;Ruta{{ruta.id}} 
