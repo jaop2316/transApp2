@@ -1,0 +1,39 @@
+<ion-modal-view>
+	<ion-header-bar>
+	  <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal()">Rutas</button>
+      <h1 class="title">Detalle Ruta</h1>
+    </ion-header-bar>
+    <ion-content class="padding">
+       	<div class="row">
+       		<div class="col">
+    			<p class="headDetallesRutas"> {{currentItem.nombreRuta}}</p>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col">
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col">
+    			<h3>Horarios</h3>
+    		</div>
+    	</div>
+    	<div class="row header">
+    		<div class="col" id="headCol">Dias</div>
+    		<div class="col" id="headCol">Horario</div>
+    	</div>
+    	<div class="row">
+    		<div class="col" id="detail">Lunes - Viernes</div>
+    		<div class="col" id="detail">{{currentItem.horaLV}}</div>
+    	</div>
+    	<div class="row">
+    		<div class="col" id="detail">Sabado</div>
+    		<div class="col" id="detail">{{currentItem.horaS}}</div>
+    	</div>
+    	<div class="row">
+    		<div class="col" id="detail">Domingo y Feriados</div>
+    		<div class="col" id="detail">{{currentItem.horaDF}}</div>
+    	</div>
+    </ion-content>
+
+</ion-modal-view>

@@ -10,15 +10,15 @@
 		</div>
 		<div class="col">
 			<ion-list>
-			<div ng-repeat="ruta in filteredRutas = (rutas |filter:busqueda)">
+			<div ng-repeat="ruta in filteredRutas = (rutas |filter:busqueda)" ruta="ruta">
 
 			    <ion-item class="item-stable" ng-click="toggleGroup(ruta)">
 			     <i class="icon" ng-class="isGroupShown(ruta) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;{{ruta.nombreRuta}} 
 			    </ion-item>
-			    <ion-item class="item-accordion ion-arrow-right-c" ng-repeat="item in ruta.items"ng-show="isGroupShown(ruta)">
+			    <ion-item class="item-accordion ion-arrow-right-c" ng-repeat="item in ruta.items track by $index"ng-show="isGroupShown(ruta)" ng-click="getdetails(ruta)">
 			                {{item.sentido1}}
 			    </ion-item>
-			    <ion-item class="item-accordion ion-arrow-right-c" ng-repeat="item in ruta.items"ng-show="isGroupShown(ruta)">
+			    <ion-item class="item-accordion ion-arrow-right-c" ng-repeat="item in ruta.items"ng-show="isGroupShown(ruta)" ng-click="getdetails(ruta)">
 			                {{item.sentido2}}
 			    </ion-item>
 

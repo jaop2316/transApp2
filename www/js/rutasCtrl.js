@@ -1,6 +1,6 @@
-app.controller('rutasController',['$scope',function($scope){
+app.controller('rutasController',['$scope','$ionicModal',function($scope,$ionicModal){
   console.log('Controlador de rutas');
-    
+    $scope.currentItem = 1;
    var ruta= [
        
        {
@@ -215,5 +215,27 @@ app.controller('rutasController',['$scope',function($scope){
     return $scope.shownGroup === group;
   };
    
+  //Detalles de rutas 
+
+  $scope.getdetails = function(item){   
+    $scope.currentItem = item;
+    console.log($scope.currentItem);
+    $scope.modal.show();
+  };
+
+   $ionicModal.fromTemplateUrl('templates/detallesRutas.html', {
+                  scope: $scope,
+                  animation: 'slide-in-up'
+                }).then(function(modal) {
+                  $scope.modal = modal;
+                })
+
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+
+   $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
     
 }]);
