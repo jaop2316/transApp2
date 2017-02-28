@@ -4,7 +4,7 @@ console.log("paradas Controller");
 $scope.location=false;
 $scope.latitud=0;
 $scope.longitud=0;
-
+$scope.paradasCercanas=[];
 $scope.paradas=[
 
 {
@@ -930,7 +930,6 @@ var posOptions = {timeout: 10000, enableHighAccuracy: false};
 };
 
 $scope.getAddress=function(){
-$scope.obtenerPosicion();
 $scope.distanciaParadas();
 var geocoder = new google.maps.Geocoder();
       var latlng = new google.maps.LatLng($scope.latitud, $scope.longitud);
@@ -942,8 +941,8 @@ var geocoder = new google.maps.Geocoder();
           if (data[0] != null) {
             var humanDirection=data[0].formatted_address;
             $scope.address=humanDirection;
-            $scope.location=true;
             console.log($scope.address);
+            $scope.location=true;
           } else {
           	humanDirection="No address available";
           }
@@ -972,6 +971,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
 
 
    $scope.distanciaParadas=function(){
+   	var contadorCercanas=0;
     for(var i=0;i<$scope.paradas.length;i++){
     	var latitudUsuario=$scope.latitud;
         var longitudUsuario=$scope.longitud;
@@ -981,7 +981,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
          console.log(longitudUsuario);
           console.log(latitudParada);
            console.log(longitudParada);
-
+       
        var distancia=$scope.calcularDistancia(latitudUsuario,latitudParada,
         	longitudUsuario,longitudParada);
        			if(distancia < 1)
@@ -989,6 +989,12 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
        				$scope.paradas[i].distancia=distancia*1000;
        				$scope.paradas[i].kilometros=false;
        				$scope.paradas[i].metros=true;
+       				if($scope.paradas[i].distancia<=600)
+       				{
+       				$scope.paradasCercanas[contadorCercanas]=$scope.paradas[i];
+       				contadorCercanas ++;
+       				}
+       				
        			}
        			else{
        				$scope.paradas[i].distancia=distancia;
@@ -999,6 +1005,13 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
 
 
     	}
+    	console.log($scope.paradasCercanas);
  	}
+
+ 	var init = function () {
+ 		$scope.obtenerPosicion();
+     }
+
+     init();
 
 	}]);
