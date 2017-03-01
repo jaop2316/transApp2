@@ -1,7 +1,8 @@
-app.controller('paradasController',['$scope','$cordovaGeolocation',function($scope,$cordovaGeolocation){
+app.controller('paradasController',['$scope','$cordovaGeolocation','ServiceParadas',function($scope,
+	$cordovaGeolocation,ServiceParadas){
 console.log("paradas Controller");
 
-$scope.location=false;
+//$scope.location=false;
 $scope.latitud=0;
 $scope.longitud=0;
 $scope.paradasCercanas=[];
@@ -12,7 +13,9 @@ $scope.paradas=[
 	nomParada:'Liga Barrial San Roque ',
 	url:"http://images.teinteresa.es/comunidad-de-madrid/madrid/Ayuntamiento-nombres-paradas-autobuses-Madrid_TINIMA20120107_0067_5.jpg",
 	latitud:-0.2180695,
-	longitud:-78.521121
+	longitud:-78.521121,
+	rutas: [{ruta1:3,
+    ruta2:4}] 
 },
 
 {
@@ -20,7 +23,9 @@ $scope.paradas=[
 	nomParada:'Mercado de San Roque ',
 	url:'http://images.teinteresa.es/comunidad-de-madrid/madrid/Ayuntamiento-nombres-paradas-autobuses-Madrid_TINIMA20120107_0067_5.jpg',
 	latitud:-0.2210294,
-	longitud:-78.520708
+	longitud:-78.520708,
+	rutas: [{ruta1:3,
+    ruta2:4}] 
 },
 
 {
@@ -992,6 +997,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
        				if($scope.paradas[i].distancia<=600)
        				{
        				$scope.paradasCercanas[contadorCercanas]=$scope.paradas[i];
+       				ServiceParadas.data=$scope.paradasCercanas;
        				contadorCercanas ++;
        				}
        				
