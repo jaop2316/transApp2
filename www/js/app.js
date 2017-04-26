@@ -76,6 +76,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
     views: {
       'tab-mapa': {
         templateUrl: 'templates/mapa.html',
+        controller:'mapController'
         
       }
     }
