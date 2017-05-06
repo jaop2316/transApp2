@@ -25,7 +25,9 @@ app.controller('mapController',function($scope){
     });
  }*/
 
- map = L.map('map').setView([-0.24540368195453613,-78.51656848144529], 11);
+ map = L.map('map', {
+    dragging:true
+}).setView([-0.24540368195453613,-78.51656848144529], 11);
 
 	 
 	     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamExOTc5IiwiYSI6ImNpazcyZHFtcjAxOGJ2ZGt0NGNhamQ1cXQifQ.Kkz4bJY_fOE6PM9YaWzJIg',
@@ -34,7 +36,7 @@ app.controller('mapController',function($scope){
 	            id: 'mapbox.streets'
 	        }).addTo(map);
 
-	     var circle = L.circle([-0.24540368195453613,-78.51656848144529], {
+	     var circle = L.circle([-0.24540368195453613,-78.51656848144529],500,{
 	         color: 'red',
 	         fillColor: '#f03',
 	         fillOpacity: 0.5,
