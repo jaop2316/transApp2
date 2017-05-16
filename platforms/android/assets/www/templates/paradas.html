@@ -32,12 +32,12 @@
 			<!-- <ion-slide-page> -->
 				<div class="row">
 		   			 <div class="col">
-						<div class="list" ng-repeat="parada in paradas">
-
+						<!-- <div class="list" ng-repeat="parada in paradas"> -->
+						<div class="list" ng-repeat="parada in paradasCercanas | orderBy:'distancia'">	
 		    			<a class="item item-avatar">
 		      			<img ng-src="{{parada.url}}">
 		      			<h2>{{parada.nomParada}}</h2>
-		      			<p>Distancia :</p>
+		      			<p>Distancia :{{parada.distancia}}&nbsp;<span ng-show="parada.metros">metros</span>&nbsp;<span ng-show="parada.kilometros">kilometros</span></p>
 		    			</a>
 
 						</div>

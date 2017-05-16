@@ -1,0 +1,40 @@
+<ion-modal-view>
+	<ion-header-bar>
+	  <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal()">Paradas</button>
+      <h1 class="title">Detalle Paradas</h1>
+    </ion-header-bar>
+        <ion-content class="padding">
+            <div class="row">
+       		   <div class="col">
+    			<p class="headDetallesRutas"> {{currentItem.nomParada}}</p>
+    		   </div>
+    	    </div>
+            <div class="list card">
+                <div class="distancia">
+                         <label class="item item-input"> <i class="ion-information-circled">  Distancia </i></label>
+                    </div>
+                <div class="item item-image">
+                    <img ng-src={{currentItem.url}}>
+                </div>
+                <div class="item item-divider">
+                  <i class="ion-ios-navigate"></i>  
+                     ¿Cómo llegar?
+                </div>
+                  <div class="item item-text-wrap">
+                    This is a basic Card with some text.
+                  </div>
+                  <div class="item item-divider">
+                      <i class="ion-android-bus"></i>
+                       Rutas Disponibles
+                  </div>
+                    <div class="item item-text-wrap">
+                    This is a basic Card with some text.
+                  </div>
+                </div>
+            
+        
+            
+    
+    </ion-content>
+
+</ion-modal-view>

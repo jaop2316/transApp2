@@ -66,6 +66,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       views: {
         'tab-lugares': {
           templateUrl: 'templates/lugares.html',
+            controller:'sitiosController'
           
         }
       }

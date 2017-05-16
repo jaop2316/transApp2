@@ -1,6 +1,9 @@
-app.controller('rutasController',['$scope',function($scope){
+app.controller('rutasController',['$scope','$ionicModal','ServiceParadas',function($scope,
+    $ionicModal,ServiceParadas){
   console.log('Controlador de rutas');
-    
+    $scope.currentItem = 1;
+    $scope.paradasCercanas=ServiceParadas.data;
+    console.log($scope.paradasCercanas);
    var ruta= [
        
        {
@@ -55,7 +58,7 @@ app.controller('rutasController',['$scope',function($scope){
         
         {
         id:3,
-        nombreRuta:"Ciudad Serrana-San José de Cutuglahua-San Roque",
+        nombreRuta:"San José de Cutuglahua-San Roque",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:24-19:00",
@@ -103,7 +106,7 @@ app.controller('rutasController',['$scope',function($scope){
         
         {
         id:5,
-        nombreRuta:"Parque MetroSur-San Juan de Turubamba-Marín",
+        nombreRuta:"San Juan de Turubamba-Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:44-19:00",
@@ -151,7 +154,7 @@ app.controller('rutasController',['$scope',function($scope){
        
        {
         id:7,
-        nombreRuta:"Ciudad Jardín-Garrochal-Santo Tomás 1-Santo Tomás 2-Marín",
+        nombreRuta:"Garrochal-Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:29-19:06",
@@ -175,7 +178,7 @@ app.controller('rutasController',['$scope',function($scope){
        
        {
         id:8,
-        nombreRuta:"Ciudad Jardín-Terranova-Venecia-Marín",
+        nombreRuta:"Venecia-Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:24-19:00",
@@ -215,5 +218,37 @@ app.controller('rutasController',['$scope',function($scope){
     return $scope.shownGroup === group;
   };
    
+  //Detalles de rutas 
+
+  $scope.getdetails = function(item,num,paradasCercanas){   
+    $scope.currentItem = item;
+    $scope.currentParadas=paradasCercanas;
+    console.log($scope.currentItem);
+    //console.log($scope.currentParadas.rutas);
+    var numero=num;
+    if(numero==1){
+        $scope.sentido1=true;
+        $scope.sentido2=false;
+    }else{
+        $scope.sentido2=true;
+        $scope.sentido1=false;
+    }
+    $scope.modal.show();
+  };
+
+   $ionicModal.fromTemplateUrl('templates/detallesRutas.html', {
+                  scope: $scope,
+                  animation: 'slide-in-up'
+                }).then(function(modal) {
+                  $scope.modal = modal;
+                })
+
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+
+   $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
     
 }]);

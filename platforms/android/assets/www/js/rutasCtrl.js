@@ -1,6 +1,9 @@
-app.controller('rutasController',['$scope',function($scope){
+app.controller('rutasController',['$scope','$ionicModal','ServiceParadas',function($scope,
+    $ionicModal,ServiceParadas){
   console.log('Controlador de rutas');
-    
+    $scope.currentItem = 1;
+    $scope.paradasCercanas=ServiceParadas.data;
+    console.log($scope.paradasCercanas);
    var ruta= [
        
        {
@@ -23,8 +26,8 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:14",
         Observaciones: "Desde Quitus- colonial se despacha intercaladamente: 2 Unidades por el Capulí",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:" Hacia Quitus Colonial",
-        sentido2:" Hacia Universidad Central"}]    
+        items: [{sentido1:" Quitus Colonial",
+        sentido2:" Universidad Central"}]    
         
         },
             
@@ -48,8 +51,8 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:14",
         Observaciones: "Salen de Buenos Aires los suigientes turnos: 05:38,06:01 y 06:29. Los turnos despachados desde Alma Lojana a Las 11:00, 11:30, 12:00, 16:00, 16:30, 17:00, 17:30 retornan a Buenos Aires.",    
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Hacia Jardín del Valle",
-        sentido2:"Hacia Las Casas"}]
+        items: [{sentido1:"Jardín del Valle - Monjas",
+        sentido2:"Las Casas"}]
         },
         
         
@@ -73,8 +76,8 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:20",
         Observaciones: "Ruta que se alterna con la de Santo Domingo (Las unidades que venga de San José regresan a Santo Domingo).",    
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Hacia San José de Cutuglahua",
-        sentido2:"Hacia San Roque"}]
+        items: [{sentido1:"San José de Cutuglahua",
+        sentido2:"San Roque"}]
         },
         
         {
@@ -97,8 +100,8 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:20",
         Observaciones: "Ruta que se alterna con la de San José (Las unidades que venga de Santo Domingo regresan a San José ).",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:" Hacia Santo Domingo de Cutuglahua",
-        sentido2:"Hacia San Roque"}] 
+        items: [{sentido1:"Santo Domingo de Cutuglahua",
+        sentido2:"San Roque"}] 
         },
         
         {
@@ -121,8 +124,8 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:20",
         Observaciones: " ",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Hacia San Juan de Turubamba",
-        sentido2:"Hacia Marín desde San Juan de Turubamba"}] 
+        items: [{sentido1:"San Juan de Turubamba",
+        sentido2:"Marín desde San Juan de Turubamba"}] 
         },
        
        {
@@ -145,8 +148,8 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:18",
         Observaciones: " ",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Hacia-Caupicho",
-        sentido2:"Hacia Marín desde Ciudad Jardín"}] 
+        items: [{sentido1:"Caupicho",
+        sentido2:"Marín desde Caupicho"}] 
         },
        
        {
@@ -169,8 +172,8 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:18",
         Observaciones: "Ruta Que se alterna con la Terranova (Las unidades que vengan por el Garrochal regresa a Terranova).",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:" Hacia El Garrochal",
-        sentido2:" Hacia Marín desde El Garrochal"}] 
+        items: [{sentido1:"El Garrochal",
+        sentido2:"Marín desde El Garrochal"}] 
         },
        
        {
@@ -193,8 +196,8 @@ app.controller('rutasController',['$scope',function($scope){
         interDFN:"0:18",
         Observaciones: "Ruta Que se alterna con la del Garrochal(Unidad que venga por Terranova regresa al Garrochal).",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
-        items: [{sentido1:"Hacia Terranova-Venecia",
-        sentido2:" Hacia Marín desde Venecia-Terranova"}] 
+        items: [{sentido1:"Terranova-Venecia",
+        sentido2:"Marín desde Venecia-Terranova"}] 
        }
        
        ];
@@ -215,5 +218,37 @@ app.controller('rutasController',['$scope',function($scope){
     return $scope.shownGroup === group;
   };
    
+  //Detalles de rutas 
+
+  $scope.getdetails = function(item,num,paradasCercanas){   
+    $scope.currentItem = item;
+    $scope.currentParadas=paradasCercanas;
+    console.log($scope.currentItem);
+    //console.log($scope.currentParadas.rutas);
+    var numero=num;
+    if(numero==1){
+        $scope.sentido1=true;
+        $scope.sentido2=false;
+    }else{
+        $scope.sentido2=true;
+        $scope.sentido1=false;
+    }
+    $scope.modal.show();
+  };
+
+   $ionicModal.fromTemplateUrl('templates/detallesRutas.html', {
+                  scope: $scope,
+                  animation: 'slide-in-up'
+                }).then(function(modal) {
+                  $scope.modal = modal;
+                })
+
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+
+   $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
     
 }]);
