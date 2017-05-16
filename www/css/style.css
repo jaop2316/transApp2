@@ -118,7 +118,7 @@ color:white;
 }
 
 
-.map-container {
+/*.map-container {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
@@ -131,7 +131,7 @@ color:white;
     width: 100%;
     height: 100%;
 }
-
+*/
 .ion-arrow-right-c #before{
     color: #33FF33;
 }
@@ -168,6 +168,7 @@ color:white;
     color: #00C957;
 }
 
+<<<<<<< HEAD
 .ion-medkit:before {
     color: #FF0000;
 }
@@ -188,3 +189,35 @@ color:white;
 
 
 
+=======
+
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+    height: 100%;
+}
+
+.ion-arrow-right-c #before{
+    color: #33FF33;
+}
+
+.ion-ios-navigate:before{
+   font-size: 30px;
+   color: #ffbb33;
+     
+}
+
+.item-divider {
+    color: #ffbb33;
+    font-weight: 500;
+    font-size:20px;
+}
+
+.ion-android-bus:before{
+   font-size: 30px;
+}
+>>>>>>> 9f0fec88a13f20f97f756029d291e0bc371e94bd

@@ -6,6 +6,7 @@ console.log("paradas Controller");
 $scope.latitud=0;
 $scope.longitud=0;
 $scope.paradasCercanas=[];
+$scope.directions=[];
 $scope.paradas=[
 
 {
@@ -1273,7 +1274,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
     var d = R * c
-    return d.toFixed(3);
+    return d.toFixed(2);
 
     }
 
@@ -1302,7 +1303,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
        				if($scope.paradas[i].distancia<=600)
        				{
        				$scope.paradasCercanas[contadorCercanas]=$scope.paradas[i];
-       				ServiceParadas.data=$scope.paradasCercanas;
+       				//ServiceParadas.data=$scope.paradasCercanas;
        				contadorCercanas ++;
        				}
        				
@@ -1321,6 +1322,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
 
  	var init = function () {
  		$scope.obtenerPosicion();
+ 		//$scope.calcRoute();
      }
 
      init();
@@ -1346,5 +1348,79 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
         $scope.closeModal = function() {
             $scope.modal.hide();
         };
+
+     $scope.getdetails=function(parada){
+     	 var latUsuario,longUsuario,latParada,longParada;
+         $scope.currentItem = parada;
+
+         console.log($scope.currentItem);
+         $scope.latDetalleParada=$scope.currentItem.latitud;
+     	 //console.log($scope.latitud);
+         $scope.modal.show();
+         latUsuario=$scope.latitud;
+         longUsuario=$scope.longitud;
+         latParada=$scope.currentItem.latitud;
+         longParada=$scope.currentItem.longitud;
+        //console.log(latParada);
+         $scope.calcRoute(latUsuario,longUsuario,latParada,longParada);
+     };
+     
+      $ionicModal.fromTemplateUrl('templates/detalleParadas.html', {
+                   scope: $scope,
+                   animation: 'slide-in-up'
+                 }).then(function(modal) {
+                   $scope.modal = modal;
+                 })
+
+         $scope.openModal = function() {
+         $scope.modal.show();
+         };
+
+         $scope.closeModal = function() {
+             $scope.modal.hide();
+         };
+
+        var directionsDisplay;
+		var directionsService = new google.maps.DirectionsService();
+
+	$scope.calcRoute =function(latUsuario,lonUsuario,latParada,lonParada) {
+			var start=String(latUsuario)+","+String(lonUsuario);
+			var end=String(latParada)+","+String(lonParada);
+			//console.log(start);
+			//console.log(end);
+			var routes=[];
+  			var request = {
+    		origin: start,
+    		destination: end,
+    		travelMode: 'WALKING'
+  			};
+  		directionsService.route(request, function(result, status) {
+  			console.log(status);
+    		if (status == 'OK') {
+      		routes=result;
+      		var regex = /(<([^>]+)>)/ig;
+      		//$scope.directions=routes.routes[0].legs[0].steps;
+      		/*
+      		var string=String(routes.routes[0].legs[0].steps[0].instructions);
+      		var withoutHtml=string.replace(regex, "");
+      		console.log(withoutHtml);*/
+      			for (var i=0; i<routes.routes[0].legs[0].steps.length;i++){
+      				//console.log(routes.routes[0].legs[0].steps[i].instructions);
+      				var string=String(routes.routes[0].legs[0].steps[i].instructions);
+      				var withoutHtml=string.replace(regex, "");
+      				$scope.directions[i]=withoutHtml;
+      				console.log(withoutHtml);
+      				//$scope.directions=routes.routes[0].legs[0].steps[i].instructions;
+
+      			}
+      			console.log($scope.directions);
+    		}
+    		else{
+    			console.log('error');
+    		}
+  		})
+ 	};
+
+ 	//$scope.calcRoute();
 
 	}]);

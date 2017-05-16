@@ -13,10 +13,9 @@
     	
     	<div class="row">
     		<div class="col">
-    			<div class="map-container">
-    				<iframe src="https://www.google.com/maps/d/embed?mid=1Q6ALPri9cPloqkTg_gHPZ3-9NYU"
-    				frameborder="0"></iframe>
-    			</div>
+    			<!-- <div class="card">
+    			  <div id="map"></div>
+    			</div> -->
     		</div>
     	</div>
     	<div class="row">
@@ -66,23 +65,6 @@
     		<div class="col" id="detail">{{currentItem.interDFN}}</div>
     	</div>
 
-    	
-    	<div class="row">
-    		<div class="col">
-    			<h3>Paradas Cercanas de la Ruta </h3>
-    		</div>
-    	</div>
-    	<div class="row">
-		   	<div class="col">
-				<div class="list" ng-repeat="parada in currentParadas">	
-				<a class="item item-avatar">
-		      		<img ng-src="{{parada.url}}">
-		      		<h2>{{parada.nomParada}}</h2>
-		      		<p>Distancia :{{parada.distancia}}&nbsp;<span ng-show="parada.metros">metros</span>&nbsp;<span ng-show="parada.kilometros">kilometros</span></p>
-		    	  </a>
-				</div>
-			</div>
-		</div>
 
     	<div class="row">
     		<div class="col">

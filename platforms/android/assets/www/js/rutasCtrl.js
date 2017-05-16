@@ -1,8 +1,7 @@
-app.controller('rutasController',['$scope','$ionicModal','ServiceParadas',function($scope,
-    $ionicModal,ServiceParadas){
+app.controller('rutasController',['$scope','$ionicModal',function($scope,
+    $ionicModal){
   console.log('Controlador de rutas');
     $scope.currentItem = 1;
-    $scope.paradasCercanas=ServiceParadas.data;
     console.log($scope.paradasCercanas);
    var ruta= [
        
@@ -220,9 +219,8 @@ app.controller('rutasController',['$scope','$ionicModal','ServiceParadas',functi
    
   //Detalles de rutas 
 
-  $scope.getdetails = function(item,num,paradasCercanas){   
+  $scope.getdetails = function(item,num){   
     $scope.currentItem = item;
-    $scope.currentParadas=paradasCercanas;
     console.log($scope.currentItem);
     //console.log($scope.currentParadas.rutas);
     var numero=num;
@@ -250,5 +248,9 @@ app.controller('rutasController',['$scope','$ionicModal','ServiceParadas',functi
    $scope.closeModal = function() {
     $scope.modal.hide();
   };
+
+  // mapa 
+    
+
     
 }]);

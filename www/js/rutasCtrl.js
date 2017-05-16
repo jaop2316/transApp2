@@ -1,8 +1,7 @@
-app.controller('rutasController',['$scope','$ionicModal','ServiceParadas',function($scope,
-    $ionicModal,ServiceParadas){
+app.controller('rutasController',['$scope','$ionicModal',function($scope,
+    $ionicModal){
   console.log('Controlador de rutas');
     $scope.currentItem = 1;
-    $scope.paradasCercanas=ServiceParadas.data;
     console.log($scope.paradasCercanas);
    var ruta= [
        
@@ -122,7 +121,7 @@ app.controller('rutasController',['$scope','$ionicModal','ServiceParadas',functi
         horaDF:"06:00-18:00",
         interDFP:"0:00",
         interDFN:"0:20",
-        Observaciones: " ",
+        Observaciones: "No existe informacion adicional",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
         items: [{sentido1:"San Juan de Turubamba",
         sentido2:"Marín desde San Juan de Turubamba"}] 
@@ -146,7 +145,7 @@ app.controller('rutasController',['$scope','$ionicModal','ServiceParadas',functi
         horaDF:"05:00-18:00",
         interDFP:"0:00",
         interDFN:"0:18",
-        Observaciones: " ",
+        Observaciones: "No existe informacion adicional",
         url:"http://www.expedicion114.com/wp-content/themes/theexplorer/img/ruta.png",
         items: [{sentido1:"Caupicho",
         sentido2:"Marín desde Caupicho"}] 
@@ -220,9 +219,8 @@ app.controller('rutasController',['$scope','$ionicModal','ServiceParadas',functi
    
   //Detalles de rutas 
 
-  $scope.getdetails = function(item,num,paradasCercanas){   
+  $scope.getdetails = function(item,num){   
     $scope.currentItem = item;
-    $scope.currentParadas=paradasCercanas;
     console.log($scope.currentItem);
     //console.log($scope.currentParadas.rutas);
     var numero=num;
@@ -250,5 +248,9 @@ app.controller('rutasController',['$scope','$ionicModal','ServiceParadas',functi
    $scope.closeModal = function() {
     $scope.modal.hide();
   };
+
+  // mapa 
+    
+
     
 }]);

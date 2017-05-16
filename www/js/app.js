@@ -72,16 +72,21 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       }
     })
 
+    
+
   .state('tab.mapa', {
     url: '/mapa',
     views: {
       'tab-mapa': {
         templateUrl: 'templates/mapa.html',
+        controller:'mapController'
         
       }
     }
   });
 
+
+  
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/paradas');
 
