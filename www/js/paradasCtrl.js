@@ -3,6 +3,7 @@ app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal'
 console.log("paradas Controller");
 
 //$scope.location=false;
+$scope.acordion=false;
 $scope.latitud=0;
 $scope.longitud=0;
 $scope.paradasCercanas=[];
@@ -1219,6 +1220,26 @@ $scope.paradas=[
 ];
 
 console.log($scope.paradas);
+
+$scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+
+ $scope.toggleGroup2 = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  };
 
 $scope.obtenerPosicion = function(){
 var posOptions = {timeout: 10000, enableHighAccuracy: false};

@@ -31,6 +31,22 @@ h3{
   display: block !important;
 }
 
+.item-accordion2 {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+
+.item-accordion2.ng-hide {
+  line-height: 0px;
+}
+
+.item-accordion2.ng-hide-add
+.item.item-accordion2.ng-hide-remove {
+  display: block !important;
+}
+
 .overflow-scroll{
 	overflow-y:auto;
 }
@@ -159,4 +175,13 @@ color: #33FF33;
 
 .ion-android-bus:before{
    font-size: 30px;
+}
+
+.ion-chevron-up:before {
+  padding-left: 80px;
+}
+
+
+.ion-chevron-down:before {
+  padding-left: 80px;
 }
