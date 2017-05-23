@@ -66,10 +66,12 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       views: {
         'tab-lugares': {
           templateUrl: 'templates/lugares.html',
-          
+          controller:'sitiosController'
         }
       }
     })
+
+    
 
   .state('tab.mapa', {
     url: '/mapa',
@@ -82,6 +84,8 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
     }
   });
 
+
+  
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/paradas');
 

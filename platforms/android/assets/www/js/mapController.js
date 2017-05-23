@@ -1,6 +1,6 @@
-app.controller('mapController',function($scope){
+app.controller('mapController',function($scope,$ionicPopup,$ionicSideMenuDelegate){
 
-/*	var src = 'https://www.dropbox.com/s/0qn1veaz4o5akcz/Rutas-Transplaneta.kml?dl=1';
+	var src = 'https://www.dropbox.com/s/0qn1veaz4o5akcz/Rutas-Transplaneta.kml?dl=1';
 
     //var latLng = new google.maps.LatLng(-0.24540368195453613,-78.51656848144529);
  
@@ -23,9 +23,29 @@ app.controller('mapController',function($scope){
       preserveViewport: false,
       map:map
     });
- }*/
+    google.maps.event.addListener(kmlLayer, 'click', function(event) {
+      var content = event.featureData.infoWindowHtml;
+      //var testimonial = document.getElementById('capture');
+      //testimonial.innerHTML = content;
+      console.log(content);
+       var alertPopup = $ionicPopup.alert({
+       title: 'Informacion',
+       template: content
+     });
+    });
+ }
 
- map = L.map('map').setView([-0.24540368195453613,-78.51656848144529], 11);
+ $scope.toggleLeft = function() {
+    $ionicSideMenuDelegate.toggleLeft();
+    console.log("toggleLeft");
+  };
+
+
+    
+
+ /*map = L.map('map', {
+    dragging:true
+}).setView([-0.24540368195453613,-78.51656848144529], 11);
 
 	 
 	     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamExOTc5IiwiYSI6ImNpazcyZHFtcjAxOGJ2ZGt0NGNhamQ1cXQifQ.Kkz4bJY_fOE6PM9YaWzJIg',
@@ -34,7 +54,7 @@ app.controller('mapController',function($scope){
 	            id: 'mapbox.streets'
 	        }).addTo(map);
 
-	     var circle = L.circle([-0.24540368195453613,-78.51656848144529], {
+	     var circle = L.circle([-0.24540368195453613,-78.51656848144529],500,{
 	         color: 'red',
 	         fillColor: '#f03',
 	         fillOpacity: 0.5,
@@ -42,14 +62,11 @@ app.controller('mapController',function($scope){
 	     }).addTo(map);
 
 
-	     /*var kmlLayer = new L.KML("lib/Rutas-Transplaneta.kml", {async: true});
-
+	     var kmlLayer = new L.KML("lib/Rutas-Transplaneta.kml", {async: true});
+        console.log(kmlLayer);
 	    kmlLayer.on("loaded", function(e) { 
             map.fitBounds(e.target.getBounds());
-         });
-
-
-                                                
+         });                                        
          map.addLayer(kmlLayer);*/
 
  

@@ -15,16 +15,16 @@
                       </div>  
             <div class="row">
               <div class="col">
-                <div class="item item-divider">
+                <div class="item item-divider" ng-click="toggleGroup(currentItem)" id="item-directions">
                 <i class="ion-ios-navigate"></i>  
                  ¿Cómo llegar?
-                 
+                 <i class="icon" ng-class="isGroupShown(currentItem) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
                 </div>
               </div>
             </div>
-            <div class="row">
+            <div class="row" ng-show="isGroupShown(currentItem)">
               <div class="col">
-                <div class="item item-text-wrap">
+                <div class="item item-text-wrap item-accordion">
                   <p ng-repeat="direction in directions track by $index">
                  {{direction}}<br>
                   </p>
@@ -33,17 +33,19 @@
             </div>
                 <div class="row">
                   <div class="col">
-                    <div class="item item-divider">
+                    <div class="item item-divider" ng-click="toggleGroup2(currentItem.rutas)">
                       <i class="ion-android-bus"></i>
                        Rutas Disponibles
+                       <i class="icon" ng-class="isGroupShown(currentItem.rutas) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
                     </div>
                   </div>
                 </div>
-                  <div class="row">
+                  <div class="row" ng-show="isGroupShown(currentItem.rutas)">
                     <div class="col">
-                      <div class="item item-text-wrap">
-                         <p>
-                        {{currentItem.rutas}}
+                      <div class="item item-text-wrap item-accordion2" ng-repeat="ruta in currentItem.rutas">
+            
+                         <p ng-repeat="item in ruta">
+                        {{item}}
                         </p>
                       </div>
                     </div>

@@ -1219,7 +1219,7 @@ $scope.paradas=[
 },    
 ];
 
-console.log($scope.paradas);
+console.log($scope.paradas.length);
 
 $scope.toggleGroup = function(group) {
     if ($scope.isGroupShown(group)) {

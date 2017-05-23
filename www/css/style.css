@@ -128,20 +128,6 @@ color:white;
 }
 
 
-/*.map-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
-}
-
-.map-container iframe, .map-container object, .map-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-*/
 .ion-arrow-right-c #before{
 color: #33FF33;
 }
@@ -157,7 +143,7 @@ color: #33FF33;
     height: 100%;
 }
 
-.ion-arrow-right-c #before{
+.ion-arrow-right-c:before{
     color: #33FF33;
 }
 
@@ -177,11 +163,33 @@ color: #33FF33;
    font-size: 30px;
 }
 
+.ion-arrow-left-c:before {
+     color: #00FF00;
+ }
+ 
+ .ion-university:before {
+     color: #0000EE;
+ }
+ 
+ .ion-cash:before {
+     color: #00C957;
+ }
+ 
+ .ion-medkit:before {
+     color: #FF0000;
+ }
+ 
+ .ion-person-stalker:before {
+     color: #BA55D3;
+ }
+
 .ion-chevron-up:before {
   padding-left: 80px;
 }
 
-
+#item-directions.ion-chevron-up:before {
+  padding-left:90px;
+  }
 .ion-chevron-down:before {
   padding-left: 80px;
 }
