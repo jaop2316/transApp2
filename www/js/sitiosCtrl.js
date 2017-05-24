@@ -1,4 +1,5 @@
-app.controller('sitiosController', function($scope) {
+app.controller('sitiosController',['$scope','$ionicModal',function($scope,
+    $ionicModal){
   $scope.sitios = [];
   
   $scope.sitios = [
@@ -43,5 +44,38 @@ app.controller('sitiosController', function($scope) {
   $scope.isGroupShown = function(sitio) {
     return $scope.shownGroup === sitio;
   };
+    
+    //Detalles de rutas 
+
+  $scope.getdetails = function(item,num){   
+    $scope.currentItem = item;
+    console.log($scope.currentItem);
+    //console.log($scope.currentParadas.rutas);
+    var numero=num;
+    if(numero==1){
+        $scope.sentido1=true;
+        $scope.sentido2=false;
+    }else{
+        $scope.sentido2=true;
+        $scope.sentido1=false;
+    }
+    $scope.modal.show();
+  };
+
+   $ionicModal.fromTemplateUrl('templates/detallesLugares.html', {
+                  scope: $scope,
+                  animation: 'slide-in-up'
+                }).then(function(modal) {
+                  $scope.modal = modal;
+                })
+
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+
+   $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+
   
-});
+}]);
