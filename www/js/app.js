@@ -82,6 +82,17 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
         
       }
     }
+  })
+
+  .state('tab.mas', {
+    url: '/mas',
+    views: {
+      'tab-mas': {
+        templateUrl:'templates/opciones.html',
+        controller:'opcionesCtrl'
+        
+      }
+    }
   });
 
 
