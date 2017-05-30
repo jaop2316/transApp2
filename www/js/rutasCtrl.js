@@ -8,7 +8,7 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
        
        {
         id:"1",
-        nombreRuta:"Quitus Colonial - Universidad Central",   
+        nombreRuta:"Guajaló - Universidad Central",   
         horarioLV: "Lunes-Viernes",
         flotaLV: 20,
         horaLV: "05:26-19:00",
@@ -58,7 +58,7 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
         
         {
         id:3,
-        nombreRuta:"Ciudad Serrana-San José de Cutuglahua-San Roque",
+        nombreRuta:"San José de Cutuglahua-San Roque",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:24-19:00",
@@ -106,7 +106,7 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
         
         {
         id:5,
-        nombreRuta:"Parque MetroSur-San Juan de Turubamba-Marín",
+        nombreRuta:"San Juan de Turubamba-Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:44-19:00",
@@ -154,7 +154,7 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
        
        {
         id:7,
-        nombreRuta:"Ciudad Jardín-Garrochal-Santo Tomás 1-Santo Tomás 2-Marín",
+        nombreRuta:"Garrochal - Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:29-19:06",
@@ -178,7 +178,7 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
        
        {
         id:8,
-        nombreRuta:"Ciudad Jardín-Terranova-Venecia-Marín",
+        nombreRuta:"Venecia - Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:24-19:00",
