@@ -12,13 +12,14 @@
         
         <div class="col">
        <ion-list>
-        <div ng-repeat="sitio in sitios">
+        <div ng-repeat="sitio in filteredSitios = (sitios |filter:busqueda)" sitio="sitio">
+        
           <ion-item class="item-stable" ng-click="toggleGroup(sitio)" ng-class="{active: isGroupShown(sitio)}">
               <i class="icon" ng-class="isGroupShown(sitio) ? 'ion-minus' : 'ion-plus'"></i>
             &nbsp;
              {{sitio.nombreCategoria}}
           </ion-item>
-          <ion-item class="item-accordion" ng-repeat="item in sitio.items" ng-show="isGroupShown(sitio)">
+          <ion-item class="item-accordion" ng-repeat="item in sitio.items" ng-show="isGroupShown(sitio)"  ng-click="getdetails(item)">
             <i class="icon" ng-class="sitio.nombreCategoria==='Instituciones Educativas' ? 'ion-university' : sitio.nombreCategoria==='Centros de Salud' ? 'ion-medkit' : sitio.nombreCategoria==='Instituciones Financieras' ? 'ion-cash' : 'ion-person-stalker' "></i>
              {{item.nombreSitio}}
           </ion-item>

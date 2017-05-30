@@ -5,8 +5,11 @@ app.controller('sitiosController',['$scope','$ionicModal',function($scope,
   $scope.sitios = [
     { nombreCategoria: 'Instituciones Educativas', 
       id: 1,
-     items: [{ nombreSitio:'Colegio Simón Bolívar'},
-            { nombreSitio: 'Colegio Pérez Pallares'},
+     items: [{ nombreSitio:'Colegio Simón Bolívar',
+             rutas: [{ruta1:"Guajaló- Universidad Central"}] },
+            {nombreSitio: 'Colegio Pérez Pallares',
+             rutas: [{ruta1:"San José de Cutuglahua-San Roque",
+             ruta2:"Santo Domingo de Cutuglahua-San Roque"}] },
             { nombreSitio: 'Instituto Nacional Mejía'},
             { nombreSitio: 'Colegio Vida Nueva'},
             { nombreSitio: 'Unidad Educativa "FESVIP"'},
@@ -14,11 +17,13 @@ app.controller('sitiosController',['$scope','$ionicModal',function($scope,
             { nombreSitio: 'Universidad Central del Ecuador'}]},
     { nombreCategoria: 'Instituciones Financieras',
      id: 2, 
-     items: [{ nombreSitio: 'Banco Pichincha'},
-            { nombreSitio: 'Banco Rumiñahui'},
-            { nombreSitio: 'Banco Internacional'},
-            { nombreSitio: 'Punto Pago Banco del Pichincha'},
-            { nombreSitio: 'Banco Rumiñahui'},
+     items: [{ nombreSitio: 'Banco Pichincha Plaza Grande '},
+             { nombreSitio: 'Banco Pichincha Punto Pago Guajalo'},
+             { nombreSitio: 'Banco Pichincha Guamaní'},
+             { nombreSitio: 'Produbanco Villaflora'},
+             { nombreSitio: 'Banco Internacional Guajaló'},
+             { nombreSitio: 'Servipagos Villaflora'},
+             { nombreSitio: 'Banco Pichincha Villafora'}
             ]},
     { nombreCategoria: 'Centros de Salud',
      id: 3,
@@ -47,18 +52,10 @@ app.controller('sitiosController',['$scope','$ionicModal',function($scope,
     
     //Detalles de rutas 
 
-  $scope.getdetails = function(item,num){   
+  $scope.getdetails = function(item){   
     $scope.currentItem = item;
     console.log($scope.currentItem);
     //console.log($scope.currentParadas.rutas);
-    var numero=num;
-    if(numero==1){
-        $scope.sentido1=true;
-        $scope.sentido2=false;
-    }else{
-        $scope.sentido2=true;
-        $scope.sentido1=false;
-    }
     $scope.modal.show();
   };
 
