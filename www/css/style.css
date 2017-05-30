@@ -161,6 +161,8 @@ color: #33FF33;
 
 .ion-android-bus:before{
    font-size: 30px;
+   
+
 }
 
 .ion-arrow-left-c:before {
@@ -192,4 +194,34 @@ color: #33FF33;
   }
 .ion-chevron-down:before {
   padding-left: 80px;
+}
+
+.more-image{
+  height: 340px;
+}   
+
+.ion-star:before{
+  color:yellow;
+}
+
+.ion-help:before{
+  color:green;
+}
+
+.ion-person:before{
+  color:blue;
+}
+
+.header-stop{
+  padding: 0px;
+}
+
+.col-return{
+  padding: 0px;
+}
+
+.col-favorite{
+  padding-top: 0px;
+  display:flex;
+  flex-direction:row-reverse;
 }

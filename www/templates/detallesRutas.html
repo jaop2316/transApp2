@@ -1,8 +1,17 @@
 <ion-modal-view>
-	<ion-header-bar>
-	  <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal()">Rutas</button>
-      <h1 class="title">Detalle Ruta</h1>
-    </ion-header-bar>
+	   <div class="bar bar-header bar-light">
+    <div class="row header-stop">
+      <div class="col col-return">
+        <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal()">Paradas</button>
+      </div>
+      <div class="col">
+        <h1 class="title">Ruta</h1>
+      </div>
+      <div class="col col-favorite">
+        <button class="button icon-left ion-star button-positive" ng-click="addFavorites(currentItem)"></button>
+      </div>
+    </div>    
+    </div>
     <ion-content class="padding">
        	<div class="row">
        		<div class="col">

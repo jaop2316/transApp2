@@ -1,7 +1,8 @@
-app.controller('rutasController',['$scope','$ionicModal',function($scope,
-    $ionicModal){
+app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout','favoritesService',function($scope,
+    $ionicModal,$ionicPopup,$timeout,favoritesService){
   console.log('Controlador de rutas');
     $scope.currentItem = 1;
+    $scope.currentItem.favorites=false;
     console.log($scope.paradasCercanas);
    var ruta= [
        
@@ -249,7 +250,23 @@ app.controller('rutasController',['$scope','$ionicModal',function($scope,
     $scope.modal.hide();
   };
 
-  // mapa 
+  $scope.addFavorites=function(item){
+        if($scope.currentItem.favorites){
+            var alertPopup = $ionicPopup.alert({
+              title: 'Alerta',
+              template: 'Esta ruta ya esta en tus favoritos'
+            });
+        }else{
+               $scope.currentItem.favorites=true; 
+               var alertPopup = $ionicPopup.alert({
+              title: 'Alerta',
+              template: 'Añadido a tu lista de favoritos.'
+            });
+               favoritesService.addRoutesList(item);
+        }
+       
+    };
+
     
 
     

@@ -1,13 +1,16 @@
-app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal',function($scope,
-	$cordovaGeolocation,$ionicModal){
+app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal','$ionicPopup','$timeout','favoritesService',function($scope,
+	$cordovaGeolocation,$ionicModal,$ionicPopup,$timeout,favoritesService){
 console.log("paradas Controller");
 
 //$scope.location=false;
 $scope.acordion=false;
+$scope.contadorFavoritas=0;
+//$scope.currentItem.favorites=false;
 $scope.latitud=0;
 $scope.longitud=0;
 $scope.paradasCercanas=[];
 $scope.directions=[];
+$scope.favoriteItems=[];
 $scope.paradas=[
 
 {
@@ -1351,7 +1354,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
      	 var latUsuario,longUsuario,latParada,longParada;
          $scope.currentItem = parada;
 
-         console.log($scope.currentItem);
+         //console.log($scope.currentItem);
          $scope.latDetalleParada=$scope.currentItem.latitud;
      	 //console.log($scope.latitud);
          $scope.modal.show();
@@ -1361,6 +1364,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
          longParada=$scope.currentItem.longitud;
         //console.log(latParada);
          $scope.calcRoute(latUsuario,longUsuario,latParada,longParada);
+         console.log($scope.favoriteItems);
      };
      
       $ionicModal.fromTemplateUrl('templates/detalleParadas.html', {
@@ -1420,5 +1424,23 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
  	};
 
  	//$scope.calcRoute();
+
+ 	$scope.addFavorites=function(item){
+
+ 		if($scope.currentItem.favorites){
+            var alertPopup = $ionicPopup.alert({
+              title: 'Alerta',
+              template: 'Esta parada ya esta en tus favoritos'
+            });
+        }else{
+        	$scope.currentItem.favorites=true;
+        	var alertPopup = $ionicPopup.alert({
+        	title: 'Alerta',
+        	template: 'Añadido a tu lista de favoritos.'
+        	});
+           favoritesService.addFavorites(item);
+        } 		
+ 	};
+
 
 	}]);
