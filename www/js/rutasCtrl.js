@@ -8,7 +8,7 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
        
        {
         id:"1",
-        nombreRuta:"Quitus Colonial - Universidad Central",   
+        nombreRuta:"Guajaló - Universidad Central",   
         horarioLV: "Lunes-Viernes",
         flotaLV: 20,
         horaLV: "05:26-19:00",
@@ -154,7 +154,7 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
        
        {
         id:7,
-        nombreRuta:"Garrochal-Marín",
+        nombreRuta:"Garrochal - Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:29-19:06",
@@ -178,7 +178,7 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
        
        {
         id:8,
-        nombreRuta:"Venecia-Marín",
+        nombreRuta:"Venecia - Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:24-19:00",
@@ -270,4 +270,4 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
     
 
     
-}]);
+}])

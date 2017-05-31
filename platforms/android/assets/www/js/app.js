@@ -66,7 +66,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       views: {
         'tab-lugares': {
           templateUrl: 'templates/lugares.html',
-          controller:'sitiosController'
+            controller:'sitiosController'   
         }
       }
     })
@@ -79,6 +79,17 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       'tab-mapa': {
         templateUrl: 'templates/mapa.html',
         controller:'mapController'
+        
+      }
+    }
+  })
+
+  .state('tab.mas', {
+    url: '/mas',
+    views: {
+      'tab-mas': {
+        templateUrl:'templates/opciones.html',
+        controller:'opcionesCtrl'
         
       }
     }

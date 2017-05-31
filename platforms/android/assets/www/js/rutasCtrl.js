@@ -1,13 +1,14 @@
-app.controller('rutasController',['$scope','$ionicModal',function($scope,
-    $ionicModal){
+app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout','favoritesService',function($scope,
+    $ionicModal,$ionicPopup,$timeout,favoritesService){
   console.log('Controlador de rutas');
     $scope.currentItem = 1;
+    $scope.currentItem.favorites=false;
     console.log($scope.paradasCercanas);
    var ruta= [
        
        {
         id:"1",
-        nombreRuta:"Quitus Colonial - Universidad Central",   
+        nombreRuta:"Guajaló - Universidad Central",   
         horarioLV: "Lunes-Viernes",
         flotaLV: 20,
         horaLV: "05:26-19:00",
@@ -57,7 +58,7 @@ app.controller('rutasController',['$scope','$ionicModal',function($scope,
         
         {
         id:3,
-        nombreRuta:"Ciudad Serrana-San José de Cutuglahua-San Roque",
+        nombreRuta:"San José de Cutuglahua-San Roque",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:24-19:00",
@@ -105,7 +106,7 @@ app.controller('rutasController',['$scope','$ionicModal',function($scope,
         
         {
         id:5,
-        nombreRuta:"Parque MetroSur-San Juan de Turubamba-Marín",
+        nombreRuta:"San Juan de Turubamba-Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:44-19:00",
@@ -153,7 +154,7 @@ app.controller('rutasController',['$scope','$ionicModal',function($scope,
        
        {
         id:7,
-        nombreRuta:"Ciudad Jardín-Garrochal-Santo Tomás 1-Santo Tomás 2-Marín",
+        nombreRuta:"Garrochal - Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:29-19:06",
@@ -177,7 +178,7 @@ app.controller('rutasController',['$scope','$ionicModal',function($scope,
        
        {
         id:8,
-        nombreRuta:"Ciudad Jardín-Terranova-Venecia-Marín",
+        nombreRuta:"Venecia - Marín",
         horarioLV: "Lunes-Viernes",
         flotaLV: 12,
         horaLV: "04:24-19:00",
@@ -249,8 +250,24 @@ app.controller('rutasController',['$scope','$ionicModal',function($scope,
     $scope.modal.hide();
   };
 
-  // mapa 
+  $scope.addFavorites=function(item){
+        if($scope.currentItem.favorites){
+            var alertPopup = $ionicPopup.alert({
+              title: 'Alerta',
+              template: 'Esta ruta ya esta en tus favoritos'
+            });
+        }else{
+               $scope.currentItem.favorites=true; 
+               var alertPopup = $ionicPopup.alert({
+              title: 'Alerta',
+              template: 'Añadido a tu lista de favoritos.'
+            });
+               favoritesService.addRoutesList(item);
+        }
+       
+    };
+
     
 
     
-}]);
+}])

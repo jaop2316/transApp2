@@ -224,6 +224,7 @@ color: #33FF33;
   padding-top: 0px;
   display:flex;
   flex-direction:row-reverse;
+  /*align-content: flex-end;*/
 }
 
 .bar.bar-light .title {

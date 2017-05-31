@@ -1,13 +1,16 @@
-app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal',function($scope,
-	$cordovaGeolocation,$ionicModal){
+app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal','$ionicPopup','$timeout','favoritesService',function($scope,
+	$cordovaGeolocation,$ionicModal,$ionicPopup,$timeout,favoritesService){
 console.log("paradas Controller");
 
 //$scope.location=false;
 $scope.acordion=false;
+$scope.contadorFavoritas=0;
+//$scope.currentItem.favorites=false;
 $scope.latitud=0;
 $scope.longitud=0;
 $scope.paradasCercanas=[];
 $scope.directions=[];
+$scope.favoriteItems=[];
 $scope.paradas=[
 
 {
@@ -1219,7 +1222,6 @@ $scope.paradas=[
 },    
 ];
 
-console.log($scope.paradas);
 
 $scope.toggleGroup = function(group) {
     if ($scope.isGroupShown(group)) {
@@ -1240,6 +1242,7 @@ $scope.toggleGroup = function(group) {
   $scope.isGroupShown = function(group) {
     return $scope.shownGroup === group;
   };
+
 
 $scope.obtenerPosicion = function(){
 var posOptions = {timeout: 10000, enableHighAccuracy: false};
@@ -1346,12 +1349,34 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
      }
 
      init();
+    
+    $scope.getdetails=function(parada){
+        $scope.currentItem = parada;
+        console.log($scope.currentItem);
+    
+        $scope.modal.show();
+    };
+    
+     $ionicModal.fromTemplateUrl('templates/detalleParadas.html', {
+                  scope: $scope,
+                  animation: 'slide-in-up'
+                }).then(function(modal) {
+                  $scope.modal = modal;
+                })
+
+        $scope.openModal = function() {
+        $scope.modal.show();
+        };
+
+        $scope.closeModal = function() {
+            $scope.modal.hide();
+        };
 
      $scope.getdetails=function(parada){
      	 var latUsuario,longUsuario,latParada,longParada;
          $scope.currentItem = parada;
 
-         console.log($scope.currentItem);
+         //console.log($scope.currentItem);
          $scope.latDetalleParada=$scope.currentItem.latitud;
      	 //console.log($scope.latitud);
          $scope.modal.show();
@@ -1361,6 +1386,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
          longParada=$scope.currentItem.longitud;
         //console.log(latParada);
          $scope.calcRoute(latUsuario,longUsuario,latParada,longParada);
+         console.log($scope.favoriteItems);
      };
      
       $ionicModal.fromTemplateUrl('templates/detalleParadas.html', {
@@ -1420,5 +1446,23 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
  	};
 
  	//$scope.calcRoute();
+
+ 	$scope.addFavorites=function(item){
+
+ 		if($scope.currentItem.favorites){
+            var alertPopup = $ionicPopup.alert({
+              title: 'Alerta',
+              template: 'Esta parada ya esta en tus favoritos'
+            });
+        }else{
+        	$scope.currentItem.favorites=true;
+        	var alertPopup = $ionicPopup.alert({
+        	title: 'Alerta',
+        	template: 'Añadido a tu lista de favoritos.'
+        	});
+           favoritesService.addFavorites(item);
+        } 		
+ 	};
+
 
 	}]);
