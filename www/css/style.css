@@ -6,15 +6,15 @@ background-color:#334455;
 }
 
 h1 {
-	color:#ffbb33;
+  color:#ffbb33;
 }
 
 h2{
-	color:#ffbb33;
+  color:#ffbb33;
 }
 
 h3{
-	color:#ffbb33;
+  color:#ffbb33;
 }
 
 .list .item.item-accordion {
@@ -26,7 +26,7 @@ h3{
 .list .item.item-accordion.ng-hide {
   line-height: 0px;
 }
-.list .item.item-accordion.ng-hide-add			
+.list .item.item-accordion.ng-hide-add      
 .list .item.item-accordion.ng-hide-remove {
   display: block !important;
 }
@@ -48,48 +48,48 @@ h3{
 }
 
 .overflow-scroll{
-	overflow-y:auto;
+  overflow-y:auto;
 }
 
 /*.input-label{
 color:white;
 
-	}*/
+  }*/
 
 .button.button-energized{
-	background-color: #ffbb33;
-	color:#334455;
-	}
+  background-color: #ffbb33;
+  color:#334455;
+  }
 
 .notFound{
-	color:#ffbb33;
-	font-size:20px;
+  color:#ffbb33;
+  font-size:20px;
 }
 
 .bar .button.button-clear .icon:before, .bar .button.button-clear.icon:before, .bar .button.button-clear.icon-left:before, .bar .button.button-clear.icon-right:before, .bar button.button-clear .icon:before, .bar button.button-clear.icon:before, 
 .bar button.button-clear.icon-left:before, 
 .bar button.button-clear.icon-right:before {
-	font-size: 20px;
+  font-size: 20px;
     line-height: 32px;
 }
 
 .bar .button.button-clear, .bar button.button-clear {
-	padding-right: 2px;
+  padding-right: 2px;
     padding-left: 2px;
     font-weight: 300;
     font-size: 12px;
-	}
+  }
 
 .headDetallesRutas{
-	font-size: 20px;
+  font-size: 20px;
     text-align: center;
     color:white;
     line-height: 30px;
 }
 
 .textInfoGeneral{
-	font-size: 15px;
-	color:white;
+  font-size: 15px;
+  color:white;
 }
 
 .header .col {

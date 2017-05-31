@@ -1222,7 +1222,6 @@ $scope.paradas=[
 },    
 ];
 
-console.log($scope.paradas.length);
 
 $scope.toggleGroup = function(group) {
     if ($scope.isGroupShown(group)) {
@@ -1243,6 +1242,7 @@ $scope.toggleGroup = function(group) {
   $scope.isGroupShown = function(group) {
     return $scope.shownGroup === group;
   };
+
 
 $scope.obtenerPosicion = function(){
 var posOptions = {timeout: 10000, enableHighAccuracy: false};
@@ -1349,6 +1349,28 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
      }
 
      init();
+    
+    $scope.getdetails=function(parada){
+        $scope.currentItem = parada;
+        console.log($scope.currentItem);
+    
+        $scope.modal.show();
+    };
+    
+     $ionicModal.fromTemplateUrl('templates/detalleParadas.html', {
+                  scope: $scope,
+                  animation: 'slide-in-up'
+                }).then(function(modal) {
+                  $scope.modal = modal;
+                })
+
+        $scope.openModal = function() {
+        $scope.modal.show();
+        };
+
+        $scope.closeModal = function() {
+            $scope.modal.hide();
+        };
 
      $scope.getdetails=function(parada){
      	 var latUsuario,longUsuario,latParada,longParada;
