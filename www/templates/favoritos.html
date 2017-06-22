@@ -12,7 +12,8 @@
 						<i class="icon ion-android-bus"></i>
 						Rutas Favoritas
 					</div>
-					<a class="item item-icon-left" ng-repeat="rutas in rutasFavoritas">
+					<a class="item item-icon-left" ng-repeat="rutas in rutasFavoritas"
+					ng-click="openModal(4,rutas)">
 					    <i class="icon ion-star"></i>
 					    {{rutas.nombreRuta}}
 					</a>
@@ -20,7 +21,7 @@
 						<i class="icon ion-ios-location"></i>
 					 	Paradas Favoritas
 					</div>
-					<a class="item item-icon-left" ng-repeat="paradas in paradasFavoritas ">
+					<a class="item item-icon-left" ng-repeat="paradas in paradasFavoritas " ng-click="openModal(5,paradas)">
 					    <i class="icon ion-star"></i>
 					    {{paradas.nomParada}}
 					</a>
@@ -29,7 +30,7 @@
 						<i class="icon ion-earth"></i>
 					 	Lugares Favoritos
 					</div>	
-					<a class="item item-icon-left" ng-repeat="lugar in lugaresFavoritos " >
+					<a class="item item-icon-left" ng-repeat="lugar in lugaresFavoritos " ng-click="openModal(6,lugar)">
 					    <i class="icon ion-star"></i>
 					    {{lugar.nombreSitio}}
 					</a>

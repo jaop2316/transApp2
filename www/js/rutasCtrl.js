@@ -1,5 +1,5 @@
-app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout','favoritesService',function($scope,
-    $ionicModal,$ionicPopup,$timeout,favoritesService){
+app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout','favoritesService','$ionicScrollDelegate',function($scope,
+    $ionicModal,$ionicPopup,$timeout,favoritesService,$ionicScrollDelegate){
   console.log('Controlador de rutas');
     $scope.currentItem = 1;
     $scope.currentItem.favorites=false;
@@ -203,6 +203,7 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
        ];
     
     //$scope.contador=0;
+    $scope.custom = true;
     $scope.rutas=[];
     $scope.rutas= ruta;
     console.log($scope.rutas);
@@ -248,6 +249,7 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
 
    $scope.closeModal = function() {
     $scope.modal.hide();
+    $ionicScrollDelegate.scrollTop();
   };
 
   $scope.addFavorites=function(item){

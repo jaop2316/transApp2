@@ -1,5 +1,5 @@
-app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal','$ionicPopup','$timeout','favoritesService',function($scope,
-	$cordovaGeolocation,$ionicModal,$ionicPopup,$timeout,favoritesService){
+app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal','$ionicPopup','$timeout','$ionicScrollDelegate','favoritesService',function($scope,
+	$cordovaGeolocation,$ionicModal,$ionicPopup,$timeout,$ionicScrollDelegate,favoritesService){
 console.log("paradas Controller");
 
 //$scope.location=false;
@@ -1370,6 +1370,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
 
         $scope.closeModal = function() {
             $scope.modal.hide();
+            //$ionicScrollDelegate.scrollTop();
         };
 
      $scope.getdetails=function(parada){
@@ -1402,6 +1403,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
 
          $scope.closeModal = function() {
              $scope.modal.hide();
+             $ionicScrollDelegate.scrollTop();
          };
 
         var directionsDisplay;
