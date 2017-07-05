@@ -2,7 +2,7 @@
 	   <ion-header-bar class="bar bar-header bar-light">
     <div class="row header-stop">
       <div class="col col-return">
-        <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal(4)">Paradas</button>
+        <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal(2)">Paradas</button>
       </div>
       <div class="col">
         <h1 class="title">Ruta</h1>
@@ -15,7 +15,8 @@
     <ion-content class="padding">
        	<div class="row">
        		<div class="col">
-    			<p class="headDetallesRutas" ng-show="sentido1">{{currentItem.nombreRuta}}</p>
+    			<p class="headDetallesRutas" ng-show="sentido1">Hacia :{{currentItem.items[0].sentido1}}</p>
+    			<p class="headDetallesRutas" ng-show="sentido2">Hacia :{{currentItem.items[0].sentido2}}</p>
     		</div>
     	</div>
     	

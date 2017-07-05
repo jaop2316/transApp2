@@ -1,5 +1,5 @@
-app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favoritesService',function($scope,
-    $ionicModal,$ionicPopup,favoritesService){
+app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favoritesService','$ionicScrollDelegate',function($scope,
+    $ionicModal,$ionicPopup,favoritesService,$ionicScrollDelegate){
    //$scope.currentItem.favorites=false;
   $scope.sitios = [];
   
@@ -154,18 +154,37 @@ app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favorit
   };
 
    $ionicModal.fromTemplateUrl('templates/detallesLugares.html', {
+                  id:'1',
                   scope: $scope,
                   animation: 'slide-in-up'
                 }).then(function(modal) {
                   $scope.modal = modal;
+                });
+  $ionicModal.fromTemplateUrl('templates/detallesRutas3.html', {
+                  id:'2',
+                  scope: $scope,
+                  animation: 'slide-in-up'
+                }).then(function(modal) {
+                  $scope.modal2 = modal;
                 })
 
-  $scope.openModal = function() {
-    $scope.modal.show();
+  $scope.openModal = function(index,currentItem) {
+    if (index == 1){
+      $scope.modal.show();
+     }else if(index == 2){
+      $scope.modal2.show();
+      $ionicScrollDelegate.scrollTop();
+      $scope.currentItem=currentItem;
+      console.log($scope.currentItem);  
+    }
   };
 
-   $scope.closeModal = function() {
-    $scope.modal.hide();
+   $scope.closeModal = function(index) {
+    if (index == 1){
+      $scope.modal.hide();
+     }else if(index == 2){
+       $scope.modal2.hide();
+    }
   };
 
 

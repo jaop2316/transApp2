@@ -2,7 +2,7 @@
 	   <ion-header-bar>
     <div class="row header-stop">
       <div class="col col-return">
-        <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal()">Paradas</button>
+        <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal(1)">Paradas</button>
       </div>
       <div class="col">
         <h1 class="title">Parada</h1>
@@ -22,7 +22,7 @@
           </div>
 
         <div ng-repeat="indice in currentItem.rutas">
-          <a class="item item-icon-left" ng-repeat="ruta in indice">
+          <a class="item item-icon-left" ng-repeat="ruta in indice" ng-click="openModal(2,currentItem)">
               <i class="icon ion-android-bus"></i>
               {{ruta}}
             </a>         
