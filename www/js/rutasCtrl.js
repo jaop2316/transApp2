@@ -1,8 +1,9 @@
-app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout','favoritesService','$ionicScrollDelegate',function($scope,
-    $ionicModal,$ionicPopup,$timeout,favoritesService,$ionicScrollDelegate){
+app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout','favoritesService','$ionicScrollDelegate','RoutesService','$state',function($scope,
+    $ionicModal,$ionicPopup,$timeout,favoritesService,$ionicScrollDelegate,RoutesService,$state){
   console.log('Controlador de rutas');
     $scope.currentItem = 1;
     $scope.currentItem.favorites=false;
+
     console.log($scope.paradasCercanas);
    var ruta= [
        
@@ -201,21 +202,17 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
        }
        
        ];
-
-    $scope.quitarTildes=function(array){
-        for(var i=0;i<array.length;i++){
-            var word=array[i].nombreRuta;
-            console.log(word);
-        }
-    }
     
+    RoutesService.addRoutes(ruta);
+
     //$scope.contador=0;
     $scope.custom = true;
     $scope.rutas=[];
     $scope.rutas= ruta;
     console.log($scope.rutas);
-
+    
     $scope.toggleGroup = function(group) {
+        $scope.resetSearch();
     if ($scope.isGroupShown(group)) {
       $scope.shownGroup = null;
     } else {
@@ -226,6 +223,10 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
     return $scope.shownGroup === group;
   };
    
+    $scope.resetSearch = function(){
+          console.log("reset");
+          $scope.busqueda ='';
+      }
   //Detalles de rutas 
 
   $scope.getdetails = function(item,num){   
@@ -276,36 +277,17 @@ app.controller('rutasController',['$scope','$ionicModal','$ionicPopup','$timeout
        
     };
 
-function normalize(texto) {
-  //console.log(texto);
-  texto = texto.replace(/[áàäâ]/g, "a");
-  texto = texto.replace(/[éèëê]/g, "e");
-  texto = texto.replace(/[íìïî]/g, "i");
-  texto = texto.replace(/[óòôö]/g, "o");
-  texto = texto.replace(/[úùüü]/g, "u");
-  texto = texto.toUpperCase();
-  return texto;
-}
+   $scope.is_on_profile = function() {
+    if ($state.current.name) return $state.current.name.match(/tabs.rutas/);
+  };
 
-$scope.quitarTildes=function(word){
-    //var word;
-    console.log(word);
-    palabraSinTilde=word.replace(/[áàäâ]/g, "a");
-    palabraSinTilde =word.replace(/[íìïî]/g, "i");
-    console.log(palabraSinTilde);
-    return palabraSinTilde;
-}
-$scope.comparator = function(actual, expected) {
-    console.log(actual);
-    //console.log(expected);
-    if (normalize(actual).indexOf(normalize(expected))>=0) {
-      
-      return true;
-    } else {
-      return false;
-    }
-};
-    
-//$scope.IsHidden = true;
+  $scope.open_tabs = function() {
+   if ($state.current.views['tab-paradas']) return $state.go('tab.paradas');
+   if ($state.current.views['tab-rutas']) return $state.go('tab.rutas');
+   if ($state.current.views['tab-lugares']) return $state.go('tab.lugares');
+   if ($state.current.views['tab-mapa']) return $state.go('tab.mapa');
+   if ($state.current.views['tab-mas']) return $state.go('tab.mas');
+
+ };
     
 }])

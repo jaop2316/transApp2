@@ -19,7 +19,7 @@
             &nbsp;
              {{sitio.nombreCategoria}}
           </ion-item>
-          <ion-item class="item-accordion" ng-repeat="item in sitio.items" ng-show="isGroupShown(sitio)"  ng-click="getdetails(item)">
+          <ion-item class="item-accordion" ng-repeat="item in sitio.items" ng-show="isGroupShown(sitio)||busqueda"  ng-click="getdetails(item)">
             <i class="icon" ng-class="sitio.nombreCategoria==='Instituciones Educativas' ? 'ion-university' : sitio.nombreCategoria==='Centros de Salud' ? 'ion-medkit' : sitio.nombreCategoria==='Instituciones Financieras' ? 'ion-cash' : 'ion-person-stalker' "></i>
              {{item.nombreSitio}}
           </ion-item>
@@ -27,6 +27,10 @@
         </div>
     
       </ion-list>
+        </div>
+
+        <div ng-show="!filteredSitios.length" class="col">
+        <h1 class="notFound">No existe una ruta disponible</h1>
         </div>
         
     </ion-content>

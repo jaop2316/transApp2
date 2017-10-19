@@ -1323,7 +1323,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
        				$scope.paradas[i].distancia=distancia*1000;
        				$scope.paradas[i].kilometros=false;
        				$scope.paradas[i].metros=true;
-       				if($scope.paradas[i].distancia<=600)
+       				if($scope.paradas[i].distancia<=900)
        				{
        				$scope.paradasCercanas[contadorCercanas]=$scope.paradas[i];
        				//ServiceParadas.data=$scope.paradasCercanas;

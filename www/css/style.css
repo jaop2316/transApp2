@@ -230,3 +230,7 @@ color: #33FF33;
 .bar.bar-light .title {
     color: #ffbb33;
 }
+
+.view-container{
+  position: initial;
+}

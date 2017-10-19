@@ -32,8 +32,8 @@
 			<!-- <ion-slide-page> -->
 				<div class="row">
 		   			 <div class="col">
-						 <div class="list" ng-repeat="parada in paradas" ng-click="getdetails(parada)"> 
-						<!-- <div class="list" ng-repeat="parada in paradasCercanas | orderBy:'distancia'" ng-click="getdetails(parada)">	 -->
+						 <!-- <div class="list" ng-repeat="parada in paradas" ng-click="getdetails(parada)">  -->
+						 <div class="list" ng-repeat="parada in paradasCercanas | orderBy:'distancia'" ng-click="getdetails(parada)">	
 		    			<a class="item item-avatar">
 		      			<img ng-src="{{parada.url}}">
 		      			<h2>{{parada.nomParada}}</h2>
