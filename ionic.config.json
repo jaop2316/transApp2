@@ -1,4 +1,12 @@
 {
   "name": "transApp_v1Tabs",
-  "app_id": "73b90b5d"
+  "app_id": "73b90b5d",
+  "integrations": {},
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
 }

@@ -5,7 +5,10 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-var app=angular.module('myApp', ['ionic','ngCordova'])
+
+var masterUrl='https://transapp-api-jaop.c9users.io/';
+//var masterUrl='http://localhost:3000/';
+var app=angular.module('myApp', ['ionic','ngCordova','ngResource'])
 
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -47,7 +50,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       'tab-paradas': {
         templateUrl: 'templates/paradas.html',
         controller:'paradasController'
-        
+
       }
     }
   })
@@ -66,12 +69,12 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       views: {
         'tab-lugares': {
           templateUrl: 'templates/lugares.html',
-            controller:'sitiosController'   
+            controller:'sitiosController'
         }
       }
     })
 
-    
+
 
   .state('tab.mapa', {
     url: '/mapa',
@@ -79,7 +82,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       'tab-mapa': {
         templateUrl: 'templates/mapa.html',
         controller:'mapController'
-        
+
       }
     }
   })
@@ -90,13 +93,13 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       'tab-mas': {
         templateUrl:'templates/opciones.html',
         controller:'opcionesCtrl'
-        
+
       }
     }
   });
 
 
-  
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/paradas');
 
