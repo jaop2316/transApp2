@@ -1,18 +1,35 @@
-app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favoritesService','$ionicScrollDelegate','$ionicLoading','$ionicPopover','RoutesService',function($scope,
-    $ionicModal,$ionicPopup,favoritesService,$ionicScrollDelegate,$ionicLoading,$ionicPopover,RoutesService){
+app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favoritesService','$ionicScrollDelegate','$ionicLoading','$ionicPopover','RoutesService','PlacesFactory',function($scope,
+    $ionicModal,$ionicPopup,favoritesService,$ionicScrollDelegate,$ionicLoading,$ionicPopover,RoutesService,PlacesFactory){
    //$scope.currentItem.favorites=false;
   $scope.sitios = [];
   $scope.routesList=[];
-  
+
+  $scope.places = [];
+
+  $scope.listaLugares = function(){
+    PlacesFactory.query().$promise.then(function (respuesta) {
+      $scope.places = respuesta;
+      console.log($scope.places);
+  },
+  function(err){
+      console.log(err);
+  }
+
+  );
+  };
+
+$scope.listaLugares();
+
+
   $scope.sitios = [
-    { nombreCategoria: 'Instituciones Educativas', 
+    { nombreCategoria: 'Instituciones Educativas',
       id: 1,
      items: [{ nombreSitio:'Colegio Simón Bolívar',
              rutas: [{ruta1:"Guajaló - Universidad Central"}] },
             {nombreSitio: 'Colegio Pérez Pallares',
              rutas: [{ruta1:"San José de Cutuglahua-San Roque",
              ruta2:"Santo Domingo de Cutuglahua-San Roque",
-             ruta3:"Guajaló - Universidad Central"}] }, 
+             ruta3:"Guajaló - Universidad Central"}] },
             { nombreSitio: 'Instituto Nacional Mejía',
               rutas: [{ruta1:"Guajaló - Universidad Central"}] },
             { nombreSitio: 'Colegio Vida Nueva',
@@ -21,18 +38,18 @@ app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favorit
              ruta3:"Guajaló - Universidad Central",
              ruta4:"Garrochal - Marín",
              ruta5:"Venecia - Marín",
-             ruta6:"San Juan de Turubamba-Marín"}] },  
+             ruta6:"San Juan de Turubamba-Marín"}] },
             { nombreSitio: 'Unidad Educativa "FESVIP"',
              rutas: [{ruta1:"San José de Cutuglahua-San Roque",
              ruta2:"Santo Domingo de Cutuglahua-San Roque",
-             ruta3:"Guajaló - Universidad Central"}] }, 
+             ruta3:"Guajaló - Universidad Central"}] },
             { nombreSitio: 'Colegio la Providencia',
-              rutas: [{ruta1:"Guajaló - Universidad Central"}] }, 
+              rutas: [{ruta1:"Guajaló - Universidad Central"}] },
             { nombreSitio: 'Universidad Central del Ecuador',
              rutas: [{ruta1:"Guajaló - Universidad Central"}] }
         ]},
     { nombreCategoria: 'Instituciones Financieras',
-     id: 2, 
+     id: 2,
      items: [{ nombreSitio: 'Banco Pichincha Plaza Grande',
               rutas: [{ruta1:"Guajaló - Universidad Central"}] },
              { nombreSitio: 'Banco Pichincha Punto Pago Guajalo',
@@ -42,7 +59,7 @@ app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favorit
               ruta4:"Garrochal - Marín",
               ruta5:"Venecia - Marín",
               ruta6:"San Juan de Turubamba-Marín",
-              ruta7:"Caupicho-Marín"}] }, 
+              ruta7:"Caupicho-Marín"}] },
              { nombreSitio: 'Banco Pichincha Guamaní',
               rutas: [{ruta1:"San José de Cutuglahua-San Roque",
               ruta2:"Santo Domingo de Cutuglahua-San Roque",
@@ -81,7 +98,7 @@ app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favorit
               rutas: [{ruta1:"Garrochal - Marín",
               ruta2:"Venecia - Marín",
               ruta3:"San Juan de Turubamba-Marín",}]
-             }, 
+             },
             { nombreSitio: 'Hospital del IESS' ,
              rutas: [{ruta1:"Guajaló - Universidad Central"}] },
             { nombreSitio: 'Centro de Salud N°1',
@@ -110,9 +127,9 @@ app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favorit
               { nombreSitio: 'Maternidad Isidro Ayora',
                   rutas: [{ruta1:"Jardín del Valle - Las Casas"}] },
         ]},
-            
+
     { nombreCategoria: 'Sitios de Recreación',
-     id: 4, 
+     id: 4,
      items: [{ nombreSitio: 'Centro Comercial "El Recreo"',
                   rutas: [{ruta1:"San José de Cutuglahua-San Roque",
                   ruta2:"Santo Domingo de Cutuglahua-San Roque",
@@ -130,9 +147,9 @@ app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favorit
              { nombreSitio: 'Parque Cuscungo',
                   rutas: [{ruta1:"Jardín del Valle - Las Casas"}] },
      ]},
-            
+
   ];
-  
+
   $scope.routesList=RoutesService.getRoutes();
   //console.log($scope.routesList[1].nombreRuta);
 
@@ -146,10 +163,10 @@ app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favorit
   $scope.isGroupShown = function(sitio) {
     return $scope.shownGroup === sitio;
   };
-    
-    //Detalles de rutas 
 
-  $scope.getdetails = function(item){   
+    //Detalles de rutas
+
+  $scope.getdetails = function(item){
     $scope.currentItem = item;
     console.log($scope.currentItem);
     //console.log($scope.currentParadas.rutas);
@@ -178,12 +195,12 @@ app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favorit
       $scope.modal2.show();
       $ionicScrollDelegate.scrollTop();
       $scope.currentItem=currentItem;
-      console.log($scope.currentItem);  
+      console.log($scope.currentItem);
     }
   };
 
 $scope.searchIndexinRoutes=function(ruta){
-    
+
     for(var i=0;i<$scope.routesList.length;i++){
       //var nomRutaList=$scope.routesList[i].nombreRuta;
       console.log($scope.routesList[i].nombreRuta);
@@ -221,7 +238,7 @@ $scope.searchIndexinRoutes=function(ruta){
           });
            favoritesService.addSitesList(item);
             //$scope.openPopover();
-        }     
+        }
   };
 
   var template = '<ion-popover-view>' + '<ion-header-bar>' +
@@ -235,7 +252,7 @@ $scope.searchIndexinRoutes=function(ruta){
 
    $scope.openPopover = function($event,item) {
     if($scope.currentItem.favorites){
-      
+
       }else{
         $scope.currentItem.favorites=true;
         favoritesService.addSitesList(item);
@@ -247,5 +264,5 @@ $scope.searchIndexinRoutes=function(ruta){
       $scope.popover.hide();
    };
 
-  
+
 }]);

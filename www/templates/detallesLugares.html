@@ -10,26 +10,26 @@
       <div class="col col-favorite">
         <button class="button icon-left ion-star button-positive" ng-click="openPopover($event,currentItem)" ng-disabled="currentItem.favorites"></button>
       </div>
-    </div>    
-    </ion-header-bar> 
-    
+    </div>
+    </ion-header-bar>
+
     <ion-content class="padding">
-        
+
            <div class="list">
 
           <div class="item item-divider">
             Rutas que me llevan
           </div>
 
-        <div ng-repeat="indice in currentItem.rutas">
-          <a class="item item-icon-left" ng-repeat="ruta in indice" ng-click="openModal(2,currentItem); searchIndexinRoutes(ruta);">
+        <div>
+          <a class="item item-icon-left" ng-repeat="indice in currentItem.rutas" ng-click="openModal(2,currentItem); searchIndexinRoutes(ruta);">
               <i class="icon ion-android-bus"></i>
-              {{ruta}}
-            </a>         
+              {{indice}}
+            </a>
         </div>
 
         </div>
-    
+
     </ion-content>
 
 </ion-modal-view>

@@ -10,7 +10,7 @@
       <div class="col col-favorite">
         <button class="button icon-left ion-star button-positive" ng-click="addFavorites(currentItem)" ng-disabled="currentItem.favorites"></button>
       </div>
-    </div>    
+    </div>
     </ion-header-bar>
     <ion-content class="padding">
        	<div class="row">
@@ -19,7 +19,7 @@
     			<p class="headDetallesRutas" ng-show="sentido2">Hacia :{{currentItem.items[0].sentido2}}</p>
     		</div>
     	</div>
-    	
+
     	<div class="row">
     		<div class="col">
     			<!-- <div class="card">
@@ -84,15 +84,9 @@
     	<div class="row">
     		<div class="col">
     			<div class="list">
-    			    <a class="item item-avatar" href="#">
+    			    <a class="item item-avatar" href="#" ng-repeat="sitio in currentItem.sitios">
     			      <img ng-src="http://www.riocentroshopping.com/assets/img/upload/big/308541cc1641488ae6e0b14c4135b1a8.jpg">
-    			      <h2>Banco del Pichincha</h2>
-    			      <p>Bancos</p>
-    			    </a>
-    			    <a class="item item-avatar" href="#">
-    			      <img ng-src="http://fotos.lahora.com.ec/cache/6/6f/6f7/6f74/realidad--los-estudiantes-de-la-universidad-central-del-ecuador-iniciaron-clases-el-pasado-5-de-septiembre--20110918044753-6f74ea077ed708caeab9acee0fe76907.jpg">
-    			      <h2>Universidad Central</h2>
-    			      <p>Universidades</p>
+    			      <h2>{{sitio}}</h2>
     			    </a>
     			</div>
     		</div>
@@ -113,6 +107,6 @@
         </div>
 
     </ion-content>
-       
+
 
 </ion-modal-view>

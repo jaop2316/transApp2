@@ -6,7 +6,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 
-var masterUrl='https://transapp-api-jaop.c9users.io/';
+var masterUrl='https://api-transapp-jaop.c9users.io/';
 //var masterUrl='http://localhost:3000/';
 var app=angular.module('myApp', ['ionic','ngCordova','ngResource'])
 

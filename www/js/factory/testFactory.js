@@ -1,6 +1,6 @@
 app.factory('TestFactory',['$resource',function($resource){
     var factory=$resource(
-        masterUrl+'/routes.json'
+        masterUrl+'api/v1/routes'
         );
 
 
