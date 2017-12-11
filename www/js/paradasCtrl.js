@@ -1,5 +1,5 @@
-app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal','$ionicPopup','$timeout','$ionicScrollDelegate','favoritesService',function($scope,
-	$cordovaGeolocation,$ionicModal,$ionicPopup,$timeout,$ionicScrollDelegate,favoritesService){
+app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal','$ionicPopup','$timeout','$ionicScrollDelegate','favoritesService','StationsFactory',function($scope,
+	$cordovaGeolocation,$ionicModal,$ionicPopup,$timeout,$ionicScrollDelegate,favoritesService,StationsFactory){
 console.log("paradas Controller");
 
 //$scope.location=false;
@@ -11,6 +11,24 @@ $scope.longitud=0;
 $scope.paradasCercanas=[];
 $scope.directions=[];
 $scope.favoriteItems=[];
+
+$scope.stations=[];
+
+$scope.listaParadas = function(){
+  StationsFactory.query().$promise.then(function (respuesta) {
+    $scope.stations = respuesta;
+    console.log($scope.stations);
+},
+function(err){
+    console.log(err);
+}
+
+);
+};
+
+$scope.listaParadas();
+
+
 $scope.paradas=[
 
 {
@@ -20,7 +38,7 @@ $scope.paradas=[
 	latitud:-0.2180695,
 	longitud:-78.521121,
 	rutas: [{ruta1:"San José de Cutuglahua-San Roque",
-    ruta2:"Santo Domingo de Cutuglahua-San Roque"}] 
+    ruta2:"Santo Domingo de Cutuglahua-San Roque"}]
 },
 
 {
@@ -30,7 +48,7 @@ $scope.paradas=[
 	latitud:-0.2210294,
 	longitud:-78.520708,
 	rutas: [{ruta1:"San José de Cutuglahua-San Roque",
-    ruta2:"Santo Domingo de Cutuglahua-San Roque"}] 
+    ruta2:"Santo Domingo de Cutuglahua-San Roque"}]
 },
 
 {
@@ -40,7 +58,7 @@ $scope.paradas=[
 	latitud:-0.2272661,
 	longitud:-78.5222701,
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
-    ruta2:"Santo Domingo de Cutuglahua-San Roque"}] 
+    ruta2:"Santo Domingo de Cutuglahua-San Roque"}]
 },
 {
 	cod:'4',
@@ -49,7 +67,7 @@ $scope.paradas=[
 	latitud:-0.2339936,
 	longitud:-78.5239095,
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
-    ruta2:"Santo Domingo de Cutuglahua-San Roque"}] 
+    ruta2:"Santo Domingo de Cutuglahua-San Roque"}]
 },
 
 {
@@ -60,7 +78,7 @@ $scope.paradas=[
 	longitud:-78.5194404,
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque",
-    ruta3: "Quitus Colonial - Universidad Central" }] 
+    ruta3: "Quitus Colonial - Universidad Central" }]
 },
 {
 	cod:'6',
@@ -156,7 +174,7 @@ $scope.paradas=[
     ruta4:"Caupicho-Marín",
     ruta5:"Garrochal-Marín",
     ruta6:"Venecia-Marín"}]
-    
+
 },
 {
 	cod:'13',
@@ -170,7 +188,7 @@ $scope.paradas=[
     ruta4:"Caupicho-Marín",
     ruta5:"Garrochal-Marín",
     ruta6:"Venecia-Marín"}]
-   
+
 },
 {
 	cod:'14',
@@ -248,8 +266,8 @@ $scope.paradas=[
 	longitud:-78.5612386,
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque"}]
-   
-   
+
+
 },
 {
 	cod:'21',
@@ -259,8 +277,8 @@ $scope.paradas=[
 	longitud:-78.5617802,
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque"}]
-  
-    
+
+
 },
 
 {
@@ -271,7 +289,7 @@ $scope.paradas=[
 	longitud:-78.5617802,
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque"}]
-     
+
 },
 //Paradas de regreso.
 
@@ -294,7 +312,7 @@ $scope.paradas=[
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque"}]
 },
-    
+
 {
 	cod:'25',
 	nomParada:' Parada 3 San José',
@@ -304,7 +322,7 @@ $scope.paradas=[
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque"}]
 },
-    
+
 {
 	cod:'26',
 	nomParada:' Av. Maldonado',
@@ -313,9 +331,9 @@ $scope.paradas=[
 	longitud:-78.567222,
     longitud:-78.568333,
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
-    ruta2:"Santo Domingo de Cutuglahua-San Roque"}]    
+    ruta2:"Santo Domingo de Cutuglahua-San Roque"}]
 },
-    
+
 {
 	cod:'27',
 	nomParada:' Av. Maldonado 2',
@@ -338,7 +356,7 @@ $scope.paradas=[
     ruta4:"Garrochal-Marín",
     ruta5:"Venecia-Marín"}]
 },
-    
+
 {
 	cod:'29',
 	nomParada:'La Barba',
@@ -352,7 +370,7 @@ $scope.paradas=[
     ruta5:"Venecia-Marín"}]
 },
 
-    
+
 {
 	cod:'30',
 	nomParada:'Camino al Conde',
@@ -366,7 +384,7 @@ $scope.paradas=[
     ruta5:"Venecia-Marín"}]
 },
 
-    
+
 {
 	cod:'31',
 	nomParada:'Puente Guajalo',
@@ -381,7 +399,7 @@ $scope.paradas=[
     ruta6:"Garrochal-Marín",
     ruta7:"Venecia-Marín"}]
 },
-  
+
 {
 	cod:'32',
 	nomParada:'Guajalo 2',
@@ -411,7 +429,7 @@ $scope.paradas=[
     ruta6:"Garrochal-Marín",
     ruta7:"Venecia-Marín"}]
 },
-    
+
 {
 	cod:'34',
 	nomParada:'C.C El Recreo',
@@ -426,7 +444,7 @@ $scope.paradas=[
     ruta6:"Garrochal-Marín",
     ruta7:"Venecia-Marín"}]
 },
-    
+
 {
 	cod:'35',
 	nomParada:'Restaurante Forastero',
@@ -441,7 +459,7 @@ $scope.paradas=[
     ruta6:"Garrochal-Marín",
     ruta7:"Venecia-Marín"}]
 },
-    
+
 {
 	cod:'36',
 	nomParada:'Parada Rodrigo de Chavez',
@@ -452,7 +470,7 @@ $scope.paradas=[
     ruta2:"Santo Domingo de Cutuglahua-San Roque",
     ruta3:"Quitus Colonial - Universidad Central"}]
 },
-    
+
 {
 	cod:'37',
 	nomParada:'Cinco de Junio 1',
@@ -463,7 +481,7 @@ $scope.paradas=[
     ruta2:"Santo Domingo de Cutuglahua-San Roque",
     ruta3:"Quitus Colonial - Universidad Central"}]
 },
-    
+
 {
 	cod:'38',
 	nomParada:'Cinco de Junio 2',
@@ -473,8 +491,8 @@ $scope.paradas=[
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque",
     ruta3:"Quitus Colonial - Universidad Central"}]
-},    
-    
+},
+
 {
 	cod:'39',
 	nomParada:'Cinco de Junio 3',
@@ -484,7 +502,7 @@ $scope.paradas=[
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque",
     ruta3:"Quitus Colonial - Universidad Central"}]
-},    
+},
 
 {
 	cod:'40',
@@ -495,7 +513,7 @@ $scope.paradas=[
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque",
     ruta3:"Quitus Colonial - Universidad Central"}]
-},    
+},
 
 {
 	cod:'41',
@@ -506,8 +524,8 @@ $scope.paradas=[
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque",
     ruta3:"Quitus Colonial - Universidad Central"}]
-}, 
-    
+},
+
 {
 	cod:'42',
 	nomParada:'Heroes del Cenepa',
@@ -517,8 +535,8 @@ $scope.paradas=[
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque",
     ruta3:"Quitus Colonial - Universidad Central"}]
-}, 
-    
+},
+
 {
 	cod:'43',
 	nomParada:'Escuela Alejandro Cardenas',
@@ -528,8 +546,8 @@ $scope.paradas=[
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque",
     ruta3:"Quitus Colonial - Universidad Central"}]
-},     
-    
+},
+
 {
 	cod:'44',
 	nomParada:'Rocafuerte',
@@ -538,7 +556,7 @@ $scope.paradas=[
 	longitud:-78.515833,
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque",}]
-}, 
+},
 
 {
 	cod:'45',
@@ -548,8 +566,8 @@ $scope.paradas=[
 	longitud:-78.5172973,
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque",}]
-}, 
-    
+},
+
 {
 	cod:'46',
 	nomParada:'Rocafuerte y Chimborazo',
@@ -558,7 +576,7 @@ $scope.paradas=[
 	longitud:-78.5183356,
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque",}]
-}, 
+},
 
 {
 	cod:'47',
@@ -568,10 +586,10 @@ $scope.paradas=[
 	longitud:-78.521121,
     rutas: [{ruta1:"San José de Cutuglahua-San Roque",
     ruta2:"Santo Domingo de Cutuglahua-San Roque",}]
-}, 
-        
+},
+
 //SANTO DOMINGO- SAN ROQUE
-    
+
 {
 	cod:'48',
 	nomParada:'Santo Domingo',
@@ -580,7 +598,7 @@ $scope.paradas=[
 	longitud:-78.564167,
     rutas: [{ruta1:"Santo Domingo de Cutuglahua-San Roque",}]
 },
-    
+
 {
 	cod:'49',
 	nomParada:'Calle 16',
@@ -598,10 +616,10 @@ $scope.paradas=[
 	longitud:-78.561389,
     rutas: [{ruta1:"Santo Domingo de Cutuglahua-San Roque",}]
 },
-    
-        
+
+
 // U.Central- Monjas
-  
+
 {
 	cod:'51',
 	nomParada:'Seminario Mayor',
@@ -610,9 +628,9 @@ $scope.paradas=[
 	longitud:-78.5006206,
     rutas: [{ruta1:"Quitus Colonial - Universidad Central",
     ruta2: "Jardín del Valle - Las Casas"}]
-    
+
 },
-        
+
 {
 	cod:'52',
 	nomParada:'Universidad Central',
@@ -622,7 +640,7 @@ $scope.paradas=[
     rutas: [{ruta1:"Quitus Colonial - Universidad Central",
     ruta2: "Jardín del Valle - Las Casas"}]
 },
-    
+
 {
 	cod:'53',
 	nomParada:'Universidad Central 2',
@@ -632,7 +650,7 @@ $scope.paradas=[
     rutas: [{ruta1:"Quitus Colonial - Universidad Central",
     ruta2: "Jardín del Valle - Las Casas"}]
 },
-  
+
 {
 	cod:'54',
 	nomParada:'Bolivia',
@@ -640,7 +658,7 @@ $scope.paradas=[
 	latitud:-0.2052778,
 	longitud:-78.500277,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
-}, 
+},
 
 {
 	cod:'55',
@@ -649,8 +667,8 @@ $scope.paradas=[
 	latitud:-0.2080556,
 	longitud:-78.4975,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
-}, 
-    
+},
+
 {
 	cod:'56',
 	nomParada:'Ejido 2',
@@ -658,8 +676,8 @@ $scope.paradas=[
 	latitud:-0.2077778,
 	longitud:-78.497222,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
-}, 
-    
+},
+
 {
 	cod:'57',
 	nomParada:'Ejido 3',
@@ -667,8 +685,8 @@ $scope.paradas=[
 	latitud:-0.2085633,
 	longitud:-78.495900,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
-}, 
-    
+},
+
 {
 	cod:'58',
 	nomParada:'Casa de la Cultura',
@@ -676,8 +694,8 @@ $scope.paradas=[
 	latitud:-0.2091667,
 	longitud:-78.495277,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
-}, 
-    
+},
+
 {
 	cod:'59',
 	nomParada:'Parque "El Arblito"',
@@ -686,7 +704,7 @@ $scope.paradas=[
 	longitud:-78.4961918,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
 },
-    
+
 {
 	cod:'60',
 	nomParada:'Alameda',
@@ -704,7 +722,7 @@ $scope.paradas=[
 	longitud:-78.507222,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
 },
-    
+
 {
 	cod:'62',
 	nomParada:'Marin 2',
@@ -712,10 +730,10 @@ $scope.paradas=[
 	latitud:-0.2183333,
 	longitud:-78.505833,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
-    
-    
+
+
 },
-    
+
 {
 	cod:'63',
 	nomParada:'Marin 3',
@@ -726,10 +744,10 @@ $scope.paradas=[
     ruta2:"Garrochal-Marín",
     ruta3:"Venecia-Marín",
     ruta4:"Jardín del Valle - Las Casas"}]
-    
-    
+
+
 },
-    
+
 {
 	cod:'64',
 	nomParada:'Marin 4',
@@ -749,8 +767,8 @@ $scope.paradas=[
 	latitud:-0.2325,
 	longitud:-78.504444,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
-    
-},   
+
+},
 
 {
 	cod:'66',
@@ -759,10 +777,10 @@ $scope.paradas=[
 	latitud:-0.227222,
 	longitud:-78.490278,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
-    
-    
-    
-},  
+
+
+
+},
 
 {
 	cod:'67',
@@ -771,7 +789,7 @@ $scope.paradas=[
 	latitud: -0.2275,
 	longitud:-78.487222,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
-},    
+},
 
 {
 	cod:'68',
@@ -780,7 +798,7 @@ $scope.paradas=[
 	latitud: -0.232222,
 	longitud:-78.483056,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
-    
+
 },
 
 {
@@ -791,7 +809,7 @@ $scope.paradas=[
 	longitud:-78.483055,
     rutas: [{ruta1: "Jardín del Valle - Las Casas"}]
 },
-    
+
 //Marin- San Juan de Turubamba
 {
 	cod:'70',
@@ -803,7 +821,7 @@ $scope.paradas=[
     ruta2:"Caupicho-Marín",
     ruta3:"Garrochal-Marín",
     ruta4:"Venecia-Marín"}]
-    
+
 },
 
 {
@@ -817,7 +835,7 @@ $scope.paradas=[
     ruta3:"Venecia-Marín",
     ruta4:"Jardín del Valle - Las Casas"}]
 },
-    
+
 {
 	cod:'72',
 	nomParada:'Marín Sur 3',
@@ -828,8 +846,8 @@ $scope.paradas=[
     ruta2:"Garrochal-Marín",
     ruta3:"Venecia-Marín",
     ruta4:"Jardín del Valle - Las Casas"}]
-},    
-   
+},
+
 {
 	cod:'73',
 	nomParada:'Marín Sur 4',
@@ -840,7 +858,7 @@ $scope.paradas=[
     ruta2:"Garrochal-Marín",
     ruta3:"Venecia-Marín",
     ruta4:"Jardín del Valle - Las Casas"}]
-}, 
+},
 
 {
 	cod:'74',
@@ -852,7 +870,7 @@ $scope.paradas=[
     ruta2:"Garrochal-Marín",
     ruta3:"Venecia-Marín",
     ruta4:"Jardín del Valle - Las Casas"}]
-}, 
+},
 
 {
 	cod:'75',
@@ -864,7 +882,7 @@ $scope.paradas=[
     ruta2:"Garrochal-Marín",
     ruta3:"Venecia-Marín",
     ruta4:"Jardín del Valle - Las Casas"}]
-}, 
+},
 
 {
 	cod:'76',
@@ -876,9 +894,9 @@ $scope.paradas=[
     ruta2:"Garrochal-Marín",
     ruta3:"Venecia-Marín",
     ruta4:"Jardín del Valle - Las Casas"}]
-    
-}, 
-    
+
+},
+
 {
 	cod:'77',
 	nomParada:'Napo S7J Sangay',
@@ -889,8 +907,8 @@ $scope.paradas=[
     ruta2:"Garrochal-Marín",
     ruta3:"Venecia-Marín",
     ruta4:"Jardín del Valle - Las Casas"}]
-}, 
-    
+},
+
 {
 	cod:'78',
 	nomParada:'Napo y Alpahuasi',
@@ -902,7 +920,7 @@ $scope.paradas=[
     ruta3:"Venecia-Marín",
     ruta4:"Jardín del Valle - Las Casas"}]
 },
-    
+
 {
 	cod:'79',
 	nomParada:'Calle Corazón',
@@ -913,8 +931,8 @@ $scope.paradas=[
     ruta2:"Garrochal-Marín",
     ruta3:"Venecia-Marín",
     ruta4:"Jardín del Valle - Las Casas"}]
-}, 
-    
+},
+
 {
 	cod:'80',
 	nomParada:'San Juan de T. Entrada',
@@ -922,8 +940,8 @@ $scope.paradas=[
 	latitud:-0.3449751,
 	longitud:-78.5484887,
     rutas: [{ruta1: "Marín - San Juan de Turubamba"}]
-}, 
-    
+},
+
 {
 	cod:'81',
 	nomParada:'S60 y E2',
@@ -931,8 +949,8 @@ $scope.paradas=[
 	latitud:-0.3455263,
 	longitud:-78.5477827,
     rutas: [{ruta1: "Marín - San Juan de Turubamba"}]
-},  
-    
+},
+
 {
 	cod:'82',
 	nomParada:'S60 y E3',
@@ -941,7 +959,7 @@ $scope.paradas=[
 	longitud:-78.5453091,
     rutas: [{ruta1: "Marín - San Juan de Turubamba"}]
 },
-    
+
 {
 	cod:'83',
 	nomParada:'E6 y S60',
@@ -949,7 +967,7 @@ $scope.paradas=[
 	latitud:-0.3492994,
 	longitud:-78.5404751,
    rutas: [{ruta1: "Marín - San Juan de Turubamba"}]
-},  
+},
 
 {
 	cod:'84',
@@ -958,7 +976,7 @@ $scope.paradas=[
 	latitud:-0.3520259,
 	longitud:-78.5395563,
     rutas: [{ruta1: "Marín - San Juan de Turubamba"}]
-}, 
+},
 
 {
 	cod:'85',
@@ -967,8 +985,8 @@ $scope.paradas=[
 	latitud:-0.354493,
 	longitud:-78.5383539,
     rutas: [{ruta1: "Marín - San Juan de Turubamba"}]
-},     
-  
+},
+
 {
 	cod:'86',
 	nomParada:'S62E',
@@ -977,7 +995,7 @@ $scope.paradas=[
 	longitud:-78.5292347,
     rutas: [{ruta1: "Marín - San Juan de Turubamba"}]
 },
-    
+
 {
 	cod:'87',
 	nomParada:'E10',
@@ -985,10 +1003,10 @@ $scope.paradas=[
 	latitud:-0.3548167,
 	longitud:-78.529234,
     rutas: [{ruta1: "Marín - San Juan de Turubamba"}]
-}, 
-    
+},
+
 //Marín - Garrochal
-    
+
 {
 	cod:'88',
 	nomParada:'S58',
@@ -997,7 +1015,7 @@ $scope.paradas=[
 	longitud:-78.5486964,
     rutas: [{ruta1: "Marín - Garrochal"}]
 },
-  
+
 {
 	cod:'89',
 	nomParada:'S58D',
@@ -1005,7 +1023,7 @@ $scope.paradas=[
 	latitud:-0.339444,
 	longitud:-78.545556,
     rutas: [{ruta1: "Marín - Garrochal"}]
-},   
+},
 
 {
 	cod:'90',
@@ -1014,7 +1032,7 @@ $scope.paradas=[
 	latitud:-0.3380527,
 	longitud:-78.5324461,
     rutas: [{ruta1: "Marín - Garrochal"}]
-}, 
+},
 
 {
 	cod:'91',
@@ -1023,10 +1041,10 @@ $scope.paradas=[
 	latitud:-0.3345446,
 	longitud:-78.5353803,
     rutas: [{ruta1: "Marín - Garrochal"}]
-}, 
-    
-//Adicional  
-    
+},
+
+//Adicional
+
 {
 	cod:'92',
 	nomParada:'Espe- Heroes del Cenepa',
@@ -1036,8 +1054,8 @@ $scope.paradas=[
     rutas: [{ruta1: " Guajalo - U. Central",
     ruta2: "Santo Domingo de Cutuglagua - San Roque",
     ruta3: "San José de Cutuglagua - San Roque"}]
-},     
-    
+},
+
 {
 	cod:'93',
 	nomParada:'U.E Fernandez Salvador 1',
@@ -1047,8 +1065,8 @@ $scope.paradas=[
     rutas: [{ruta1: " Guajalo - U. Central",
     ruta2: "Santo Domingo de Cutuglagua - San Roque",
     ruta3: "San José de Cutuglagua - San Roque"}]
-    
-},    
+
+},
 
 {
 	cod:'94',
@@ -1059,10 +1077,10 @@ $scope.paradas=[
     rutas: [{ruta1: " Guajalo - U. Central",
     ruta2: "Santo Domingo de Cutuglagua - San Roque",
     ruta3: "San José de Cutuglagua - San Roque"}]
-    
-    
-},        
-     
+
+
+},
+
 {
 	cod:'95',
 	nomParada:'Iglesia Santa Clara',
@@ -1071,7 +1089,7 @@ $scope.paradas=[
 	longitud:-78.515833,
     rutas: [{ruta1: "Santo Domingo de Cutuglagua - San Roque",
     ruta2: "San José de Cutuglagua - San Roque"}]
-}, 
+},
 
 {
 	cod:'96',
@@ -1081,9 +1099,9 @@ $scope.paradas=[
 	longitud:-78.519444,
     rutas: [{ruta1: "Santo Domingo de Cutuglagua - San Roque",
     ruta2: "San José de Cutuglagua - San Roque"}]
-    
+
 },
- 
+
 //Universidad Central Guajaló
 {
 	cod:'97',
@@ -1092,9 +1110,9 @@ $scope.paradas=[
 	latitud:-0.2039455,
 	longitud:-78.5055113,
     rutas: [{ruta1: "Guajaló - U. Central"}]
-    
-    
-},    
+
+
+},
 
 {
 	cod:'98',
@@ -1103,8 +1121,8 @@ $scope.paradas=[
 	latitud:-0.212778,
 	longitud:-78.5075,
     rutas: [{ruta1: "Guajaló - U. Central"}]
-},       
-  
+},
+
 {
 	cod:'99',
 	nomParada:'Venezuela',
@@ -1112,8 +1130,8 @@ $scope.paradas=[
 	latitud:-0.2161111,
 	longitud:-78.509166,
     rutas: [{ruta1: "Guajaló - U. Central"}]
-}, 
-    
+},
+
 {
 	cod:'100',
 	nomParada:'Benalcazar',
@@ -1121,7 +1139,7 @@ $scope.paradas=[
 	latitud:-0.2175248,
 	longitud:-78.5115919,
     rutas: [{ruta1: "Guajaló - U. Central"}]
-}, 
+},
 
 {
 	cod:'101',
@@ -1138,7 +1156,7 @@ $scope.paradas=[
 	latitud:-0.225278,
 	longitud:-78.516111,
     rutas: [{ruta1: "Guajaló - U. Central"}]
-}, 
+},
 
 {
 	cod:'103',
@@ -1148,7 +1166,7 @@ $scope.paradas=[
 	longitud:-78.514722,
     rutas: [{ruta1: "Guajaló - U. Central"}]
 },
-    
+
 {
 	cod:'104',
 	nomParada:'Letort',
@@ -1166,7 +1184,7 @@ $scope.paradas=[
 	longitud:-78.538055,
     rutas: [{ruta1: "Guajaló - U. Central"}]
 },
-    
+
 {
 	cod:'106',
 	nomParada:'S4DB',
@@ -1174,8 +1192,8 @@ $scope.paradas=[
 	latitud:-0.3055556,
 	longitud:-78.536388,
     rutas: [{ruta1: "Guajaló - U. Central"}]
-},    
-    
+},
+
 {
 	cod:'107',
 	nomParada:'E58',
@@ -1184,7 +1202,7 @@ $scope.paradas=[
 	longitud:-78.534444,
     rutas: [{ruta1: "Guajaló - U. Central"}]
 },
-    
+
 {
 	cod:'108',
 	nomParada:'S42',
@@ -1193,7 +1211,7 @@ $scope.paradas=[
 	longitud:-78.534444,
     rutas: [{ruta1: "Guajaló - U. Central"}]
 },
-    
+
 {
 	cod:'109',
 	nomParada:'S4DB',
@@ -1202,7 +1220,7 @@ $scope.paradas=[
 	longitud:-78.536388,
     rutas: [{ruta1: "Guajaló - U. Central"}]
 },
-    
+
 {
 	cod:'110',
 	nomParada:'ESG',
@@ -1211,7 +1229,7 @@ $scope.paradas=[
 	longitud:-78.5338888,
     rutas: [{ruta1: "Guajaló - U. Central"}]
 },
-    
+
 {
 	cod:'111',
 	nomParada:'S418',
@@ -1219,7 +1237,7 @@ $scope.paradas=[
 	latitud:-0.3088889,
 	longitud:-78.532777,
     rutas: [{ruta1: "Guajaló - U. Central"}]
-},    
+},
 ];
 
 
@@ -1253,14 +1271,14 @@ var posOptions = {timeout: 10000, enableHighAccuracy: false};
       var long = position.coords.longitude
       $scope.latitud=lat;
       $scope.longitud=long;
-      
-      
+
+
       console.log(lat);
       console.log(long);
     }, function(err) {
       // error
     });
-   
+
 };
 
 $scope.getAddress=function(){
@@ -1301,12 +1319,12 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
 
     }
 
-    
+
 
 
    $scope.distanciaParadas=function(){
    	var contadorCercanas=0;
-    for(var i=0;i<$scope.paradas.length;i++){
+    for(var i=0;i<$scope.stations.length;i++){
     	var latitudUsuario=$scope.latitud;
         var longitudUsuario=$scope.longitud;
         var latitudParada=$scope.paradas[i].latitud;
@@ -1315,28 +1333,28 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
          console.log(longitudUsuario);
           console.log(latitudParada);
            console.log(longitudParada);
-       
+
        var distancia=$scope.calcularDistancia(latitudUsuario,latitudParada,
         	longitudUsuario,longitudParada);
        			if(distancia < 1)
        			{
-       				$scope.paradas[i].distancia=distancia*1000;
-       				$scope.paradas[i].kilometros=false;
-       				$scope.paradas[i].metros=true;
-       				if($scope.paradas[i].distancia<=900)
+       				$scope.stations[i].distancia=distancia*1000;
+       				$scope.stations[i].kilometros=false;
+       				$scope.stations[i].metros=true;
+       				if($scope.stations[i].distancia<=900)
        				{
-       				$scope.paradasCercanas[contadorCercanas]=$scope.paradas[i];
+       				$scope.paradasCercanas[contadorCercanas]=$scope.stations[i];
        				//ServiceParadas.data=$scope.paradasCercanas;
        				contadorCercanas ++;
        				}
-       				
+
        			}
        			else{
-       				$scope.paradas[i].distancia=distancia;
-       				$scope.paradas[i].kilometros=true;
+       				$scope.stations[i].distancia=distancia;
+       				$scope.stations[i].kilometros=true;
        			}
-             
-             console.log($scope.paradas[i].distancia);
+
+             console.log($scope.stations[i].distancia);
 
 
     	}
@@ -1345,18 +1363,18 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
 
  	var init = function () {
  		$scope.obtenerPosicion();
- 		//$scope.calcRoute();
      }
 
      init();
-    
+	
+
     $scope.getdetails=function(parada){
         $scope.currentItem = parada;
         console.log($scope.currentItem);
-    
+
         $scope.modal.show();
     };
-    
+
      $ionicModal.fromTemplateUrl('templates/detalleParadas.html', {
                   scope: $scope,
                   animation: 'slide-in-up'
@@ -1389,7 +1407,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
          $scope.calcRoute(latUsuario,longUsuario,latParada,longParada);
          console.log($scope.favoriteItems);
      };
-     
+
       $ionicModal.fromTemplateUrl('templates/detalleParadas.html', {
                    scope: $scope,
                    animation: 'slide-in-up'
@@ -1463,7 +1481,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
         	template: 'Añadido a tu lista de favoritos.'
         	});
            favoritesService.addFavorites(item);
-        } 		
+        }
  	};
 
 

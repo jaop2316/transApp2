@@ -1,53 +1,54 @@
 <ion-view view-title="Paradas">
-	<ion-content class="padding">
+    <ion-content class="padding">
 
-		<div class="row">
-			<div class="col col-75"> 
-				<h2>Mi ubicación</h2>	
-			</div>
-			<div class="col"> 
-				<button class="button button-energized icon ion-location" ng-click="getAddress()"></button>
-			</div>
-		</div>
+        <div class="row">
+            <div class="col col-75">
+                <h2>Mi ubicación</h2>
+            </div>
+            <div class="col">
+                <button class="button button-energized icon ion-location" ng-click="getAddress()"></button>
+            </div>
+        </div>
 
 
-		<div class="row">
-			<div class="col">
-				<div class="card">
-		  			<div class="item item-text-wrap">
-		    			{{address}}
-		  			</div>
-				</div>
-			</div>
-		</div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="item item-text-wrap">
+                        {{address}}
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="row">
-			<div class="col">
-				<h3> Paradas Cercanas</h3>
-			</div>
+        <div class="row">
+            <div class="col">
+                <h3> Paradas Cercanas</h3>
+            </div>
 
-		</div>
+        </div>
 
-		<!-- <ion-slides  options="options" slider="data.slider"> -->
-			<!-- <ion-slide-page> -->
-				<div class="row">
-		   			 <div class="col">
-						 <!-- <div class="list" ng-repeat="parada in paradas" ng-click="getdetails(parada)">  -->
-						 <div class="list" ng-repeat="parada in paradasCercanas | orderBy:'distancia'" ng-click="getdetails(parada)">	
-		    			<a class="item item-avatar">
-		      			<img ng-src="{{parada.url}}">
-		      			<h2>{{parada.nomParada}}</h2>
-		      			<p>Distancia :{{parada.distancia}}&nbsp;<span ng-show="parada.metros">metros</span>&nbsp;<span ng-show="parada.kilometros">kilometros</span></p>
-		    			</a>
+        <!-- <ion-slides  options="options" slider="data.slider"> -->
+        <!-- <ion-slide-page> -->
+        <div class="row">
+            <div class="col">
+                <div class="list" ng-repeat="parada in stations track by $index" ng-click="getdetails(parada)">
+                    <!--<div class="list" ng-repeat="parada in paradasCercanas | orderBy:'distancia'" ng-click="getdetails(parada)">-->
+                    <a class="item item-avatar">
+                        <img ng-src="{{parada.url}}">
+                        <h2>{{parada.nomParada}}</h2>
+                        <p>Distancia :{{parada.distancia}}&nbsp;<span ng-show="parada.metros">metros</span>&nbsp;<span
+                                ng-show="parada.kilometros">kilometros</span></p>
+                    </a>
 
-						</div>
-					</div>
-				</div>
-			<!-- </ion-slide-page> -->
-			
+                </div>
+            </div>
+        </div>
+        <!-- </ion-slide-page> -->
 
-    <!--  </ion-slides> -->
-		
-		
-	</ion-content>
-</ion-view> 
+
+        <!--  </ion-slides> -->
+
+
+    </ion-content>
+</ion-view>

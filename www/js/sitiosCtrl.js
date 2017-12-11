@@ -1,5 +1,5 @@
-app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favoritesService','$ionicScrollDelegate','$ionicLoading','$ionicPopover','RoutesService','PlacesFactory',function($scope,
-    $ionicModal,$ionicPopup,favoritesService,$ionicScrollDelegate,$ionicLoading,$ionicPopover,RoutesService,PlacesFactory){
+app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favoritesService','$ionicScrollDelegate','$ionicLoading','$ionicPopover','TestFactory','PlacesFactory',function($scope,
+    $ionicModal,$ionicPopup,favoritesService,$ionicScrollDelegate,$ionicLoading,$ionicPopover,TestFactory,PlacesFactory){
    //$scope.currentItem.favorites=false;
   $scope.sitios = [];
   $scope.routesList=[];
@@ -150,8 +150,22 @@ $scope.listaLugares();
 
   ];
 
-  $scope.routesList=RoutesService.getRoutes();
+  //$scope.routesList=RoutesService.getRoutes();
   //console.log($scope.routesList[1].nombreRuta);
+
+  $scope.listaRutas = function(){
+    TestFactory.query().$promise.then(function (respuesta) {
+      $scope.routesList = respuesta;
+      console.log($scope.routesList);
+  },
+  function(err){
+      console.log(err);
+  }
+
+  );
+  };
+
+  $scope.listaRutas();
 
   $scope.toggleGroup = function(sitio) {
     if ($scope.isGroupShown(sitio)) {

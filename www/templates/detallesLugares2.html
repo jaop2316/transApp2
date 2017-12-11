@@ -22,7 +22,7 @@
           </div>
 
         <div ng-repeat="indice in currentItem.rutas">
-          <a class="item item-icon-left" ng-repeat="ruta in indice">
+          <a class="item item-icon-left" ng-repeat="ruta in indice track by $index">
               <i class="icon ion-android-bus"></i>
               {{ruta}}
             </a>         
