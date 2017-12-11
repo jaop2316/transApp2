@@ -82,10 +82,11 @@
 
 			<div class="row">
     		<div class="col">
-    			<div class="list">
-    			    <a class="item item-avatar" href="#" ng-repeat="sitio in currentItem.sitios">
+    			<div class="list" ng-repeat="sitio in currentItem.sitios">
+    			    <a class="item item-avatar" href="#" ng-repeat="index in sitio" >
     			      <img ng-src="http://www.riocentroshopping.com/assets/img/upload/big/308541cc1641488ae6e0b14c4135b1a8.jpg">
-    			      <h2>{{sitio}}</h2>
+    			      <h2>{{index.nombre}}</h2>
+								<p>{{index.categoria}}</p>
     			    </a>
     			</div>
     		</div>

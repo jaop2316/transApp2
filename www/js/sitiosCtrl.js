@@ -180,10 +180,11 @@ $scope.listaLugares();
 
     //Detalles de rutas
 
-  $scope.getdetails = function(item){
+  $scope.getdetails = function(item,category){
     $scope.currentItem = item;
     console.log($scope.currentItem);
-    //console.log($scope.currentParadas.rutas);
+    $scope.category=category;
+    console.log($scope.category);
     $scope.modal.show();
   };
 
@@ -216,7 +217,6 @@ $scope.listaLugares();
 $scope.searchIndexinRoutes=function(ruta){
 
     for(var i=0;i<$scope.routesList.length;i++){
-      //var nomRutaList=$scope.routesList[i].nombreRuta;
       console.log($scope.routesList[i].nombreRuta);
       console.log(ruta);
       if($scope.routesList[i].nombreRuta.localeCompare(ruta)==0){

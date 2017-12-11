@@ -13,18 +13,13 @@
     </div>
     </ion-header-bar>
     <ion-content class="padding">
-       	<div class="row">
-       		<div class="col">
-    			<p class="headDetallesRutas" ng-show="sentido1">Hacia :{{currentItem.sentido1}}</p>
-    			<p class="headDetallesRutas" ng-show="sentido2">Hacia :{{getRouteService.items[0].sentido2}}</p>
-    		</div>
-    	</div>
+
+
+
 
     	<div class="row">
     		<div class="col">
-    			<!-- <div class="card">
-    			  <div id="map"></div>
-    			</div> -->
+    			<p class="headDetallesRutas">{{getRouteService.nombreRuta}}</p>
     		</div>
     	</div>
     	<div class="row">
@@ -72,6 +67,24 @@
     	<div class="row">
     		<div class="col" id="detail">Domingo y Feriados</div>
     		<div class="col" id="detail">{{getRouteService.interDFN}}</div>
+    	</div>
+
+			<div class="row">
+    		<div class="col">
+    			<h3>Sitios de Interes</h3>
+    		</div>
+    	</div>
+
+			<div class="row">
+    		<div class="col">
+    			<div class="list" ng-repeat="sitio in getRouteService.sitios">
+    			    <a class="item item-avatar" href="#" ng-repeat = "index in sitio" >
+    			      <img ng-src="http://www.riocentroshopping.com/assets/img/upload/big/308541cc1641488ae6e0b14c4135b1a8.jpg">
+    			      <h2>{{index.nombre}}</h2>
+								<p>{{index.categoria}}</p>
+    			    </a>
+    			</div>
+    		</div>
     	</div>
 
         <div class="row">

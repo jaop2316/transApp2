@@ -19,7 +19,7 @@
             &nbsp;
              {{sitio.nombreCategoria}}
           </ion-item>
-          <ion-item class="item-accordion" ng-repeat="item in sitio.items" ng-show="isGroupShown(sitio)||busqueda"  ng-click="getdetails(item)">
+          <ion-item class="item-accordion" ng-repeat="item in sitio.items" ng-show="isGroupShown(sitio)||busqueda"  ng-click="getdetails(item,sitio.nombreCategoria)">
             <i class="icon" ng-class="sitio.nombreCategoria==='Instituciones Educativas' ? 'ion-university' : sitio.nombreCategoria==='Centros de Salud' ? 'ion-medkit' : sitio.nombreCategoria==='Instituciones Financieras' ? 'ion-cash' : 'ion-person-stalker' "></i>
              {{item.nombreSitio}}
           </ion-item>
