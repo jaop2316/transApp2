@@ -2,7 +2,7 @@
 	   <ion-header-bar class="bar bar-header bar-light">
     <div class="row header-stop">
       <div class="col col-return">
-        <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal(4)">Paradas</button>
+        <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal(4)">Favoritos</button>
       </div>
       <div class="col">
         <h1 class="title">Ruta</h1>
@@ -15,7 +15,7 @@
     <ion-content class="padding">
        	<div class="row">
        		<div class="col">
-    			<p class="headDetallesRutas" ng-show="sentido1">{{currentItem.nombreRuta}}</p>
+    			<p class="headDetallesRutas">{{currentItem.nombreRuta}}</p>
     		</div>
     	</div>
 
@@ -84,7 +84,7 @@
     		<div class="col">
     			<div class="list" ng-repeat="sitio in currentItem.sitios">
     			    <a class="item item-avatar" href="#" ng-repeat="index in sitio" >
-    			      <img ng-src="http://www.riocentroshopping.com/assets/img/upload/big/308541cc1641488ae6e0b14c4135b1a8.jpg">
+    			      <img ng-src="{{index.categoria==='Instituciones Educativas' ? 'img/education.png' : index.categoria==='Centros de Salud' ? 'img/doctor.png' : index.categoria==='Instituciones Financieras' ? 'img/money-bag.png' : 'img/target.png'}}">
     			      <h2>{{index.nombre}}</h2>
 								<p>{{index.categoria}}</p>
     			    </a>

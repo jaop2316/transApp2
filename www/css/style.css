@@ -1,5 +1,21 @@
 /* Empty. Add your own CSS if you like */
 
+@font-face {
+    font-family: 'ubunturegular';
+    src: url('fonts/ubuntu-r-webfont.eot');
+    src: url('fonts/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ubuntu-r-webfont.woff2') format('woff2'),
+         url('fonts/ubuntu-r-webfont.woff') format('woff'),
+         url('fonts/ubuntu-r-webfont.svg#ubunturegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+  font-family: 'ubunturegular';
+}
+
 .padding{
 background-color:#334455;
 
@@ -7,14 +23,17 @@ background-color:#334455;
 
 h1 {
   color:#ffbb33;
+  font-family: 'ubunturegular';
 }
 
 h2{
   color:#ffbb33;
+  font-family: 'ubunturegular';
 }
 
 h3{
   color:#ffbb33;
+  font-family: 'ubunturegular';
 }
 
 .list .item.item-accordion {
@@ -26,7 +45,7 @@ h3{
 .list .item.item-accordion.ng-hide {
   line-height: 0px;
 }
-.list .item.item-accordion.ng-hide-add      
+.list .item.item-accordion.ng-hide-add
 .list .item.item-accordion.ng-hide-remove {
   display: block !important;
 }
@@ -66,8 +85,8 @@ color:white;
   font-size:20px;
 }
 
-.bar .button.button-clear .icon:before, .bar .button.button-clear.icon:before, .bar .button.button-clear.icon-left:before, .bar .button.button-clear.icon-right:before, .bar button.button-clear .icon:before, .bar button.button-clear.icon:before, 
-.bar button.button-clear.icon-left:before, 
+.bar .button.button-clear .icon:before, .bar .button.button-clear.icon:before, .bar .button.button-clear.icon-left:before, .bar .button.button-clear.icon-right:before, .bar button.button-clear .icon:before, .bar button.button-clear.icon:before,
+.bar button.button-clear.icon-left:before,
 .bar button.button-clear.icon-right:before {
   font-size: 20px;
     line-height: 32px;
@@ -150,7 +169,7 @@ color: #33FF33;
 .ion-ios-navigate:before{
    font-size: 30px;
    color: #ffbb33;
-     
+
 }
 
 .item-divider {
@@ -161,26 +180,26 @@ color: #33FF33;
 
 .ion-android-bus:before{
    font-size: 30px;
-   
+
 
 }
 
 .ion-arrow-left-c:before {
      color: #00FF00;
  }
- 
+
  .ion-university:before {
      color: #0000EE;
  }
- 
+
  .ion-cash:before {
      color: #00C957;
  }
- 
+
  .ion-medkit:before {
      color: #FF0000;
  }
- 
+
  .ion-person-stalker:before {
      color: #BA55D3;
  }
@@ -198,7 +217,7 @@ color: #33FF33;
 
 .more-image{
   height: 340px;
-}   
+}
 
 .ion-star:before{
   color:yellow;
