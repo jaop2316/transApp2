@@ -167,7 +167,7 @@ color: #33FF33;
 }
 
 .ion-ios-navigate:before{
-   font-size: 30px;
+   font-size: 25px;
    color: #ffbb33;
 
 }
@@ -178,10 +178,14 @@ color: #33FF33;
     font-size:20px;
 }
 
+.item-divider p{
+  font-size: 20px;
+  color: #ffbb33;
+}
+
 .ion-android-bus:before{
-   font-size: 30px;
-
-
+   font-size: 25px;
+   padding-right: 5px;
 }
 
 .ion-arrow-left-c:before {
@@ -210,14 +214,14 @@ color: #33FF33;
  }
 
 .ion-chevron-up:before {
-  padding-left: 80px;
+  /*padding-left: 80px;*/
 }
 
 #item-directions.ion-chevron-up:before {
   padding-left:90px;
   }
 .ion-chevron-down:before {
-  padding-left: 80px;
+  /*padding-left: 80px;*/
 }
 
 .more-image{
