@@ -1366,7 +1366,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
      }
 
      init();
-	
+
 
     $scope.getdetails=function(parada){
         $scope.currentItem = parada;
