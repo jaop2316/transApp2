@@ -1,7 +1,9 @@
 {
   "name": "transApp_v1Tabs",
   "app_id": "73b90b5d",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic1",
   "watchPatterns": [
     "scss/**/*",

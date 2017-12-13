@@ -1,0 +1,37 @@
+<ion-view view-title="Lugares">
+  <ion-content class="padding">
+    <center><h2 class="title">Sitios de interés</h2></center>
+         <div class="col">
+      <div class="list list-inset">
+          <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" placeholder="Buscar" ng-model="busqueda">
+          </label>
+      </div>
+    </div>
+
+        <div class="col">
+       <ion-list>
+        <div ng-repeat="sitio in filteredSitios = (places |filter:busqueda)" sitio="sitio">
+
+          <ion-item class="item-stable" ng-click="toggleGroup(sitio)" ng-class="{active: isGroupShown(sitio)}">
+              <i class="icon" ng-class="isGroupShown(sitio) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+             {{sitio.nombreCategoria}}
+          </ion-item>
+          <ion-item class="item-accordion" ng-repeat="item in sitio.items" ng-show="isGroupShown(sitio)||busqueda"  ng-click="getdetails(item,sitio.nombreCategoria)">
+            <i class="icon" ng-class="sitio.nombreCategoria==='Instituciones Educativas' ? 'ion-university' : sitio.nombreCategoria==='Centros de Salud' ? 'ion-medkit' : sitio.nombreCategoria==='Instituciones Financieras' ? 'ion-cash' : 'ion-person-stalker' "></i>
+             {{item.nombreSitio}}
+          </ion-item>
+
+        </div>
+
+      </ion-list>
+        </div>
+
+        <div ng-show="!filteredSitios.length" class="col">
+        <h1 class="notFound">No existe lugares disponible</h1>
+        </div>
+
+    </ion-content>
+</ion-view

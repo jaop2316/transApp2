@@ -1,0 +1,106 @@
+<ion-modal-view>
+	   <ion-header-bar class="bar bar-header bar-light">
+    <div class="row header-stop">
+      <div class="col col-return">
+        <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal(2)">Sitios</button>
+      </div>
+      <div class="col">
+        <h1 class="title">Ruta</h1>
+      </div>
+      <div class="col col-favorite">
+        <button class="button icon-left ion-star button-positive" ng-click="addFavorites(getRouteService)"></button>
+      </div>
+    </div>
+    </ion-header-bar>
+    <ion-content class="padding">
+
+
+
+
+    	<div class="row">
+    		<div class="col">
+    			<p class="headDetallesRutas">{{getRouteService.nombreRuta}}</p>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col">
+    			<h3>Horarios</h3>
+    		</div>
+    	</div>
+
+
+    	<div class="row header">
+    		<div class="col" id="headCol">Dias</div>
+    		<div class="col" id="headCol">Horario</div>
+    	</div>
+    	<div class="row">
+    		<div class="col" id="detail">Lunes - Viernes</div>
+    		<div class="col" id="detail">{{getRouteService.horaLV}}</div>
+    	</div>
+    	<div class="row">
+    		<div class="col" id="detail">Sabado</div>
+    		<div class="col" id="detail">{{getRouteService.horaS}}</div>
+    	</div>
+    	<div class="row">
+    		<div class="col" id="detail">Domingo y Feriados</div>
+    		<div class="col" id="detail">{{getRouteService.horaDF}}</div>
+    	</div>
+
+    	<div class="row">
+    		<div class="col">
+    			<h3>Intervalos de Llegada</h3>
+    		</div>
+    	</div>
+
+    	<div class="row header">
+    		<div class="col" id="headCol">Dias</div>
+    		<div class="col" id="headCol">Intervalos</div>
+    	</div>
+    	<div class="row">
+    		<div class="col" id="detail">Lunes - Viernes</div>
+    		<div class="col" id="detail">{{getRouteService.interLVP}}</div>
+    	</div>
+    	<div class="row">
+    		<div class="col" id="detail">Sabado</div>
+    		<div class="col" id="detail">{{getRouteService.interSP}}</div>
+    	</div>
+    	<div class="row">
+    		<div class="col" id="detail">Domingo y Feriados</div>
+    		<div class="col" id="detail">{{getRouteService.interDFN}}</div>
+    	</div>
+
+			<div class="row">
+    		<div class="col">
+    			<h3>Sitios de Interes</h3>
+    		</div>
+    	</div>
+
+			<div class="row">
+    		<div class="col">
+    			<div class="list" ng-repeat="sitio in getRouteService.sitios">
+    			    <a class="item item-avatar" href="#" ng-repeat = "index in sitio" >
+    			      <img ng-src="{{index.categoria==='Instituciones Educativas' ? 'img/education.png' : index.categoria==='Centros de Salud' ? 'img/doctor.png' : index.categoria==='Instituciones Financieras' ? 'img/money-bag.png' : 'img/target.png'}}">
+    			      <h2>{{index.nombre}}</h2>
+								<p>{{index.categoria}}</p>
+    			    </a>
+    			</div>
+    		</div>
+    	</div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Observaciones</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="item item-text-wrap">
+                    <p>{{getRouteService.Observaciones}}</p>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+
+</ion-modal-view>

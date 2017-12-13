@@ -18,53 +18,69 @@
     <ion-content class="padding">
         <div class="row">
             <div class="col">
-                <p class="headDetallesRutas"> {{currentItem.nomParada}}</p>
+              <center><h2> {{currentItem.nomParada}}</h2></center>
             </div>
         </div>
-        <div class="list card">
-            <div class="item item-image">
-                <img ng-src={{currentItem.url}}>
+
+        <div class="row">
+            <div class="col">
+                <p class="headDetallesRutas"> Distancia: {{currentItem.distancia}}<span ng-show="currentItem.metros">metros</span>&nbsp;<span
+                        ng-show="currentItem.kilometros">kilometros</span></p>
             </div>
-            <div class="row">
-                <div class="col">
-                    <div class="item item-divider" ng-click="toggleGroup(currentItem)" id="item-directions">
-                        <i class="ion-ios-navigate"></i>
-                        ¿Cómo llegar?
-                        <i class="icon"
-                           ng-class="isGroupShown(currentItem) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="list card">
+                <div class="item item-image">
+                    <img ng-src={{currentItem.url}}>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="item item-divider" ng-click="toggleGroup(currentItem)" id="item-directions">
+                            <i class="ion-ios-navigate"></i>
+                            ¿Cómo llegar?
+                            <i class="icon"
+                               ng-class="isGroupShown(currentItem) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row" ng-show="isGroupShown(currentItem)">
-                <div class="col">
-                    <div class="item item-text-wrap item-accordion">
-                        <p ng-repeat="direction in directions track by $index">
-                            {{direction}}<br>
-                        </p>
+                <div class="row" ng-show="isGroupShown(currentItem)">
+                    <div class="col">
+                        <div class="item item-text-wrap item-accordion">
+                            <p ng-repeat="direction in directions track by $index">
+                              <i class="ion-android-walk"></i>
+                                {{direction}}<br>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="item item-divider" ng-click="toggleGroup2(currentItem.rutas)">
-                        <i class="ion-android-bus"></i>
-                        Rutas Disponibles
-                        <i class="icon"
-                           ng-class="isGroupShown(currentItem.rutas) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+                <div class="row">
+                    <div class="col">
+                        <div class="item item-divider" ng-click="toggleGroup2(currentItem.rutas)">
+                            <i class="ion-android-bus"></i>
+                            Rutas Disponibles
+                            <i class="icon"
+                               ng-class="isGroupShown(currentItem.rutas) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row" ng-show="isGroupShown(currentItem.rutas)">
-                <div class="col">
-                    <div class="item item-text-wrap item-accordion2" ng-repeat="ruta in currentItem.rutas">
-                        <p>
-                            {{ruta}}
-                        </p>
+                <div class="row" ng-show="isGroupShown(currentItem.rutas)">
+                    <div class="col">
+                        <div class="item item-text-wrap item-accordion2" ng-repeat="ruta in currentItem.rutas">
+                            <p>
+                              <i class="ion-arrow-right-c"></i>
+                                {{ruta}}
+                            </p>
+                        </div>
                     </div>
                 </div>
+
             </div>
+          </div>
 
         </div>
+
 
 
     </ion-content>

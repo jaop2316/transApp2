@@ -1,0 +1,255 @@
+/* Empty. Add your own CSS if you like */
+
+@font-face {
+    font-family: 'ubunturegular';
+    src: url('fonts/ubuntu-r-webfont.eot');
+    src: url('fonts/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ubuntu-r-webfont.woff2') format('woff2'),
+         url('fonts/ubuntu-r-webfont.woff') format('woff'),
+         url('fonts/ubuntu-r-webfont.svg#ubunturegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+  font-family: 'ubunturegular';
+}
+
+.padding{
+background-color:#334455;
+
+}
+
+h1 {
+  color:#ffbb33;
+  font-family: 'ubunturegular';
+}
+
+h2{
+  color:#ffbb33;
+  font-family: 'ubunturegular';
+}
+
+h3{
+  color:#ffbb33;
+  font-family: 'ubunturegular';
+}
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+
+.item-accordion2 {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+
+.item-accordion2.ng-hide {
+  line-height: 0px;
+}
+
+.item-accordion2.ng-hide-add
+.item.item-accordion2.ng-hide-remove {
+  display: block !important;
+}
+
+.overflow-scroll{
+  overflow-y:auto;
+}
+
+/*.input-label{
+color:white;
+
+  }*/
+
+.button.button-energized{
+  background-color: #ffbb33;
+  color:#334455;
+  }
+
+.notFound{
+  color:#ffbb33;
+  font-size:20px;
+}
+
+.bar .button.button-clear .icon:before, .bar .button.button-clear.icon:before, .bar .button.button-clear.icon-left:before, .bar .button.button-clear.icon-right:before, .bar button.button-clear .icon:before, .bar button.button-clear.icon:before,
+.bar button.button-clear.icon-left:before,
+.bar button.button-clear.icon-right:before {
+  font-size: 20px;
+    line-height: 32px;
+}
+
+.bar .button.button-clear, .bar button.button-clear {
+  padding-right: 2px;
+    padding-left: 2px;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+.headDetallesRutas{
+  font-size: 20px;
+    text-align: center;
+    color:white;
+    line-height: 30px;
+}
+
+.textInfoGeneral{
+  font-size: 15px;
+  color:white;
+}
+
+.header .col {
+  background-color:#ffbb33;
+  color:white;
+  font-size:23px;
+  text-align:center;
+}
+
+#headCol{
+  border: solid 1px black;
+  border-bottom-style: none;
+  border-right-style: none;
+}
+
+#headCol:last-child {
+  border-right: solid 1px black;
+}
+
+
+#detail {
+  border: solid 1px black;
+  border-bottom-style: none;
+  border-right-style: none;
+  background-color:white;
+  text-align:center;
+
+}
+
+#detail:last-child {
+  border-right: solid 1px black;
+}
+
+.row:last-child #detail {
+  border-bottom:solid 1px black;
+}
+
+
+.ion-arrow-right-c #before{
+color: #33FF33;
+}
+
+
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+    height: 100%;
+}
+
+.ion-arrow-right-c:before{
+    color: #33FF33;
+}
+
+.ion-ios-navigate:before{
+   font-size: 30px;
+   color: #ffbb33;
+
+}
+
+.item-divider {
+    color: #ffbb33;
+    font-weight: 500;
+    font-size:20px;
+}
+
+.ion-android-bus:before{
+   font-size: 30px;
+
+
+}
+
+.ion-arrow-left-c:before {
+     color: #00FF00;
+ }
+
+ .ion-university:before {
+     color: #0000EE;
+ }
+
+ .ion-cash:before {
+     color: #00C957;
+ }
+
+ .ion-medkit:before {
+     color: #FF0000;
+ }
+
+ .ion-person-stalker:before {
+     color: #BA55D3;
+ }
+
+.ion-chevron-up:before {
+  padding-left: 80px;
+}
+
+#item-directions.ion-chevron-up:before {
+  padding-left:90px;
+  }
+.ion-chevron-down:before {
+  padding-left: 80px;
+}
+
+.more-image{
+  height: 340px;
+}
+
+.ion-star:before{
+  color:yellow;
+}
+
+.ion-help:before{
+  color:green;
+}
+
+.ion-person:before{
+  color:blue;
+}
+
+.header-stop{
+  padding: 0px;
+}
+
+.col-return{
+  padding: 0px;
+}
+
+.col-favorite{
+  padding-top: 0px;
+  display:flex;
+  flex-direction:row-reverse;
+  /*align-content: flex-end;*/
+}
+
+.bar.bar-light .title {
+    color: #ffbb33;
+}
+
+.view-container{
+  position: initial;
+}

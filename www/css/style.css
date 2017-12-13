@@ -204,6 +204,11 @@ color: #33FF33;
      color: #BA55D3;
  }
 
+ .ion-android-walk:before{
+   color: #33FF33;
+   padding-right: 5px;
+ }
+
 .ion-chevron-up:before {
   padding-left: 80px;
 }

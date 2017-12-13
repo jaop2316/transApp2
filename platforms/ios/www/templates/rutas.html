@@ -1,0 +1,42 @@
+	<ion-view view-title="Rutas">
+	<ion-content class="padding">
+
+		<center><h2 class="title">Rutas</h2></center>
+
+		<div class="col">
+			<div class="list list-inset">
+		  		<label class="item item-input">
+		    	<i class="icon ion-search placeholder-icon"></i>
+		    	<input type="text" placeholder="Buscar" ng-model="busqueda">
+		  		</label>
+			</div>
+		</div>
+		<div class="col">
+			<ion-list>
+			<div ng-repeat="ruta in filteredRutas = (routes | filter:busqueda)" ruta="ruta">
+
+			    <ion-item class="item-stable" ng-click="toggleGroup(ruta)">
+			     <i class="icon" ng-class="isGroupShown(ruta) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;{{ruta.nombreRuta}}
+			    </ion-item>
+
+			    <ion-item class="item-accordion ion-arrow-right-c" ng-repeat="item in ruta.items track by $index" ng-show="isGroupShown(ruta)||busqueda" ng-click="getdetails(ruta,1)">
+			                {{item.sentido1}}
+			    </ion-item>
+			    <ion-item class="item-accordion ion-arrow-left-c" ng-repeat="item in ruta.items"ng-show="isGroupShown(ruta)||busqueda" ng-click="getdetails(ruta,2)">
+			                {{item.sentido2}}
+			    </ion-item>
+
+
+
+			</div>
+			</ion-list>
+		</div>
+		<div ng-show="!filteredRutas.length" class="col">
+		<h1 class="notFound">No existe una ruta disponible</h1>
+		</div>
+
+		<!-- <div id="map"></div> -->
+
+
+	<ion-content>
+</ion-view>
