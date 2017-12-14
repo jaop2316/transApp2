@@ -3,14 +3,14 @@ app.controller('mapController',function($scope,$ionicPopup,$ionicSideMenuDelegat
 	var src = 'https://www.dropbox.com/s/0qn1veaz4o5akcz/Rutas-Transplaneta.kml?dl=1';
 
     //var latLng = new google.maps.LatLng(-0.24540368195453613,-78.51656848144529);
- 
+
     var mapOptions = {
       center: {lat:-0.24540368195453613, lng:-78.51656848144529},
       zoom: 11,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       draggable:true
     };
- 
+
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
     loadKmlLayer(src, map);
@@ -25,11 +25,9 @@ app.controller('mapController',function($scope,$ionicPopup,$ionicSideMenuDelegat
     });
     google.maps.event.addListener(kmlLayer, 'click', function(event) {
       var content = event.featureData.infoWindowHtml;
-      //var testimonial = document.getElementById('capture');
-      //testimonial.innerHTML = content;
       console.log(content);
        var alertPopup = $ionicPopup.alert({
-       title: 'Informacion',
+       title: 'Información',
        template: content
      });
     });
@@ -41,13 +39,13 @@ app.controller('mapController',function($scope,$ionicPopup,$ionicSideMenuDelegat
   };
 
 
-    
+
 
  /*map = L.map('map', {
     dragging:true
 }).setView([-0.24540368195453613,-78.51656848144529], 11);
 
-	 
+
 	     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamExOTc5IiwiYSI6ImNpazcyZHFtcjAxOGJ2ZGt0NGNhamQ1cXQifQ.Kkz4bJY_fOE6PM9YaWzJIg',
 	                    {
 	            attribution: 'Map data &copy; <a href="http://openo streetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -64,12 +62,12 @@ app.controller('mapController',function($scope,$ionicPopup,$ionicSideMenuDelegat
 
 	     var kmlLayer = new L.KML("lib/Rutas-Transplaneta.kml", {async: true});
         console.log(kmlLayer);
-	    kmlLayer.on("loaded", function(e) { 
+	    kmlLayer.on("loaded", function(e) {
             map.fitBounds(e.target.getBounds());
-         });                                        
+         });
          map.addLayer(kmlLayer);*/
 
- 
+
    /*$scope.map = {
           defaults: {
             tileLayer: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
@@ -94,4 +92,3 @@ app.controller('mapController',function($scope,$ionicPopup,$ionicSideMenuDelegat
 
 
 	});
-
