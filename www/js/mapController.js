@@ -1,39 +1,5 @@
 app.controller('mapController',function($scope,$ionicPopup,$ionicSideMenuDelegate){
 
-// 	var src = 'https://www.dropbox.com/s/tpphzum3bsx1m5l/firstRoute.kml?dl=1';
-//
-//     //var latLng = new google.maps.LatLng(-0.24540368195453613,-78.51656848144529);
-// //https://www.dropbox.com/s/tpphzum3bsx1m5l/firstRoute.kml?dl=0
-// //https://www.dropbox.com/s/0qn1veaz4o5akcz/Rutas-Transplaneta.kml?dl=1
-//     var mapOptions = {
-//       center: {lat:-0.24540368195453613, lng:-78.51656848144529},
-//       zoom: 11,
-//       mapTypeId: google.maps.MapTypeId.ROADMAP,
-//       draggable:true
-//     };
-//
-//     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-//
-//     loadKmlLayer(src, map);
-//
-//     function loadKmlLayer(src, map) {
-//     	console.log(src);
-//     	console.log(map);
-//     var kmlLayer = new google.maps.KmlLayer(src, {
-//       suppressInfoWindows: true,
-//       preserveViewport: false,
-//       map:map
-//     });
-//     google.maps.event.addListener(kmlLayer, 'click', function(event) {
-//       var content = event.featureData.infoWindowHtml;
-//       console.log(content);
-//        var alertPopup = $ionicPopup.alert({
-//        title: 'Información',
-//        template: content
-//      });
-//     });
-//  }
-
 var layers = [];
 
 layers[0] = new google.maps.KmlLayer('https://www.dropbox.com/s/3uq07wy1ss5bk2n/firstRoute.kml?dl=1', {
@@ -56,7 +22,15 @@ layers[4] = new google.maps.KmlLayer('https://www.dropbox.com/s/0gldyct3gjx3nbf/
     preserveViewport: true
 });
 
-layers[5] = new google.maps.KmlLayer('https://www.dropbox.com/s/9sw3erta3zxnex3/sixroute.kml?dl=1', {
+layers[5] = new google.maps.KmlLayer('https://www.dropbox.com/s/acbeadsmlt8swpz/sixroute.kml?dl=1', {
+    preserveViewport: true
+});
+
+layers[6] = new google.maps.KmlLayer('https://www.dropbox.com/s/s1794y0e6bzkt5f/sevenroute.kml?dl=1', {
+    preserveViewport: true
+});
+
+layers[7] = new google.maps.KmlLayer('https://www.dropbox.com/s/zt5vlw6np9aetim/eightRoute.kml?dl=1', {
     preserveViewport: true
 });
 
@@ -121,6 +95,18 @@ function initialize() {
 		google.maps.event.addDomListener(document.getElementById('layer_06'), 'click', function (evt) {
         toggleLayers(5);
     });
+
+    google.maps.event.addDomListener(document.getElementById('layer_07'), 'click', function (evt) {
+        toggleLayers(6);
+    });
+
+    google.maps.event.addDomListener(document.getElementById('layer_08'), 'click', function (evt) {
+        toggleLayers(7);
+    });
+
+
+
+
     // toggle layers at the beginning
     toggleLayers(0);
     toggleLayers(1);
@@ -128,13 +114,16 @@ function initialize() {
 		toggleLayers(3);
 		toggleLayers(4);
 		toggleLayers(5);
+    toggleLayers(6);
+    toggleLayers(7);
+
 
 
 
 
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+//google.maps.event.addDomListener(window, 'load', initialize);
 
 // Charge the function
 initialize();
