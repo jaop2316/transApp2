@@ -1,4 +1,4 @@
-app.service('favoritesService', function() {
+app.service('favoritesService', function($localstorage) {
 	console.log("Favorite Services");
 	var favoriteList = [];
 	var favoriteRoutesList=[];
@@ -6,10 +6,15 @@ app.service('favoritesService', function() {
 
 	var addFavorites = function(newObj) {
       favoriteList.push(newObj);
+			$localstorage.setObject('fav', favoriteList);
   };
 
   	var getFavorites = function(){
-      return favoriteList;
+			// TODO :ADD LOCAL STORAGE FOR favoriteItems
+			//var fav = $localstorage.getObject('fav');
+      //return fav;
+			return favoriteList;
+		//console.log(fav);
   };
 
   var addRoutesList=function(newObj){
