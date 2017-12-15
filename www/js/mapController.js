@@ -136,6 +136,9 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
+// Charge the function
+initialize();
+
  $scope.toggleLeft = function() {
     $ionicSideMenuDelegate.toggleLeft();
     console.log("toggleLeft");
