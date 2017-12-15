@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
+    <Style id="linestyleExample">
+      <LineStyle>
+        <color>fffc4c5d</color>
+        <width>4</width>
+        <gx:labelVisibility>1</gx:labelVisibility>
+      </LineStyle>
+      <IconStyle>
+        <scale>1.1</scale>
+           <Icon>
+              <href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+           </Icon>
+        </IconStyle>
+    </Style>
   <Folder>
     <name>Ruta Las Casas-Monjas-Buenos Aires</name>
     <Placemark>
       <name>Las Casas-Monjas-Buenos Aires</name>
-      <styleUrl>#line-5555FF-5-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <LineString>
         <tessellate>1</tessellate>
         <coordinates>
@@ -1056,7 +1069,7 @@
     </Placemark>
     <Placemark>
       <name>Buenos-Aires</name>
-      <styleUrl>#icon-1532-F57C00-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <Point>
         <coordinates>
           -78.477832,-0.238051,0
@@ -1065,7 +1078,7 @@
     </Placemark>
     <Placemark>
       <name>Monjas</name>
-      <styleUrl>#icon-1532-F57C00-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <Point>
         <coordinates>
           -78.4826052,-0.2333408,0
@@ -1074,7 +1087,7 @@
     </Placemark>
     <Placemark>
       <name>Las Casas</name>
-      <styleUrl>#icon-1532-F57C00-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <Point>
         <coordinates>
           -78.5093093,-0.1853081,0

@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
+  <Style id="linestyleExample">
+    <LineStyle>
+      <color>fffc612e</color>
+      <width>4</width>
+      <gx:labelVisibility>1</gx:labelVisibility>
+    </LineStyle>
+    <IconStyle>
+      <scale>0.5</scale>
+         <Icon>
+            <href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+         </Icon>
+      </IconStyle>
+  </Style>
   <Folder>
     <name>Ruta San Jose de Cutuglagua - San Roque</name>
     <Placemark>
       <name>Directions from San Jose de Cutuglagua to San Roque</name>
-      <styleUrl>#line-1267FF-5-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <LineString>
         <tessellate>1</tessellate>
         <coordinates>
@@ -526,7 +539,7 @@
     </Placemark>
     <Placemark>
       <name>San Jose de Cutuglagua</name>
-      <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <Point>
         <coordinates>
           -78.5721928,-0.357663,0
@@ -535,7 +548,7 @@
     </Placemark>
     <Placemark>
       <name>San Roque</name>
-      <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <Point>
         <coordinates>
           -78.5211588,-0.2180705,0

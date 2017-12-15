@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
+    <Style id="linestyleExample">
+      <LineStyle>
+        <color>ffae1c9c</color>
+        <width>4</width>
+        <gx:labelVisibility>1</gx:labelVisibility>
+      </LineStyle>
+      <IconStyle>
+        <scale>1.1</scale>
+           <Icon>
+              <href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+           </Icon>
+        </IconStyle>
+    </Style>
   <Folder>
     <name>Ruta Santo Tomas 1-La Marin</name>
     <Placemark>
       <name>Santo-Tomas 1</name>
-      <styleUrl>#line-9C27B0-5-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <LineString>
         <tessellate>1</tessellate>
         <coordinates>
@@ -257,7 +270,7 @@
     </Placemark>
     <Placemark>
       <name>Santo Tomas 1</name>
-      <styleUrl>#icon-1532-F57C00-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <Point>
         <coordinates>
           -78.5387922,-0.335403,0
@@ -266,7 +279,7 @@
     </Placemark>
     <Placemark>
       <name>Marin</name>
-      <styleUrl>#icon-1532-F57C00-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <Point>
         <coordinates>
           -78.5076249,-0.223583,0

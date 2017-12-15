@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
+    <Style id="linestyleExample">
+      <LineStyle>
+        <color>ff2fffaa</color>
+        <width>4</width>
+        <gx:labelVisibility>1</gx:labelVisibility>
+      </LineStyle>
+      <IconStyle>
+        <scale>1.1</scale>
+           <Icon>
+              <href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+           </Icon>
+        </IconStyle>
+    </Style>
   <Folder>
     <name>Ruta Universidad Central -Quitus-Plywood.kmz</name>
     <Placemark>
       <name>Universidad Central -Quitus-Plywood</name>
-      <styleUrl>#line-AAFF00-5-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <LineString>
         <tessellate>1</tessellate>
         <coordinates>
@@ -564,7 +577,7 @@
     </Placemark>
     <Placemark>
       <name>Quitus</name>
-      <styleUrl>#icon-1532-F57C00-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <Point>
         <coordinates>
           -78.5328269,-0.3089461,0
@@ -573,7 +586,7 @@
     </Placemark>
     <Placemark>
       <name>Plywood</name>
-      <styleUrl>#icon-1532-F57C00-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <Point>
         <coordinates>
           -78.539429,-0.304484,0
@@ -582,7 +595,7 @@
     </Placemark>
     <Placemark>
       <name>Universidad Cental</name>
-      <styleUrl>#icon-1532-F57C00-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <Point>
         <coordinates>
           -78.5010481,-0.197496,0

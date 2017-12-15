@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
+  <Style id="linestyleExample">
+    <LineStyle>
+      <color>ff7d000e</color>
+      <width>4</width>
+      <gx:labelVisibility>1</gx:labelVisibility>
+    </LineStyle>
+    <IconStyle>
+      <scale>1.1</scale>
+         <Icon>
+            <href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+         </Icon>
+      </IconStyle>
+  </Style>
   <Folder>
     <name>Ruta Santo Domingo-San Roque</name>
     <Placemark>
       <name>Santo Domingo-San Roque</name>
-      <styleUrl>#line-00007F-5-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <LineString>
         <tessellate>1</tessellate>
         <coordinates>
@@ -200,7 +213,7 @@
     </Placemark>
     <Placemark>
       <name>Santo Domingo de Cutulagua</name>
-      <styleUrl>#icon-1532-F57C00-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <Point>
         <coordinates>
           -78.564992,-0.3724919,0
@@ -209,7 +222,7 @@
     </Placemark>
     <Placemark>
       <name>San Roque</name>
-      <styleUrl>#icon-1532-F57C00-nodesc</styleUrl>
+      <styleUrl>#linestyleExample</styleUrl>
       <Point>
         <coordinates>
           -78.5201,-0.218704,0

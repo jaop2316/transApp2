@@ -2,35 +2,35 @@ app.controller('mapController',function($scope,$ionicPopup,$ionicSideMenuDelegat
 
 var layers = [];
 
-layers[0] = new google.maps.KmlLayer('https://www.dropbox.com/s/3uq07wy1ss5bk2n/firstRoute.kml?dl=1', {
+layers[0] = new google.maps.KmlLayer('https://www.dropbox.com/s/bsgeqp3yk3gytic/firstRoute.kml?dl=1', {
     preserveViewport: true
 });
 
-layers[1] = new google.maps.KmlLayer('https://www.dropbox.com/s/2awzpmw8spz4ym2/SecondRoute.kml?dl=1', {
+layers[1] = new google.maps.KmlLayer('https://www.dropbox.com/s/lif14ndoan2tzaq/SecondRoute.kml?dl=1', {
     preserveViewport: true
 });
 
-layers[2] = new google.maps.KmlLayer('https://www.dropbox.com/s/vxniqzxtuyh1gpe/thirdRoute.kml?dl=1', {
+layers[2] = new google.maps.KmlLayer('https://www.dropbox.com/s/9igoffh09cm4iji/thirdRoute.kml?dl=1', {
     preserveViewport: true
 });
 
-layers[3] = new google.maps.KmlLayer('https://www.dropbox.com/s/m9tn1ytbhdha5u5/fourthRoute.kml?dl=1', {
+layers[3] = new google.maps.KmlLayer('https://www.dropbox.com/s/fv0q6qkadsezoc5/fourthRoute.kml?dl=1', {
     preserveViewport: true
 });
 
-layers[4] = new google.maps.KmlLayer('https://www.dropbox.com/s/0gldyct3gjx3nbf/fifthRoute.kml?dl=1', {
+layers[4] = new google.maps.KmlLayer('https://www.dropbox.com/s/r6a9yi6ngrkbx2r/fifthRoute.kml?dl=1', {
     preserveViewport: true
 });
 
-layers[5] = new google.maps.KmlLayer('https://www.dropbox.com/s/acbeadsmlt8swpz/sixroute.kml?dl=1', {
+layers[5] = new google.maps.KmlLayer('https://www.dropbox.com/s/xy9122rf4dbz3jr/sixroute.kml?dl=1', {
     preserveViewport: true
 });
 
-layers[6] = new google.maps.KmlLayer('https://www.dropbox.com/s/s1794y0e6bzkt5f/sevenroute.kml?dl=1', {
+layers[6] = new google.maps.KmlLayer('https://www.dropbox.com/s/6ke34ta4jlh2gfx/sevenroute.kml?dl=1', {
     preserveViewport: true
 });
 
-layers[7] = new google.maps.KmlLayer('https://www.dropbox.com/s/zt5vlw6np9aetim/eightRoute.kml?dl=1', {
+layers[7] = new google.maps.KmlLayer('https://www.dropbox.com/s/l3jo73z05ti5uam/eightRoute.kml?dl=1', {
     preserveViewport: true
 });
 
