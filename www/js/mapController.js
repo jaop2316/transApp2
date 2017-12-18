@@ -125,7 +125,7 @@ function initialize() {
 
 //google.maps.event.addDomListener(window, 'load', initialize);
 
-// Charge the function
+// Load map function
 initialize();
 
  $scope.toggleLeft = function() {
@@ -133,7 +133,10 @@ initialize();
     console.log("toggleLeft");
   };
 
-
+// Function to resize tab template, fix the map doesn't load bug.
+  $scope.$on('$ionicView.afterEnter', function() {
+    ionic.trigger('resize');
+  });
 
 
 
