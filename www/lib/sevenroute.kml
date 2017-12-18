@@ -8,7 +8,7 @@
         <gx:labelVisibility>1</gx:labelVisibility>
       </LineStyle>
       <IconStyle>
-        <scale>1.1</scale>
+        <scale>0.8</scale>
            <Icon>
               <href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
            </Icon>
