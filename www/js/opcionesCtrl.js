@@ -93,10 +93,16 @@ app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionic
 	 	}
 	};
 
-  	$scope.paradasFavoritas=favoritesService.getFavorites();
-  	console.log($scope.paradasFavoritas);
+  	
   	$scope.rutasFavoritas=favoritesService.getRoutesList();
   	console.log($scope.rutasFavoritas);
   	$scope.lugaresFavoritos=favoritesService.getSitesList();
   	console.log($scope.lugaresFavoritos);
+
+  	$scope.$on('$ionicView.afterEnter', function() {
+    $scope.paradasFavoritas=favoritesService.getFavorites();
+  });
+
+
+
 }]);
