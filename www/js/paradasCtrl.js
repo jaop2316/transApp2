@@ -1283,6 +1283,8 @@ var posOptions = {timeout: 10000, enableHighAccuracy: false};
 
 $scope.getAddress=function(){
 $scope.distanciaParadas();
+$scope.demoCaption1 = "Bienvenido a la sección paradas, Obten tu localización con un click en este botón";
+$scope.demoActive1 = true;
 var geocoder = new google.maps.Geocoder();
       var latlng = new google.maps.LatLng($scope.latitud, $scope.longitud);
       var request = {

@@ -5,7 +5,7 @@
             <div class="col col-75">
                 <h2>Mi ubicación</h2>
             </div>
-            <div class="col">
+            <div class="col" id="focus-item">
                 <button class="button button-energized icon ion-location" ng-click="getAddress()"></button>
             </div>
         </div>
@@ -48,6 +48,17 @@
 
 
         <!--  </ion-slides> -->
+
+        <walkthrough
+            wid="Demo1"
+            walkthrough-type="transparency"
+            focus-element-selector="#focus-item"
+            icon="single_tap"
+            main-caption="{{demoCaption1}}"
+            icon-padding-left="0"
+            icon-padding-top="20"
+            is-active="demoActive1">
+      </walkthrough>
 
 
     </ion-content>

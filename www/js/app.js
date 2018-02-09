@@ -8,7 +8,7 @@
 
 var masterUrl='https://api-transapp-jaop.c9users.io/';
 //var masterUrl='http://localhost:3000/';
-var app=angular.module('myApp', ['ionic','ngCordova','ngResource'])
+var app=angular.module('myApp', ['ionic','ngCordova','ngResource','ng-walkthrough'])
 
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,6 +23,7 @@ app.run(function($ionicPlatform) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
   });
 })
 
