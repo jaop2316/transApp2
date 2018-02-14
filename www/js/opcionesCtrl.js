@@ -1,4 +1,4 @@
-app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionicScrollDelegate','$localstorage',function ($scope,$ionicModal,favoritesService,$ionicScrollDelegate,$localstorage){
+app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionicScrollDelegate','$localstorage','$state',function ($scope,$ionicModal,favoritesService,$ionicScrollDelegate,$localstorage,$state){
 	console.log("opciones controller");
 
 	$ionicModal.fromTemplateUrl('templates/nosotros.html', {
@@ -101,6 +101,15 @@ app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionic
 
   	$scope.$on('$ionicView.afterEnter', function() {
     $scope.paradasFavoritas=favoritesService.getFavorites();
+
+
+    // Initial Tour option.
+
+    $scope.toIntro = function(){
+    $state.go('intro');
+  }
+
+
   });
 
 

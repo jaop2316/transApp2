@@ -10,7 +10,7 @@ var masterUrl='https://api-transapp-jaop.c9users.io/';
 //var masterUrl='http://localhost:3000/';
 var app=angular.module('myApp', ['ionic','ngCordova','ngResource','ng-walkthrough'])
 
-app.run(function($ionicPlatform) {
+app.run(function($ionicPlatform,$state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -24,6 +24,21 @@ app.run(function($ionicPlatform) {
       StatusBar.styleDefault();
     }
 
+    // Run tour for application.
+
+    if(window.localStorage.getItem("loggedIn") != 1) {
+        // Running for the first time.
+        window.localStorage.setItem("loggedIn", 1);
+        $state.go('intro');
+        console.log("1st time");
+        
+      }
+    else
+      {
+        //Already run this app before.
+      console.log("running this for more than one time");
+      }
+
   });
 })
 
@@ -35,6 +50,13 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
+
+  // setup template for initial tour application.
+  .state('intro', {
+    url: '/',
+    templateUrl: 'templates/intro.html',
+    controller: 'IntroCtrl'
+  })
 
   // setup an abstract state for the tabs directive
     .state('tab', {

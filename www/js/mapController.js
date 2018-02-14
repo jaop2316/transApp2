@@ -110,10 +110,10 @@ function initialize() {
     // toggle layers at the beginning
     toggleLayers(0);
     toggleLayers(1);
-		toggleLayers(2);
-		toggleLayers(3);
-		toggleLayers(4);
-		toggleLayers(5);
+	toggleLayers(2);
+	toggleLayers(3);
+	toggleLayers(4);
+	toggleLayers(5);
     toggleLayers(6);
     toggleLayers(7);
 

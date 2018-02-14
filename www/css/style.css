@@ -294,3 +294,50 @@ color: #33FF33;
 .options-template,.about-template .item{
   color:#334455;
 }
+
+.slider {
+  height: 100%;
+}
+.slider-slide {
+  padding-top: 80px;
+  color: #fff;
+  background-color: #334455;
+  text-align: center;
+}
+
+#logo {
+  margin: 30px 0px;
+}
+
+#list {
+  width: 170px;
+  margin: 30px auto;
+  font-size: 20px;
+}
+#list ol {
+  margin-top: 30px;
+}
+#list ol li {
+  text-align: center;
+  list-style: none;
+  margin: 10px 0px;
+  color:#ffbb33;
+}
+
+.button.ng-hide{
+  display:none;
+}
+
+.bar.bar-positive{
+  background-color: #ffbb33;
+}
+
+.button.button-positive.button-clear{
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.slider-pager .slider-pager-page{
+  color:#fff;
+}

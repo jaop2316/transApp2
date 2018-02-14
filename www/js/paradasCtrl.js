@@ -1,5 +1,5 @@
-app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal','$ionicPopup','$timeout','$ionicScrollDelegate','favoritesService','StationsFactory',function($scope,
-	$cordovaGeolocation,$ionicModal,$ionicPopup,$timeout,$ionicScrollDelegate,favoritesService,StationsFactory){
+app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal','$ionicPopup','$timeout','$ionicScrollDelegate','favoritesService','StationsFactory','$localstorage',function($scope,
+	$cordovaGeolocation,$ionicModal,$ionicPopup,$timeout,$ionicScrollDelegate,favoritesService,StationsFactory,$localstorage){
 console.log("paradas Controller");
 
 //$scope.location=false;
@@ -27,6 +27,9 @@ function(err){
 };
 
 $scope.listaParadas();
+
+//var loadFirst= $localstorage.getObject('initialRun');
+//console.log(loadFirst.length);
 
 
 $scope.paradas=[
@@ -1283,8 +1286,6 @@ var posOptions = {timeout: 10000, enableHighAccuracy: false};
 
 $scope.getAddress=function(){
 $scope.distanciaParadas();
-$scope.demoCaption1 = "Bienvenido a la sección paradas, Obten tu localización con un click en este botón";
-$scope.demoActive1 = true;
 var geocoder = new google.maps.Geocoder();
       var latlng = new google.maps.LatLng($scope.latitud, $scope.longitud);
       var request = {
