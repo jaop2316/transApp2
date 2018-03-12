@@ -1,8 +1,8 @@
-<ion-view view-title="Opciones">
+<ion-view view-title="Opciones" hide-nav-bar="true">
 	<div class="bar bar-header bar-energized">
 	  <h1 class="title">TRANSAPP</h1>
 	</div>
-	<ion-content class="padding">
+	<ion-content class="padding options-template">
 
 		<div class="list card">
 
@@ -16,7 +16,7 @@
 		    Favoritos
 		  </a>
 
-		  <a class="item item-icon-left">
+		  <a class="item item-icon-left" ng-click="toIntro()">
 		    <i class="icon ion-help"></i>
 		    Tutorial
 		  </a>
@@ -32,6 +32,6 @@
 		  </a>
 
 		</div>
-	
+
 	</ion-content>
-</ion-view> 
+</ion-view>

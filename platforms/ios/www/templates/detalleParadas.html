@@ -15,7 +15,7 @@
             </div>
         </div>
     </ion-header-bar>
-    <ion-content class="padding">
+    <ion-content class="padding station-details">
         <div class="row">
             <div class="col">
               <center><h2> {{currentItem.nomParada}}</h2></center>
@@ -47,13 +47,13 @@
                                  </div>
                                  <div class="col">
                                    <i class="icon"
-                                      ng-class="isGroupShown(currentItem.rutas) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+                                      ng-class="isGroupShown(direction) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
                                  </div>
                                  </div>
                         </div>
                     </div>
                 </div>
-                <div class="row" ng-show="isGroupShown(currentItem)">
+                <div class="row details-text" ng-show="isGroupShown(currentItem)">
                     <div class="col">
                         <div class="item item-text-wrap item-accordion">
                             <p ng-repeat="direction in directions track by $index">
@@ -82,10 +82,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" ng-show="isGroupShown(currentItem.rutas)">
+                <div class="row details-text" ng-show="isGroupShown(currentItem.rutas)">
                     <div class="col">
-                        <div class="item item-text-wrap item-accordion2" ng-repeat="ruta in currentItem.rutas">
-                            <p>
+                        <div class="item item-text-wrap item-accordion2" >
+                            <p ng-repeat="ruta in currentItem.rutas">
                               <i class="ion-arrow-right-c"></i>
                                 {{ruta}}
                             </p>

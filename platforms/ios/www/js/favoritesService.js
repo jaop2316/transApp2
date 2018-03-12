@@ -1,15 +1,32 @@
-app.service('favoritesService', function() {
+app.service('favoritesService', function($localstorage) {
 	console.log("Favorite Services");
 	var favoriteList = [];
 	var favoriteRoutesList=[];
   var sitesList=[];
 
 	var addFavorites = function(newObj) {
+      var fav = $localstorage.getObject('fav');
+      console.log(fav.length);
+
+     if(!fav){
+      fav.push(newObj);
+      console.log(fav);
+     }else{
       favoriteList.push(newObj);
+      $localstorage.setObject('fav', favoriteList);
+     }
+      
+ 
+      //fav.push(newObj);
+      //console.log(fav);
   };
 
   	var getFavorites = function(){
-      return favoriteList;
+			// TODO :ADD LOCAL STORAGE FOR favoriteItems
+			//var fav = $localstorage.getObject('fav');
+      //return fav;
+			return $localstorage.getObject('fav');
+		//console.log(fav);
   };
 
   var addRoutesList=function(newObj){

@@ -1,97 +1,145 @@
 app.controller('mapController',function($scope,$ionicPopup,$ionicSideMenuDelegate){
 
-	var src = 'https://www.dropbox.com/s/0qn1veaz4o5akcz/Rutas-Transplaneta.kml?dl=1';
+var layers = [];
 
-    //var latLng = new google.maps.LatLng(-0.24540368195453613,-78.51656848144529);
- 
+layers[0] = new google.maps.KmlLayer('https://www.dropbox.com/s/90q9q0v6lnppeym/firstRoute.kml?dl=1', {
+    preserveViewport: true
+});
+
+layers[1] = new google.maps.KmlLayer('https://www.dropbox.com/s/j9638gx0egdsyzq/SecondRoute.kml?dl=1', {
+    preserveViewport: true
+});
+
+layers[2] = new google.maps.KmlLayer('https://www.dropbox.com/s/ocxu0y0w05tv006/thirdRoute.kml?dl=1', {
+    preserveViewport: true
+});
+
+layers[3] = new google.maps.KmlLayer('https://www.dropbox.com/s/y430ik64bxz9z61/fourthRoute.kml?dl=1', {
+    preserveViewport: true
+});
+
+layers[4] = new google.maps.KmlLayer('https://www.dropbox.com/s/givn9pbhvxylmdi/fifthRoute.kml?dl=1', {
+    preserveViewport: true
+});
+
+layers[5] = new google.maps.KmlLayer('https://www.dropbox.com/s/47ksjx4px55scen/sixroute.kml?dl=1', {
+    preserveViewport: true
+});
+
+layers[6] = new google.maps.KmlLayer('https://www.dropbox.com/s/rm3af8ay45eqp5d/sevenroute.kml?dl=1', {
+    preserveViewport: true
+});
+
+layers[7] = new google.maps.KmlLayer('https://www.dropbox.com/s/6wf4ud0z1cx17zx/eightRoute.kml?dl=1', {
+    preserveViewport: true
+});
+
+// end layers to toggle
+// intialize
+
+function initialize() {
     var mapOptions = {
-      center: {lat:-0.24540368195453613, lng:-78.51656848144529},
-      zoom: 11,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      draggable:true
+        zoom: 11,
+        center: {lat:-0.24540368195453613, lng:-78.51656848144529},
+        mapTypeId:google.maps.MapTypeId.ROADMAP
     };
- 
+
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    loadKmlLayer(src, map);
+    loadKml = function (opts, map) {
+        var layer = new google.maps.KmlLayer();
+        opts.preserveViewport = true;
+        if (map) {
+            opts.map = map;
+        }
 
-    function loadKmlLayer(src, map) {
-    	console.log(src);
-    	console.log(map);
-    var kmlLayer = new google.maps.KmlLayer(src, {
-      suppressInfoWindows: true,
-      preserveViewport: false,
-      map:map
+        google.maps.event.addListener(layer, 'defaultviewport_changed', function () {
+            var map = this.getMap(),
+                bounds = map.get('kmlBounds') || this.getDefaultViewport();
+
+            bounds.union(this.getDefaultViewport());
+            map.set('kmlBounds', bounds);
+            map.fitBounds(bounds);
+        });
+        layer.setOptions(opts);
+        return layer;
+    };
+
+    function toggleLayers(i) {
+        if (layers[i].getMap() == null) {
+            layers[i].setMap(map);
+        } else {
+            layers[i].setMap(null);
+        }
+    }
+    // end toggle layers
+    google.maps.event.addDomListener(document.getElementById('layer_01'), 'click', function (evt) {
+        toggleLayers(0);
     });
-    google.maps.event.addListener(kmlLayer, 'click', function(event) {
-      var content = event.featureData.infoWindowHtml;
-      //var testimonial = document.getElementById('capture');
-      //testimonial.innerHTML = content;
-      console.log(content);
-       var alertPopup = $ionicPopup.alert({
-       title: 'Informacion',
-       template: content
-     });
+    google.maps.event.addDomListener(document.getElementById('layer_02'), 'click', function (evt) {
+        toggleLayers(1);
     });
- }
+
+		google.maps.event.addDomListener(document.getElementById('layer_03'), 'click', function (evt) {
+        toggleLayers(2);
+    });
+
+		google.maps.event.addDomListener(document.getElementById('layer_04'), 'click', function (evt) {
+        toggleLayers(3);
+    });
+
+		google.maps.event.addDomListener(document.getElementById('layer_05'), 'click', function (evt) {
+        toggleLayers(4);
+    });
+
+		google.maps.event.addDomListener(document.getElementById('layer_06'), 'click', function (evt) {
+        toggleLayers(5);
+    });
+
+    google.maps.event.addDomListener(document.getElementById('layer_07'), 'click', function (evt) {
+        toggleLayers(6);
+    });
+
+    google.maps.event.addDomListener(document.getElementById('layer_08'), 'click', function (evt) {
+        toggleLayers(7);
+    });
+
+
+
+
+    // toggle layers at the beginning
+    toggleLayers(0);
+    toggleLayers(1);
+	toggleLayers(2);
+	toggleLayers(3);
+	toggleLayers(4);
+	toggleLayers(5);
+    toggleLayers(6);
+    toggleLayers(7);
+
+
+
+
+
+}
+
+//google.maps.event.addDomListener(window, 'load', initialize);
+
+// Load map function
+initialize();
 
  $scope.toggleLeft = function() {
     $ionicSideMenuDelegate.toggleLeft();
     console.log("toggleLeft");
   };
 
-
-    
-
- /*map = L.map('map', {
-    dragging:true
-}).setView([-0.24540368195453613,-78.51656848144529], 11);
-
-	 
-	     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamExOTc5IiwiYSI6ImNpazcyZHFtcjAxOGJ2ZGt0NGNhamQ1cXQifQ.Kkz4bJY_fOE6PM9YaWzJIg',
-	                    {
-	            attribution: 'Map data &copy; <a href="http://openo streetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-	            id: 'mapbox.streets'
-	        }).addTo(map);
-
-	     var circle = L.circle([-0.24540368195453613,-78.51656848144529],500,{
-	         color: 'red',
-	         fillColor: '#f03',
-	         fillOpacity: 0.5,
-	         radius: 500
-	     }).addTo(map);
+// Function to resize tab template, fix the map doesn't load bug.
+  $scope.$on('$ionicView.afterEnter', function() {
+    ionic.trigger('resize');
+  });
 
 
-	     var kmlLayer = new L.KML("lib/Rutas-Transplaneta.kml", {async: true});
-        console.log(kmlLayer);
-	    kmlLayer.on("loaded", function(e) { 
-            map.fitBounds(e.target.getBounds());
-         });                                        
-         map.addLayer(kmlLayer);*/
 
- 
-   /*$scope.map = {
-          defaults: {
-            tileLayer: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-            maxZoom: 18,
-            zoomControlPosition: 'bottomleft'
-          },
-          markers : {},
-          events: {
-            map: {
-              enable: ['context'],
-              logic: 'emit'
-            }
-          }
-        };
-
-        $scope.map.center  = {
-          lat : -0.24540368195453613,
-          lng : -78.51656848144529,
-          zoom : 12
-        };
-*/
 
 
 	});
-

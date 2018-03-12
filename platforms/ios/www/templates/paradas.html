@@ -1,11 +1,11 @@
-<ion-view view-title="Paradas">
-    <ion-content class="padding">
+<ion-view view-title="Paradas" hide-nav-bar="true">
+    <ion-content class="padding stations-template">
 
         <div class="row">
             <div class="col col-75">
                 <h2>Mi ubicación</h2>
             </div>
-            <div class="col">
+            <div class="col" id="focus-item">
                 <button class="button button-energized icon ion-location" ng-click="getAddress()"></button>
             </div>
         </div>
@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="item item-text-wrap">
+                    <div class="item item-text-wrap current-address">
                         {{address}}
                     </div>
                 </div>

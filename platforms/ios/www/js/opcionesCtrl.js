@@ -1,4 +1,4 @@
-app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionicScrollDelegate',function ($scope,$ionicModal,favoritesService,$ionicScrollDelegate){
+app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionicScrollDelegate','$localstorage','$state',function ($scope,$ionicModal,favoritesService,$ionicScrollDelegate,$localstorage,$state){
 	console.log("opciones controller");
 
 	$ionicModal.fromTemplateUrl('templates/nosotros.html', {
@@ -53,7 +53,7 @@ app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionic
 	 $scope.openModal = function(index,currentItem) {
 	 	if (index == 1){
 	 		$scope.modal.show();
-	 	 }else if(index == 2){	
+	 	 }else if(index == 2){
 	 	 	$scope.modal2.show();
 	 	}else if(index == 3){
 	 		$scope.modal3.show();
@@ -70,7 +70,7 @@ app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionic
 	 		$scope.currentItem=currentItem;
 	 		console.log($scope.currentItem);
 	 	}
-    	
+
   	};
 
    $scope.closeModal = function(index) {
@@ -93,10 +93,25 @@ app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionic
 	 	}
 	};
 
-  	$scope.paradasFavoritas=favoritesService.getFavorites();
-  	console.log($scope.paradasFavoritas);
+  	
   	$scope.rutasFavoritas=favoritesService.getRoutesList();
   	console.log($scope.rutasFavoritas);
   	$scope.lugaresFavoritos=favoritesService.getSitesList();
   	console.log($scope.lugaresFavoritos);
+
+  	$scope.$on('$ionicView.afterEnter', function() {
+    $scope.paradasFavoritas=favoritesService.getFavorites();
+
+
+    // Initial Tour option.
+
+    $scope.toIntro = function(){
+    $state.go('intro');
+  }
+
+
+  });
+
+
+
 }]);

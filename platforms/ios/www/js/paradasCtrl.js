@@ -1,5 +1,5 @@
-app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal','$ionicPopup','$timeout','$ionicScrollDelegate','favoritesService','StationsFactory',function($scope,
-	$cordovaGeolocation,$ionicModal,$ionicPopup,$timeout,$ionicScrollDelegate,favoritesService,StationsFactory){
+app.controller('paradasController',['$scope','$cordovaGeolocation','$ionicModal','$ionicPopup','$timeout','$ionicScrollDelegate','favoritesService','StationsFactory','$localstorage',function($scope,
+	$cordovaGeolocation,$ionicModal,$ionicPopup,$timeout,$ionicScrollDelegate,favoritesService,StationsFactory,$localstorage){
 console.log("paradas Controller");
 
 //$scope.location=false;
@@ -27,6 +27,9 @@ function(err){
 };
 
 $scope.listaParadas();
+
+//var loadFirst= $localstorage.getObject('initialRun');
+//console.log(loadFirst.length);
 
 
 $scope.paradas=[
@@ -1366,7 +1369,7 @@ $scope.calcularDistancia=function(lat1, lat2, lon1, lon2){
      }
 
      init();
-	
+
 
     $scope.getdetails=function(parada){
         $scope.currentItem = parada;
