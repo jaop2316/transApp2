@@ -1,4 +1,4 @@
-app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionicScrollDelegate','$localstorage','$state',function ($scope,$ionicModal,favoritesService,$ionicScrollDelegate,$localstorage,$state){
+app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionicScrollDelegate','$localstorage','$state','$ionicSlideBoxDelegate',function ($scope,$ionicModal,favoritesService,$ionicScrollDelegate,$localstorage,$state,$ionicSlideBoxDelegate){
 	console.log("opciones controller");
 
 	$ionicModal.fromTemplateUrl('templates/nosotros.html', {
@@ -93,7 +93,7 @@ app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionic
 	 	}
 	};
 
-  	
+
   	$scope.rutasFavoritas=favoritesService.getRoutesList();
   	console.log($scope.rutasFavoritas);
   	$scope.lugaresFavoritos=favoritesService.getSitesList();
@@ -107,7 +107,7 @@ app.controller('opcionesCtrl',['$scope','$ionicModal','favoritesService','$ionic
 
     $scope.toIntro = function(){
     $state.go('intro');
-  }
+  };
 
 
   });

@@ -3,6 +3,7 @@ app.controller('IntroCtrl',function($scope, $state, $ionicSlideBoxDelegate){
 // Called to navigate to the main app
   $scope.startApp = function() {
     $state.go('tab.paradas');
+    $ionicSlideBoxDelegate.slide(0);
   };
   $scope.next = function() {
     $ionicSlideBoxDelegate.next();
