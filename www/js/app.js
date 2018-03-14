@@ -31,7 +31,7 @@ app.run(function($ionicPlatform,$state) {
         window.localStorage.setItem("loggedIn", 1);
         $state.go('intro');
         console.log("1st time");
-        
+
       }
     else
       {

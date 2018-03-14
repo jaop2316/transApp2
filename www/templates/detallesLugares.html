@@ -1,48 +1,63 @@
 <ion-modal-view>
-	   <ion-header-bar>
+  <ion-header-bar>
     <div class="row header-stop">
       <div class="col col-return">
-        <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal(1)">Sitios</button>
+        <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="closeModal(1)">Sitios
+        </button>
       </div>
       <div class="col">
         <h1 class="title">Sitio</h1>
       </div>
       <div class="col col-favorite">
-        <button class="button icon-left ion-star button-positive" ng-click="addFavorites(currentItem)" ng-disabled="currentItem.favorites"></button>
+        <button class="button icon-left ion-star button-positive" ng-click="addFavorites(currentItem)"
+                ng-disabled="currentItem.favorites"></button>
       </div>
     </div>
-    </ion-header-bar>
+  </ion-header-bar>
 
-    <ion-content class="padding places-detail">
+  <ion-content class="padding places-detail">
 
-			<div class="row">
-					<div class="col">
-							<center><h2> {{currentItem.nombreSitio}}</h2></center>
-					</div>
-			</div>
+    <div class="row">
+      <div class="col">
+        <center><h2> {{currentItem.nombreSitio}}</h2></center>
+      </div>
+    </div>
 
-			<div class="row">
-					<div class="col">
-							<p class="headDetallesRutas">{{category}}</p>
-					</div>
-			</div>
+    <div class="row">
+      <div class="col">
+        <p class="headDetallesRutas">{{category}}</p>
+      </div>
+    </div>
 
-
-           <div class="list">
-
-          <div class="item item-divider">
-            Rutas
-          </div>
-
-        <div>
-          <a class="item item-icon-left" ng-repeat="indice in currentItem.rutas" ng-click="openModal(2,currentItem); searchIndexinRoutes(indice);">
-              <i class="icon ion-android-bus"></i>
-              {{indice}}
-            </a>
+    <div class="row">
+      <div class="col">
+        <div class="iframe-container">
+          <iframe
+            ng-src={{trustSrc(currentItem.url)}}
+            width="280" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
 
-        </div>
 
-    </ion-content>
+      </div>
+    </div>
+
+
+    <div class="list">
+
+      <div class="item item-divider">
+        Rutas
+      </div>
+
+      <div>
+        <a class="item item-icon-left" ng-repeat="indice in currentItem.rutas"
+           ng-click="openModal(2,currentItem); searchIndexinRoutes(indice);">
+          <i class="icon ion-android-bus"></i>
+          {{indice}}
+        </a>
+      </div>
+
+    </div>
+
+  </ion-content>
 
 </ion-modal-view>

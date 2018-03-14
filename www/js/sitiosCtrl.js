@@ -1,10 +1,14 @@
-app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favoritesService','$ionicScrollDelegate','$ionicLoading','$ionicPopover','TestFactory','PlacesFactory',function($scope,
-    $ionicModal,$ionicPopup,favoritesService,$ionicScrollDelegate,$ionicLoading,$ionicPopover,TestFactory,PlacesFactory){
+app.controller('sitiosController',['$scope','$ionicModal','$ionicPopup','favoritesService','$ionicScrollDelegate','$ionicLoading','$ionicPopover','TestFactory','PlacesFactory','$sce',function($scope,
+    $ionicModal,$ionicPopup,favoritesService,$ionicScrollDelegate,$ionicLoading,$ionicPopover,TestFactory,PlacesFactory,$sce){
    //$scope.currentItem.favorites=false;
   $scope.sitios = [];
   $scope.routesList=[];
 
   $scope.places = [];
+
+  $scope.trustSrc = function(src) {
+    return $sce.trustAsResourceUrl(src);
+  };
 
   $scope.listaLugares = function(){
     PlacesFactory.query().$promise.then(function (respuesta) {

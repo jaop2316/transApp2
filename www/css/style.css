@@ -1,14 +1,14 @@
 /* Empty. Add your own CSS if you like */
 
 @font-face {
-    font-family: 'ubunturegular';
-    src: url('fonts/ubuntu-r-webfont.eot');
-    src: url('fonts/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/ubuntu-r-webfont.woff2') format('woff2'),
-         url('fonts/ubuntu-r-webfont.woff') format('woff'),
-         url('fonts/ubuntu-r-webfont.svg#ubunturegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'ubunturegular';
+  src: url('fonts/ubuntu-r-webfont.eot');
+  src: url('fonts/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/ubuntu-r-webfont.woff2') format('woff2'),
+  url('fonts/ubuntu-r-webfont.woff') format('woff'),
+  url('fonts/ubuntu-r-webfont.svg#ubunturegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 
 }
 
@@ -16,23 +16,23 @@
   font-family: 'ubunturegular';
 }
 
-.padding{
-background-color:#334455;
+.padding {
+  background-color: #334455;
 
 }
 
 h1 {
-  color:#ffbb33;
+  color: #ffbb33;
   font-family: 'ubunturegular';
 }
 
-h2{
-  color:#ffbb33;
+h2 {
+  color: #ffbb33;
   font-family: 'ubunturegular';
 }
 
-h3{
-  color:#ffbb33;
+h3 {
+  color: #ffbb33;
   font-family: 'ubunturegular';
 }
 
@@ -42,9 +42,11 @@ h3{
   padding-bottom: 0;
   transition: 0.09s all linear;
 }
+
 .list .item.item-accordion.ng-hide {
   line-height: 0px;
 }
+
 .list .item.item-accordion.ng-hide-add
 .list .item.item-accordion.ng-hide-remove {
   display: block !important;
@@ -66,8 +68,8 @@ h3{
   display: block !important;
 }
 
-.overflow-scroll{
-  overflow-y:auto;
+.overflow-scroll {
+  overflow-y: auto;
 }
 
 /*.input-label{
@@ -75,50 +77,50 @@ color:white;
 
   }*/
 
-.button.button-energized{
+.button.button-energized {
   background-color: #ffbb33;
-  color:#334455;
-  }
+  color: #334455;
+}
 
-.notFound{
-  color:#ffbb33;
-  font-size:20px;
+.notFound {
+  color: #ffbb33;
+  font-size: 20px;
 }
 
 .bar .button.button-clear .icon:before, .bar .button.button-clear.icon:before, .bar .button.button-clear.icon-left:before, .bar .button.button-clear.icon-right:before, .bar button.button-clear .icon:before, .bar button.button-clear.icon:before,
 .bar button.button-clear.icon-left:before,
 .bar button.button-clear.icon-right:before {
   font-size: 20px;
-    line-height: 32px;
+  line-height: 32px;
 }
 
 .bar .button.button-clear, .bar button.button-clear {
   padding-right: 2px;
-    padding-left: 2px;
-    font-weight: 300;
-    font-size: 12px;
-  }
-
-.headDetallesRutas{
-  font-size: 20px;
-    text-align: center;
-    color:white;
-    line-height: 30px;
+  padding-left: 2px;
+  font-weight: 300;
+  font-size: 12px;
 }
 
-.textInfoGeneral{
+.headDetallesRutas {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  line-height: 30px;
+}
+
+.textInfoGeneral {
   font-size: 15px;
-  color:white;
+  color: white;
 }
 
 .header .col {
-  background-color:#ffbb33;
-  color:white;
-  font-size:23px;
-  text-align:center;
+  background-color: #ffbb33;
+  color: white;
+  font-size: 23px;
+  text-align: center;
 }
 
-#headCol{
+#headCol {
   border: solid 1px black;
   border-bottom-style: none;
   border-right-style: none;
@@ -128,13 +130,12 @@ color:white;
   border-right: solid 1px black;
 }
 
-
 #detail {
   border: solid 1px black;
   border-bottom-style: none;
   border-right-style: none;
-  background-color:white;
-  text-align:center;
+  background-color: white;
+  text-align: center;
 
 }
 
@@ -143,15 +144,12 @@ color:white;
 }
 
 .row:last-child #detail {
-  border-bottom:solid 1px black;
+  border-bottom: solid 1px black;
 }
 
-
-.ion-arrow-right-c #before{
-color: #33FF33;
+.ion-arrow-right-c #before {
+  color: #33FF33;
 }
-
-
 
 #map {
   width: 100%;
@@ -159,145 +157,147 @@ color: #33FF33;
 }
 
 .scroll {
-    height: 100%;
+  height: 100%;
 }
 
-.ion-arrow-right-c:before{
-    color: #33FF33;
+.ion-arrow-right-c:before {
+  color: #33FF33;
 }
 
-.ion-ios-navigate:before{
-   font-size: 25px;
-   color: #ffbb33;
+.ion-ios-navigate:before {
+  font-size: 25px;
+  color: #ffbb33;
 
 }
 
 .item-divider {
-    color: #ffbb33;
-    font-weight: 500;
-    font-size:20px;
+  color: #ffbb33;
+  font-weight: 500;
+  font-size: 20px;
 }
 
-.item-divider p{
+.item-divider p {
   font-size: 20px;
   color: #ffbb33;
 }
 
-.ion-android-bus:before{
-   font-size: 25px;
-   padding-right: 5px;
+.ion-android-bus:before {
+  font-size: 25px;
+  padding-right: 5px;
 }
 
 .ion-arrow-left-c:before {
-     color: #00FF00;
- }
+  color: #00FF00;
+}
 
- .ion-university:before {
-     color: #0000EE;
- }
+.ion-university:before {
+  color: #0000EE;
+}
 
- .ion-cash:before {
-     color: #00C957;
- }
+.ion-cash:before {
+  color: #00C957;
+}
 
- .ion-medkit:before {
-     color: #FF0000;
- }
+.ion-medkit:before {
+  color: #FF0000;
+}
 
- .ion-person-stalker:before {
-     color: #BA55D3;
- }
+.ion-person-stalker:before {
+  color: #BA55D3;
+}
 
- .ion-android-walk:before{
-   color: #33FF33;
-   padding-right: 5px;
- }
+.ion-android-walk:before {
+  color: #33FF33;
+  padding-right: 5px;
+}
 
 .ion-chevron-up:before {
   /*padding-left: 80px;*/
 }
 
 #item-directions.ion-chevron-up:before {
-  padding-left:90px;
-  }
+  padding-left: 90px;
+}
+
 .ion-chevron-down:before {
   /*padding-left: 80px;*/
 }
 
-.more-image{
+.more-image {
   height: 340px;
 }
 
-.ion-star:before{
-  color:yellow;
+.ion-star:before {
+  color: yellow;
 }
 
-.ion-help:before{
-  color:green;
+.ion-help:before {
+  color: green;
 }
 
-.ion-person:before{
-  color:blue;
+.ion-person:before {
+  color: blue;
 }
 
-.header-stop{
+.header-stop {
   padding: 0px;
 }
 
-.col-return{
+.col-return {
   padding: 0px;
 }
 
-.col-favorite{
+.col-favorite {
   padding-top: 0px;
-  display:flex;
-  flex-direction:row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
   /*align-content: flex-end;*/
 }
 
 .bar.bar-light .title {
-    color: #ffbb33;
+  color: #ffbb33;
 }
 
-.view-container{
+.view-container {
   position: initial;
 }
 
-.places-detail .item-divider{
-  color:#334455;
+.places-detail .item-divider {
+  color: #334455;
 }
 
 .places-detail .item {
-  color:#334455;
+  color: #334455;
 }
 
-.station-details .details-text p{
-  color:#334455;
+.station-details .details-text p {
+  color: #334455;
 }
 
-.stations-template .list p{
-  color:#334455;
+.stations-template .list p {
+  color: #334455;
 }
 
 .stations-template .current-address {
-    color:#334455;
+  color: #334455;
 }
 
-.routes-template .item-stable, .item-accordion{
-  color:#334455;
+.routes-template .item-stable, .item-accordion {
+  color: #334455;
 }
 
-.places-template .item-stable, .item-accordion{
-  color:#334455;
+.places-template .item-stable, .item-accordion {
+  color: #334455;
 }
 
-.options-template,.about-template .item{
-  color:#334455;
+.options-template, .about-template .item {
+  color: #334455;
 }
 
 .slider {
   height: 100%;
 }
+
 .slider-slide {
   padding-top: 80px;
   color: #fff;
@@ -314,30 +314,39 @@ color: #33FF33;
   margin: 30px auto;
   font-size: 20px;
 }
+
 #list ol {
   margin-top: 30px;
 }
+
 #list ol li {
   text-align: center;
   list-style: none;
   margin: 10px 0px;
-  color:#ffbb33;
+  color: #ffbb33;
 }
 
-.button.ng-hide{
-  display:none;
+.button.ng-hide {
+  display: none;
 }
 
-.bar.bar-positive{
+.bar.bar-positive {
   background-color: #ffbb33;
 }
 
-.button.button-positive.button-clear{
+.button.button-positive.button-clear {
   color: white;
   font-weight: 600;
   font-size: 14px;
 }
 
-.slider-pager .slider-pager-page{
-  color:#fff;
+.slider-pager .slider-pager-page {
+  color: #fff;
+}
+
+.iframe-container {
+  width: 280px;
+  margin: 0 auto;
+}
+
 }
