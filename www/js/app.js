@@ -8,7 +8,8 @@
 
 //var masterUrl='http://localhost:3000/'; //local API site
 //var masterUrl='https://api-transapp-jaop.c9users.io/'; //Development API SITE
-var masterUrl='http://167.99.13.64/'; // Production API site (This server is running now)
+//var masterUrl='http://167.99.13.64/'; // Production API site (This server is running now)
+var masterUrl='http://transapi.online/'; // Production domain name API site (This server is running now)
 var app=angular.module('myApp', ['ionic','ngCordova','ngResource','ng-walkthrough'])
 
 app.run(function($ionicPlatform,$state) {
