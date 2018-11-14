@@ -1,0 +1,114 @@
+<ion-view view-title="" class="intro-template">
+        <ion-nav-buttons side="left">
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="startApp()" ng-show="!slideIndex">
+            Saltar Intro
+          </button>
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="previous()" ng-show="slideIndex > 0">
+            Anterior
+          </button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right"> 
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="next()" ng-show="slideIndex != 4">
+            Siguiente
+          </button>
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="startApp()" ng-show="slideIndex == 4">
+            Empezar
+          </button>
+        </ion-nav-buttons>
+        <ion-slide-box on-slide-changed="slideChanged(index)">
+          <ion-slide>
+            <h3>Gracias por usar TransApp</h3>
+            <div id="logo">
+              <img src="img/logoplanet.png">
+            </div>
+
+            <div class="row">
+            <div class="col">
+            <p>
+             Este tour te enseñara el funcionamiento de la aplicación y sus secciones.
+            </p>
+            <p>
+              Las secciones que encuentras en la aplicación son: 
+            </p>
+              <div id="list">
+                  <ol>
+                    <li> Paradas </li>
+                    <li> Rutas </li>
+                    <li> Lugares</li>
+                    <li> Mapa</li>
+                  </ol>
+                </div>
+            </div>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <h3>Paradas</h3>
+            
+            <div class="row">
+              <div class="col">
+                <p> Esta sección te permite ubicar las paradas mas cercanas a tu ubicación</p>
+              </div>
+            </div>
+
+            <div class="row">
+            <div class="col">
+              <p>Oprime el botón para obtener o actualizar tu ubicación</p>
+              <img src="img/location.png">
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col">
+            <p>Observa un listado de paradas cercanas y la distancia a cada una de ellas</p>
+            <img src="img/nearest.png">
+            </div>
+
+            </div>
+            
+          </ion-slide>
+          <ion-slide>
+            <h3>Rutas</h3>
+            <div class="row">
+              <div class="col">
+                <p> Esta sección te permite visualizar el listado de rutas de la compañia Transplaneta S.A</p>
+                <img src="img/routes.png">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <p>Verifica información de la ruta acorde a su sentido de viaje.</p>
+                <img src="img/ways.png">
+              </div>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <h3>Lugares</h3>
+            <div class="row">
+              <div class="col">
+                <p> En esta sección encontraras lugares de interes a los que puedes llegar , tomando las rutas
+               de Transplaneta. Los sitios de interes se encuentran clasificados en diferentes categorias</p>
+                <img src="img/places-list.png">
+              </div>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <h3>Mapa</h3>
+              <div class="row">
+              <div class="col">
+                <p>Identifica las rutas y sus principales paradas en el mapa de la ciudad. </p>
+              </div>
+            </div>
+
+            <div class="row">
+            <div class="col">
+            <img class="full-image" src="img/map3.png">
+            </div>
+            </div>
+          </ion-slide>
+        </ion-slide-box>
+      </ion-view>
